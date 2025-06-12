@@ -308,5 +308,116 @@ class Solution {
       python: "True\nFalse\nTrue",
       java: "true\nfalse\ntrue",
     },
+  },,
+
+  "maximum-subarray": {
+    id: "maximum-subarray",
+    title: "Maximum Subarray",
+    difficulty: "Medium",
+    category: "Array • Dynamic Programming • Divide and Conquer",
+    description: {
+      text: "Given an integer array nums, find the subarray with the largest sum, and return its sum.",
+      notes: [],
+    },
+    examples: [
+      {
+        input: "nums = [-2,1,-3,4,-1,2,1,-5,4]",
+        output: "6",
+        explanation: "The subarray [4,-1,2,1] has the largest sum 6.",
+      },
+      { input: "nums = [1]", output: "1", explanation: "The subarray [1] has the largest sum 1." },
+      { input: "nums = [5,4,-1,7,8]", output: "23", explanation: "The subarray [5,4,-1,7,8] has the largest sum 23." },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 10⁵", "-10⁴ ≤ nums[i] ≤ 10⁴"],
+    starterCode: {
+      javascript: `function maxSubArray(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(maxSubArray([-2,1,-3,4,-1,2,1,-5,4])); // Expected: 6
+console.log(maxSubArray([1])); // Expected: 1
+console.log(maxSubArray([5,4,-1,7,8])); // Expected: 23`,
+      python: `def maxSubArray(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(maxSubArray([-2,1,-3,4,-1,2,1,-5,4]))  # Expected: 6
+print(maxSubArray([1]))  # Expected: 1
+print(maxSubArray([5,4,-1,7,8]))  # Expected: 23`,
+      java: `class Solution {
+    public static int maxSubArray(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(maxSubArray(new int[]{-2,1,-3,4,-1,2,1,-5,4}));
+        System.out.println(maxSubArray(new int[]{1}));
+        System.out.println(maxSubArray(new int[]{5,4,-1,7,8}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "6\n1\n23",
+      python: "6\n1\n23",
+      java: "6\n1\n23",
+    },
+  },,
+
+  "product-of-array-except-self": {
+    id: "product-of-array-except-self",
+    title: "Product of Array Except Self",
+    difficulty: "Medium",
+    category: "Array • Prefix Sum",
+    description: {
+      text: "Given an integer array nums, return an array answer such that answer[i] is equal to the product of all the elements of nums except nums[i].",
+      notes: [
+        "The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer.",
+        "You must write an algorithm that runs in O(n) time and without using the division operation.",
+      ],
+    },
+    examples: [
+      { input: "nums = [1,2,3,4]", output: "[24,12,8,6]" },
+      { input: "nums = [-1,1,0,-3,3]", output: "[0,0,9,0,0]" },
+    ],
+    constraints: ["2 ≤ nums.length ≤ 10⁵", "-30 ≤ nums[i] ≤ 30"],
+    starterCode: {
+      javascript: `function productExceptSelf(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(productExceptSelf([1,2,3,4])); // Expected: [24,12,8,6]
+console.log(productExceptSelf([-1,1,0,-3,3])); // Expected: [0,0,9,0,0]`,
+      python: `def productExceptSelf(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(productExceptSelf([1,2,3,4]))  # Expected: [24, 12, 8, 6]
+print(productExceptSelf([-1,1,0,-3,3]))  # Expected: [0, 0, 9, 0, 0]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int[] productExceptSelf(int[] nums) {
+        // Write your solution here
+        return new int[0];
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(productExceptSelf(new int[]{1,2,3,4})));
+        System.out.println(Arrays.toString(productExceptSelf(new int[]{-1,1,0,-3,3})));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[24,12,8,6]\n[0,0,9,0,0]",
+      python: "[24, 12, 8, 6]\n[0, 0, 9, 0, 0]",
+      java: "[24, 12, 8, 6]\n[0, 0, 9, 0, 0]",
+    },
   },
 };
