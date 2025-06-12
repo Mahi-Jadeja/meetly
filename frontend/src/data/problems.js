@@ -419,5 +419,120 @@ class Solution {
       python: "[24, 12, 8, 6]\n[0, 0, 9, 0, 0]",
       java: "[24, 12, 8, 6]\n[0, 0, 9, 0, 0]",
     },
+  },,
+
+  "three-sum": {
+    id: "three-sum",
+    title: "3Sum",
+    difficulty: "Medium",
+    category: "Array • Two Pointers • Sorting",
+    description: {
+      text: "Given an integer array nums, return all the triplets [nums[i], nums[j], nums[k]] such that i != j, i != k, and j != k, and nums[i] + nums[j] + nums[k] == 0.",
+      notes: ["Notice that the solution set must not contain duplicate triplets."],
+    },
+    examples: [
+      {
+        input: "nums = [-1,0,1,2,-1,-4]",
+        output: "[[-1,-1,2],[-1,0,1]]",
+        explanation: "The distinct triplets are [-1,0,1] and [-1,-1,2].",
+      },
+      { input: "nums = [0,1,1]", output: "[]", explanation: "The only possible triplet does not sum up to 0." },
+      { input: "nums = [0,0,0]", output: "[[0,0,0]]", explanation: "The only possible triplet sums up to 0." },
+    ],
+    constraints: ["3 ≤ nums.length ≤ 3000", "-10⁵ ≤ nums[i] ≤ 10⁵"],
+    starterCode: {
+      javascript: `function threeSum(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(threeSum([-1,0,1,2,-1,-4]))); // Expected: [[-1,-1,2],[-1,0,1]]
+console.log(JSON.stringify(threeSum([0,1,1]))); // Expected: []
+console.log(JSON.stringify(threeSum([0,0,0]))); // Expected: [[0,0,0]]`,
+      python: `def threeSum(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(threeSum([-1,0,1,2,-1,-4]))  # Expected: [[-1,-1,2],[-1,0,1]]
+print(threeSum([0,1,1]))  # Expected: []
+print(threeSum([0,0,0]))  # Expected: [[0,0,0]]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<Integer>> threeSum(int[] nums) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(threeSum(new int[]{-1,0,1,2,-1,-4}));
+        System.out.println(threeSum(new int[]{0,1,1}));
+        System.out.println(threeSum(new int[]{0,0,0}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[[-1,-1,2],[-1,0,1]]\n[]\n[[0,0,0]]',
+      python: "[[-1, -1, 2], [-1, 0, 1]]\n[]\n[[0, 0, 0]]",
+      java: "[[-1, -1, 2], [-1, 0, 1]]\n[]\n[[0, 0, 0]]",
+    },
+  },,
+
+  "container-with-most-water": {
+    id: "container-with-most-water",
+    title: "Container With Most Water",
+    difficulty: "Medium",
+    category: "Array • Two Pointers • Greedy",
+    description: {
+      text: "You are given an integer array height of length n. There are n vertical lines drawn such that the two endpoints of the ith line are (i, 0) and (i, height[i]).",
+      notes: [
+        "Find two lines that together with the x-axis form a container, such that the container contains the most water.",
+        "Return the maximum amount of water a container can store.",
+      ],
+    },
+    examples: [
+      {
+        input: "height = [1,8,6,2,5,4,8,3,7]",
+        output: "49",
+        explanation: "The max area of water the container can contain is 49.",
+      },
+      { input: "height = [1,1]", output: "1" },
+    ],
+    constraints: ["n == height.length", "2 ≤ n ≤ 10⁵", "0 ≤ height[i] ≤ 10⁴"],
+    starterCode: {
+      javascript: `function maxArea(height) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(maxArea([1,8,6,2,5,4,8,3,7])); // Expected: 49
+console.log(maxArea([1,1])); // Expected: 1`,
+      python: `def maxArea(height):
+    # Write your solution here
+    pass
+
+# Test cases
+print(maxArea([1,8,6,2,5,4,8,3,7]))  # Expected: 49
+print(maxArea([1,1]))  # Expected: 1`,
+      java: `class Solution {
+    public static int maxArea(int[] height) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(maxArea(new int[]{1,8,6,2,5,4,8,3,7}));
+        System.out.println(maxArea(new int[]{1,1}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "49\n1",
+      python: "49\n1",
+      java: "49\n1",
+    },
   },
 };
