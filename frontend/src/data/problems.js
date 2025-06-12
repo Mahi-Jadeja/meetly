@@ -199,5 +199,114 @@ print(maxProfit([7,6,4,3,1]))  # Expected: 0`,
       python: "5\n0",
       java: "5\n0",
     },
+  },,
+
+  "valid-anagram": {
+    id: "valid-anagram",
+    title: "Valid Anagram",
+    difficulty: "Easy",
+    category: "String • Hash Table • Sorting",
+    description: {
+      text: "Given two strings s and t, return true if t is an anagram of s, and false otherwise.",
+      notes: ["An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once."],
+    },
+    examples: [
+      { input: 's = "anagram", t = "nagaram"', output: "true" },
+      { input: 's = "rat", t = "car"', output: "false" },
+    ],
+    constraints: [
+      "1 ≤ s.length, t.length ≤ 5 × 10⁴",
+      "s and t consist of lowercase English letters",
+    ],
+    starterCode: {
+      javascript: `function isAnagram(s, t) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(isAnagram("anagram", "nagaram")); // Expected: true
+console.log(isAnagram("rat", "car")); // Expected: false`,
+      python: `def isAnagram(s, t):
+    # Write your solution here
+    pass
+
+# Test cases
+print(isAnagram("anagram", "nagaram"))  # Expected: True
+print(isAnagram("rat", "car"))  # Expected: False`,
+      java: `import java.util.*;
+
+class Solution {
+    public static boolean isAnagram(String s, String t) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(isAnagram("anagram", "nagaram"));
+        System.out.println(isAnagram("rat", "car"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse",
+      python: "True\nFalse",
+      java: "true\nfalse",
+    },
+  },,
+
+  "contains-duplicate": {
+    id: "contains-duplicate",
+    title: "Contains Duplicate",
+    difficulty: "Easy",
+    category: "Array • Hash Table • Sorting",
+    description: {
+      text: "Given an integer array nums, return true if any value appears at least twice in the array, and return false if every element is distinct.",
+      notes: [],
+    },
+    examples: [
+      { input: "nums = [1,2,3,1]", output: "true", explanation: "The element 1 occurs at the indices 0 and 3." },
+      { input: "nums = [1,2,3,4]", output: "false", explanation: "All elements are distinct." },
+      { input: "nums = [1,1,1,3,3,4,3,2,4,2]", output: "true" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 10⁵", "-10⁹ ≤ nums[i] ≤ 10⁹"],
+    starterCode: {
+      javascript: `function containsDuplicate(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(containsDuplicate([1,2,3,1])); // Expected: true
+console.log(containsDuplicate([1,2,3,4])); // Expected: false
+console.log(containsDuplicate([1,1,1,3,3,4,3,2,4,2])); // Expected: true`,
+      python: `def containsDuplicate(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(containsDuplicate([1,2,3,1]))  # Expected: True
+print(containsDuplicate([1,2,3,4]))  # Expected: False
+print(containsDuplicate([1,1,1,3,3,4,3,2,4,2]))  # Expected: True`,
+      java: `import java.util.*;
+
+class Solution {
+    public static boolean containsDuplicate(int[] nums) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(containsDuplicate(new int[]{1,2,3,1}));
+        System.out.println(containsDuplicate(new int[]{1,2,3,4}));
+        System.out.println(containsDuplicate(new int[]{1,1,1,3,3,4,3,2,4,2}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse\ntrue",
+      python: "True\nFalse\nTrue",
+      java: "true\nfalse\ntrue",
+    },
   },
 };
