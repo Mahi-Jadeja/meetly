@@ -772,5 +772,114 @@ print(search([-1,0,3,5,9,12], 2))  # Expected: -1`,
       python: "4\n-1",
       java: "4\n-1",
     },
+  },,
+
+  "search-in-rotated-sorted-array": {
+    id: "search-in-rotated-sorted-array",
+    title: "Search in Rotated Sorted Array",
+    difficulty: "Medium",
+    category: "Array • Binary Search",
+    description: {
+      text: "There is an integer array nums sorted in ascending order (with distinct values). Prior to being passed to your function, nums is possibly rotated at an unknown pivot index k.",
+      notes: [
+        "Given the array nums after the possible rotation and an integer target, return the index of target if it is in nums, or -1 if it is not in nums.",
+        "You must write an algorithm with O(log n) runtime complexity.",
+      ],
+    },
+    examples: [
+      { input: "nums = [4,5,6,7,0,1,2], target = 0", output: "4" },
+      { input: "nums = [4,5,6,7,0,1,2], target = 3", output: "-1" },
+      { input: "nums = [1], target = 0", output: "-1" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 5000", "-10⁴ ≤ nums[i] ≤ 10⁴", "All values of nums are unique"],
+    starterCode: {
+      javascript: `function search(nums, target) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(search([4,5,6,7,0,1,2], 0)); // Expected: 4
+console.log(search([4,5,6,7,0,1,2], 3)); // Expected: -1
+console.log(search([1], 0)); // Expected: -1`,
+      python: `def search(nums, target):
+    # Write your solution here
+    pass
+
+# Test cases
+print(search([4,5,6,7,0,1,2], 0))  # Expected: 4
+print(search([4,5,6,7,0,1,2], 3))  # Expected: -1
+print(search([1], 0))  # Expected: -1`,
+      java: `class Solution {
+    public static int search(int[] nums, int target) {
+        // Write your solution here
+        return -1;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(search(new int[]{4,5,6,7,0,1,2}, 0));
+        System.out.println(search(new int[]{4,5,6,7,0,1,2}, 3));
+        System.out.println(search(new int[]{1}, 0));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "4\n-1\n-1",
+      python: "4\n-1\n-1",
+      java: "4\n-1\n-1",
+    },
+  },,
+
+  "find-minimum-in-rotated-sorted-array": {
+    id: "find-minimum-in-rotated-sorted-array",
+    title: "Find Minimum in Rotated Sorted Array",
+    difficulty: "Medium",
+    category: "Array • Binary Search",
+    description: {
+      text: "Suppose an array of length n sorted in ascending order is rotated between 1 and n times. Given the sorted rotated array nums of unique elements, return the minimum element of this array.",
+      notes: ["You must write an algorithm that runs in O(log n) time."],
+    },
+    examples: [
+      { input: "nums = [3,4,5,1,2]", output: "1", explanation: "The original array was [1,2,3,4,5] rotated 3 times." },
+      { input: "nums = [4,5,6,7,0,1,2]", output: "0" },
+      { input: "nums = [11,13,15,17]", output: "11" },
+    ],
+    constraints: ["n == nums.length", "1 ≤ n ≤ 5000", "-5000 ≤ nums[i] ≤ 5000", "All integers in nums are unique"],
+    starterCode: {
+      javascript: `function findMin(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(findMin([3,4,5,1,2])); // Expected: 1
+console.log(findMin([4,5,6,7,0,1,2])); // Expected: 0
+console.log(findMin([11,13,15,17])); // Expected: 11`,
+      python: `def findMin(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(findMin([3,4,5,1,2]))  # Expected: 1
+print(findMin([4,5,6,7,0,1,2]))  # Expected: 0
+print(findMin([11,13,15,17]))  # Expected: 11`,
+      java: `class Solution {
+    public static int findMin(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(findMin(new int[]{3,4,5,1,2}));
+        System.out.println(findMin(new int[]{4,5,6,7,0,1,2}));
+        System.out.println(findMin(new int[]{11,13,15,17}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "1\n0\n11",
+      python: "1\n0\n11",
+      java: "1\n0\n11",
+    },
   },
 };
