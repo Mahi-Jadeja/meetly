@@ -534,5 +534,127 @@ print(maxArea([1,1]))  # Expected: 1`,
       python: "49\n1",
       java: "49\n1",
     },
+  },,
+
+  "reverse-string": {
+    id: "reverse-string",
+    title: "Reverse String",
+    difficulty: "Easy",
+    category: "String • Two Pointers",
+    description: {
+      text: "Write a function that reverses a string. The input string is given as an array of characters s.",
+      notes: ["You must do this by modifying the input array in-place with O(1) extra memory."],
+    },
+    examples: [
+      { input: 's = ["h","e","l","l","o"]', output: '["o","l","l","e","h"]' },
+      { input: 's = ["H","a","n","n","a","h"]', output: '["h","a","n","n","a","H"]' },
+    ],
+    constraints: ["1 ≤ s.length ≤ 10⁵", "s[i] is a printable ascii character"],
+    starterCode: {
+      javascript: `function reverseString(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let test1 = ["h","e","l","l","o"];
+reverseString(test1);
+console.log(test1); // Expected: ["o","l","l","e","h"]
+
+let test2 = ["H","a","n","n","a","h"];
+reverseString(test2);
+console.log(test2); // Expected: ["h","a","n","n","a","H"]`,
+      python: `def reverseString(s):
+    # Write your solution here
+    pass
+
+# Test cases
+test1 = ["h","e","l","l","o"]
+reverseString(test1)
+print(test1)  # Expected: ["o","l","l","e","h"]
+
+test2 = ["H","a","n","n","a","h"]
+reverseString(test2)
+print(test2)  # Expected: ["h","a","n","n","a","H"]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static void reverseString(char[] s) {
+        // Write your solution here
+    }
+    
+    public static void main(String[] args) {
+        char[] test1 = {'h','e','l','l','o'};
+        reverseString(test1);
+        System.out.println(Arrays.toString(test1));
+        
+        char[] test2 = {'H','a','n','n','a','h'};
+        reverseString(test2);
+        System.out.println(Arrays.toString(test2));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '["o","l","l","e","h"]\n["h","a","n","n","a","H"]',
+      python: "['o', 'l', 'l', 'e', 'h']\n['h', 'a', 'n', 'n', 'a', 'H']",
+      java: "[o, l, l, e, h]\n[h, a, n, n, a, H]",
+    },
+  },,
+
+  "valid-palindrome": {
+    id: "valid-palindrome",
+    title: "Valid Palindrome",
+    difficulty: "Easy",
+    category: "String • Two Pointers",
+    description: {
+      text: "A phrase is a palindrome if, after converting all uppercase letters into lowercase letters and removing all non-alphanumeric characters, it reads the same forward and backward.",
+      notes: ["Given a string s, return true if it is a palindrome, or false otherwise."],
+    },
+    examples: [
+      {
+        input: 's = "A man, a plan, a canal: Panama"',
+        output: "true",
+        explanation: '"amanaplanacanalpanama" is a palindrome.',
+      },
+      { input: 's = "race a car"', output: "false" },
+      { input: 's = " "', output: "true" },
+    ],
+    constraints: ["1 ≤ s.length ≤ 2 × 10⁵", "s consists only of printable ASCII characters"],
+    starterCode: {
+      javascript: `function isPalindrome(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(isPalindrome("A man, a plan, a canal: Panama")); // Expected: true
+console.log(isPalindrome("race a car")); // Expected: false
+console.log(isPalindrome(" ")); // Expected: true`,
+      python: `def isPalindrome(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(isPalindrome("A man, a plan, a canal: Panama"))  # Expected: True
+print(isPalindrome("race a car"))  # Expected: False
+print(isPalindrome(" "))  # Expected: True`,
+      java: `class Solution {
+    public static boolean isPalindrome(String s) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(isPalindrome("A man, a plan, a canal: Panama"));
+        System.out.println(isPalindrome("race a car"));
+        System.out.println(isPalindrome(" "));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse\ntrue",
+      python: "True\nFalse\nTrue",
+      java: "true\nfalse\ntrue",
+    },
   },
 };
