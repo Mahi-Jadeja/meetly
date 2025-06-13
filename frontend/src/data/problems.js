@@ -881,5 +881,106 @@ print(findMin([11,13,15,17]))  # Expected: 11`,
       python: "1\n0\n11",
       java: "1\n0\n11",
     },
+  },,
+
+  "climbing-stairs": {
+    id: "climbing-stairs",
+    title: "Climbing Stairs",
+    difficulty: "Easy",
+    category: "Dynamic Programming • Math • Memoization",
+    description: {
+      text: "You are climbing a staircase. It takes n steps to reach the top. Each time you can either climb 1 or 2 steps. In how many distinct ways can you climb to the top?",
+      notes: [],
+    },
+    examples: [
+      { input: "n = 2", output: "2", explanation: "There are two ways to climb to the top: 1 step + 1 step, or 2 steps." },
+      { input: "n = 3", output: "3", explanation: "There are three ways: 1+1+1, 1+2, and 2+1." },
+    ],
+    constraints: ["1 ≤ n ≤ 45"],
+    starterCode: {
+      javascript: `function climbStairs(n) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(climbStairs(2)); // Expected: 2
+console.log(climbStairs(3)); // Expected: 3
+console.log(climbStairs(4)); // Expected: 5`,
+      python: `def climbStairs(n):
+    # Write your solution here
+    pass
+
+# Test cases
+print(climbStairs(2))  # Expected: 2
+print(climbStairs(3))  # Expected: 3
+print(climbStairs(4))  # Expected: 5`,
+      java: `class Solution {
+    public static int climbStairs(int n) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(climbStairs(2));
+        System.out.println(climbStairs(3));
+        System.out.println(climbStairs(4));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2\n3\n5",
+      python: "2\n3\n5",
+      java: "2\n3\n5",
+    },
+  },,
+
+  "house-robber": {
+    id: "house-robber",
+    title: "House Robber",
+    difficulty: "Medium",
+    category: "Array • Dynamic Programming",
+    description: {
+      text: "You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. Adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.",
+      notes: ["Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police."],
+    },
+    examples: [
+      { input: "nums = [1,2,3,1]", output: "4", explanation: "Rob house 1 (money = 1) and then rob house 3 (money = 3). Total = 4." },
+      { input: "nums = [2,7,9,3,1]", output: "12", explanation: "Rob house 1, 3, and 5. Total = 2 + 9 + 1 = 12." },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 100", "0 ≤ nums[i] ≤ 400"],
+    starterCode: {
+      javascript: `function rob(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(rob([1,2,3,1])); // Expected: 4
+console.log(rob([2,7,9,3,1])); // Expected: 12`,
+      python: `def rob(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(rob([1,2,3,1]))  # Expected: 4
+print(rob([2,7,9,3,1]))  # Expected: 12`,
+      java: `class Solution {
+    public static int rob(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(rob(new int[]{1,2,3,1}));
+        System.out.println(rob(new int[]{2,7,9,3,1}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "4\n12",
+      python: "4\n12",
+      java: "4\n12",
+    },
   },
 };
