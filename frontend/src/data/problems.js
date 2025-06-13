@@ -656,5 +656,121 @@ print(isPalindrome(" "))  # Expected: True`,
       python: "True\nFalse\nTrue",
       java: "true\nfalse\ntrue",
     },
+  },,
+
+  "longest-substring-without-repeating-characters": {
+    id: "longest-substring-without-repeating-characters",
+    title: "Longest Substring Without Repeating Characters",
+    difficulty: "Medium",
+    category: "String • Hash Table • Sliding Window",
+    description: {
+      text: "Given a string s, find the length of the longest substring without repeating characters.",
+      notes: [],
+    },
+    examples: [
+      {
+        input: 's = "abcabcbb"',
+        output: "3",
+        explanation: 'The answer is "abc", with the length of 3.',
+      },
+      {
+        input: 's = "bbbbb"',
+        output: "1",
+        explanation: 'The answer is "b", with the length of 1.',
+      },
+      {
+        input: 's = "pwwkew"',
+        output: "3",
+        explanation: 'The answer is "wke", with the length of 3.',
+      },
+    ],
+    constraints: ["0 ≤ s.length ≤ 5 × 10⁴", "s consists of English letters, digits, symbols and spaces"],
+    starterCode: {
+      javascript: `function lengthOfLongestSubstring(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(lengthOfLongestSubstring("abcabcbb")); // Expected: 3
+console.log(lengthOfLongestSubstring("bbbbb")); // Expected: 1
+console.log(lengthOfLongestSubstring("pwwkew")); // Expected: 3`,
+      python: `def lengthOfLongestSubstring(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(lengthOfLongestSubstring("abcabcbb"))  # Expected: 3
+print(lengthOfLongestSubstring("bbbbb"))  # Expected: 1
+print(lengthOfLongestSubstring("pwwkew"))  # Expected: 3`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int lengthOfLongestSubstring(String s) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(lengthOfLongestSubstring("abcabcbb"));
+        System.out.println(lengthOfLongestSubstring("bbbbb"));
+        System.out.println(lengthOfLongestSubstring("pwwkew"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n1\n3",
+      python: "3\n1\n3",
+      java: "3\n1\n3",
+    },
+  },,
+
+  "binary-search": {
+    id: "binary-search",
+    title: "Binary Search",
+    difficulty: "Easy",
+    category: "Array • Binary Search",
+    description: {
+      text: "Given an array of integers nums which is sorted in ascending order, and an integer target, write a function to search target in nums. If target exists, then return its index. Otherwise, return -1.",
+      notes: ["You must write an algorithm with O(log n) runtime complexity."],
+    },
+    examples: [
+      { input: "nums = [-1,0,3,5,9,12], target = 9", output: "4", explanation: "9 exists in nums and its index is 4." },
+      { input: "nums = [-1,0,3,5,9,12], target = 2", output: "-1", explanation: "2 does not exist in nums so return -1." },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 10⁴", "-10⁴ < nums[i], target < 10⁴", "All integers in nums are unique", "nums is sorted in ascending order"],
+    starterCode: {
+      javascript: `function search(nums, target) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(search([-1,0,3,5,9,12], 9)); // Expected: 4
+console.log(search([-1,0,3,5,9,12], 2)); // Expected: -1`,
+      python: `def search(nums, target):
+    # Write your solution here
+    pass
+
+# Test cases
+print(search([-1,0,3,5,9,12], 9))  # Expected: 4
+print(search([-1,0,3,5,9,12], 2))  # Expected: -1`,
+      java: `class Solution {
+    public static int search(int[] nums, int target) {
+        // Write your solution here
+        return -1;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(search(new int[]{-1,0,3,5,9,12}, 9));
+        System.out.println(search(new int[]{-1,0,3,5,9,12}, 2));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "4\n-1",
+      python: "4\n-1",
+      java: "4\n-1",
+    },
   },
 };
