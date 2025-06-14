@@ -1197,5 +1197,127 @@ class Solution {
       python: "[['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']]\n[['']]\n[['a']]",
       java: "[[eat, tea, ate], [tan, nat], [bat]]\n[[]]\n[[a]]",
     },
+  },,
+
+  "top-k-frequent-elements": {
+    id: "top-k-frequent-elements",
+    title: "Top K Frequent Elements",
+    difficulty: "Medium",
+    category: "Array • Hash Table • Divide and Conquer • Sorting • Heap • Bucket Sort",
+    description: {
+      text: "Given an integer array nums and an integer k, return the k most frequent elements. You may return the answer in any order.",
+      notes: [],
+    },
+    examples: [
+      { input: "nums = [1,1,1,2,2,3], k = 2", output: "[1,2]" },
+      { input: "nums = [1], k = 1", output: "[1]" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 10⁵", "-10⁴ ≤ nums[i] ≤ 10⁴", "k is in the range [1, the number of unique elements in the array]"],
+    starterCode: {
+      javascript: `function topKFrequent(nums, k) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(topKFrequent([1,1,1,2,2,3], 2)); // Expected: [1,2]
+console.log(topKFrequent([1], 1)); // Expected: [1]`,
+      python: `def topKFrequent(nums, k):
+    # Write your solution here
+    pass
+
+# Test cases
+print(topKFrequent([1,1,1,2,2,3], 2))  # Expected: [1, 2]
+print(topKFrequent([1], 1))  # Expected: [1]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int[] topKFrequent(int[] nums, int k) {
+        // Write your solution here
+        return new int[0];
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(topKFrequent(new int[]{1,1,1,2,2,3}, 2)));
+        System.out.println(Arrays.toString(topKFrequent(new int[]{1}, 1)));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[1,2]\n[1]",
+      python: "[1, 2]\n[1]",
+      java: "[1, 2]\n[1]",
+    },
+  },,
+
+  "encode-and-decode-strings": {
+    id: "encode-and-decode-strings",
+    title: "Encode and Decode Strings",
+    difficulty: "Medium",
+    category: "Array • String • Design",
+    description: {
+      text: "Design an algorithm to encode a list of strings to a string. The encoded string is then sent over the network and is decoded back to the original list of strings.",
+      notes: ["Implement the encode and decode methods."],
+    },
+    examples: [
+      { input: 'strs = ["Hello","World"]', output: '["Hello","World"]' },
+      { input: 'strs = [""]', output: '[""]' },
+    ],
+    constraints: ["1 ≤ strs.length ≤ 200", "0 ≤ strs[i].length ≤ 200", "strs[i] contains any possible characters out of 256 valid ASCII characters"],
+    starterCode: {
+      javascript: `function encode(strs) {
+  // Write your solution here
+  
+}
+
+function decode(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let encoded = encode(["Hello","World"]);
+console.log(decode(encoded)); // Expected: ["Hello","World"]
+encoded = encode([""]);
+console.log(decode(encoded)); // Expected: [""]`,
+      python: `def encode(strs):
+    # Write your solution here
+    pass
+
+def decode(s):
+    # Write your solution here
+    pass
+
+# Test cases
+encoded = encode(["Hello","World"])
+print(decode(encoded))  # Expected: ["Hello", "World"]
+encoded = encode([""])
+print(decode(encoded))  # Expected: [""]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static String encode(List<String> strs) {
+        // Write your solution here
+        return "";
+    }
+    
+    public static List<String> decode(String s) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        String encoded = encode(Arrays.asList("Hello", "World"));
+        System.out.println(decode(encoded));
+        encoded = encode(Arrays.asList(""));
+        System.out.println(decode(encoded));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '["Hello","World"]\n[""]',
+      python: "['Hello', 'World']\n['']",
+      java: "[Hello, World]\n[]",
+    },
   },
 };
