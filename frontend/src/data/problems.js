@@ -1091,5 +1091,111 @@ print(longestCommonSubsequence("abc", "def"))  # Expected: 0`,
       python: "3\n3\n0",
       java: "3\n3\n0",
     },
+  },,
+
+  "merge-intervals": {
+    id: "merge-intervals",
+    title: "Merge Intervals",
+    difficulty: "Medium",
+    category: "Array • Sorting",
+    description: {
+      text: "Given an array of intervals where intervals[i] = [starti, endi], merge all overlapping intervals, and return an array of the non-overlapping intervals that cover all the intervals in the input.",
+      notes: [],
+    },
+    examples: [
+      { input: "intervals = [[1,3],[2,6],[8,10],[15,18]]", output: "[[1,6],[8,10],[15,18]]", explanation: "Since intervals [1,3] and [2,6] overlap, merge them into [1,6]." },
+      { input: "intervals = [[1,4],[4,5]]", output: "[[1,5]]", explanation: "Intervals [1,4] and [4,5] are considered overlapping." },
+    ],
+    constraints: ["1 ≤ intervals.length ≤ 10⁴", "intervals[i].length == 2", "0 ≤ starti ≤ endi ≤ 10⁴"],
+    starterCode: {
+      javascript: `function merge(intervals) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(merge([[1,3],[2,6],[8,10],[15,18]]))); // Expected: [[1,6],[8,10],[15,18]]
+console.log(JSON.stringify(merge([[1,4],[4,5]]))); // Expected: [[1,5]]`,
+      python: `def merge(intervals):
+    # Write your solution here
+    pass
+
+# Test cases
+print(merge([[1,3],[2,6],[8,10],[15,18]]))  # Expected: [[1,6],[8,10],[15,18]]
+print(merge([[1,4],[4,5]]))  # Expected: [[1,5]]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int[][] merge(int[][] intervals) {
+        // Write your solution here
+        return new int[0][0];
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(Arrays.deepToString(merge(new int[][]{{1,3},{2,6},{8,10},{15,18}})));
+        System.out.println(Arrays.deepToString(merge(new int[][]{{1,4},{4,5}})));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[[1,6],[8,10],[15,18]]\n[[1,5]]',
+      python: "[[1, 6], [8, 10], [15, 18]]\n[[1, 5]]",
+      java: "[[1, 6], [8, 10], [15, 18]]\n[[1, 5]]",
+    },
+  },,
+
+  "group-anagrams": {
+    id: "group-anagrams",
+    title: "Group Anagrams",
+    difficulty: "Medium",
+    category: "Array • Hash Table • String • Sorting",
+    description: {
+      text: "Given an array of strings strs, group the anagrams together. You can return the answer in any order.",
+      notes: ["An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, typically using all the original letters exactly once."],
+    },
+    examples: [
+      { input: 'strs = ["eat","tea","tan","ate","nat","bat"]', output: '[["bat"],["nat","tan"],["ate","eat","tea"]]' },
+      { input: 'strs = [""]', output: '[[""]]' },
+      { input: 'strs = ["a"]', output: '[["a"]]' },
+    ],
+    constraints: ["1 ≤ strs.length ≤ 10⁴", "0 ≤ strs[i].length ≤ 100", "strs[i] consists of lowercase English letters"],
+    starterCode: {
+      javascript: `function groupAnagrams(strs) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(groupAnagrams(["eat","tea","tan","ate","nat","bat"])));
+console.log(JSON.stringify(groupAnagrams([""])));
+console.log(JSON.stringify(groupAnagrams(["a"])));`,
+      python: `def groupAnagrams(strs):
+    # Write your solution here
+    pass
+
+# Test cases
+print(groupAnagrams(["eat","tea","tan","ate","nat","bat"]))
+print(groupAnagrams([""]))
+print(groupAnagrams(["a"]))`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<String>> groupAnagrams(String[] strs) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(groupAnagrams(new String[]{"eat","tea","tan","ate","nat","bat"}));
+        System.out.println(groupAnagrams(new String[]{""}));
+        System.out.println(groupAnagrams(new String[]{"a"}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[["eat","tea","ate"],["tan","nat"],["bat"]]\n[[""]]\n[["a"]]',
+      python: "[['eat', 'tea', 'ate'], ['tan', 'nat'], ['bat']]\n[['']]\n[['a']]",
+      java: "[[eat, tea, ate], [tan, nat], [bat]]\n[[]]\n[[a]]",
+    },
   },
 };
