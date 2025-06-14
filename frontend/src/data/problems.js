@@ -982,5 +982,114 @@ print(rob([2,7,9,3,1]))  # Expected: 12`,
       python: "4\n12",
       java: "4\n12",
     },
+  },,
+
+  "coin-change": {
+    id: "coin-change",
+    title: "Coin Change",
+    difficulty: "Medium",
+    category: "Array • Dynamic Programming • BFS",
+    description: {
+      text: "You are given an integer array coins representing coins of different denominations and an integer amount representing a total amount of money. Return the fewest number of coins that you need to make up that amount. If that amount of money cannot be made up by any combination of the coins, return -1.",
+      notes: ["You may assume that you have an infinite number of each kind of coin."],
+    },
+    examples: [
+      { input: "coins = [1,2,5], amount = 11", output: "3", explanation: "11 = 5 + 5 + 1" },
+      { input: "coins = [2], amount = 3", output: "-1" },
+      { input: "coins = [1], amount = 0", output: "0" },
+    ],
+    constraints: ["1 ≤ coins.length ≤ 12", "1 ≤ coins[i] ≤ 2³¹ - 1", "0 ≤ amount ≤ 10⁴"],
+    starterCode: {
+      javascript: `function coinChange(coins, amount) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(coinChange([1,2,5], 11)); // Expected: 3
+console.log(coinChange([2], 3)); // Expected: -1
+console.log(coinChange([1], 0)); // Expected: 0`,
+      python: `def coinChange(coins, amount):
+    # Write your solution here
+    pass
+
+# Test cases
+print(coinChange([1,2,5], 11))  # Expected: 3
+print(coinChange([2], 3))  # Expected: -1
+print(coinChange([1], 0))  # Expected: 0`,
+      java: `class Solution {
+    public static int coinChange(int[] coins, int amount) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(coinChange(new int[]{1,2,5}, 11));
+        System.out.println(coinChange(new int[]{2}, 3));
+        System.out.println(coinChange(new int[]{1}, 0));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n-1\n0",
+      python: "3\n-1\n0",
+      java: "3\n-1\n0",
+    },
+  },,
+
+  "longest-common-subsequence": {
+    id: "longest-common-subsequence",
+    title: "Longest Common Subsequence",
+    difficulty: "Medium",
+    category: "String • Dynamic Programming",
+    description: {
+      text: "Given two strings text1 and text2, return the length of their longest common subsequence. If there is no common subsequence, return 0.",
+      notes: [
+        "A subsequence of a string is a new string generated from the original string with some characters (can be none) deleted without changing the relative order of the remaining characters.",
+        "A common subsequence of two strings is a subsequence that is common to both strings.",
+      ],
+    },
+    examples: [
+      { input: 'text1 = "abcde", text2 = "ace"', output: "3", explanation: 'The longest common subsequence is "ace" and its length is 3.' },
+      { input: 'text1 = "abc", text2 = "abc"', output: "3" },
+      { input: 'text1 = "abc", text2 = "def"', output: "0" },
+    ],
+    constraints: ["1 ≤ text1.length, text2.length ≤ 1000", "text1 and text2 consist of only lowercase English characters"],
+    starterCode: {
+      javascript: `function longestCommonSubsequence(text1, text2) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(longestCommonSubsequence("abcde", "ace")); // Expected: 3
+console.log(longestCommonSubsequence("abc", "abc")); // Expected: 3
+console.log(longestCommonSubsequence("abc", "def")); // Expected: 0`,
+      python: `def longestCommonSubsequence(text1, text2):
+    # Write your solution here
+    pass
+
+# Test cases
+print(longestCommonSubsequence("abcde", "ace"))  # Expected: 3
+print(longestCommonSubsequence("abc", "abc"))  # Expected: 3
+print(longestCommonSubsequence("abc", "def"))  # Expected: 0`,
+      java: `class Solution {
+    public static int longestCommonSubsequence(String text1, String text2) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(longestCommonSubsequence("abcde", "ace"));
+        System.out.println(longestCommonSubsequence("abc", "abc"));
+        System.out.println(longestCommonSubsequence("abc", "def"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n3\n0",
+      python: "3\n3\n0",
+      java: "3\n3\n0",
+    },
   },
 };
