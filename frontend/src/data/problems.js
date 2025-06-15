@@ -1319,5 +1319,105 @@ class Solution {
       python: "['Hello', 'World']\n['']",
       java: "[Hello, World]\n[]",
     },
+  },,
+
+  "longest-consecutive-sequence": {
+    id: "longest-consecutive-sequence",
+    title: "Longest Consecutive Sequence",
+    difficulty: "Medium",
+    category: "Array • Hash Table • Union Find",
+    description: {
+      text: "Given an unsorted array of integers nums, return the length of the longest consecutive elements sequence.",
+      notes: ["You must write an algorithm that runs in O(n) time."],
+    },
+    examples: [
+      { input: "nums = [100,4,200,1,3,2]", output: "4", explanation: "The longest consecutive elements sequence is [1, 2, 3, 4]. Therefore its length is 4." },
+      { input: "nums = [0,3,7,2,5,8,4,6,0,1]", output: "9" },
+    ],
+    constraints: ["0 ≤ nums.length ≤ 10⁵", "-10⁹ ≤ nums[i] ≤ 10⁹"],
+    starterCode: {
+      javascript: `function longestConsecutive(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(longestConsecutive([100,4,200,1,3,2])); // Expected: 4
+console.log(longestConsecutive([0,3,7,2,5,8,4,6,0,1])); // Expected: 9`,
+      python: `def longestConsecutive(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(longestConsecutive([100,4,200,1,3,2]))  # Expected: 4
+print(longestConsecutive([0,3,7,2,5,8,4,6,0,1]))  # Expected: 9`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int longestConsecutive(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(longestConsecutive(new int[]{100,4,200,1,3,2}));
+        System.out.println(longestConsecutive(new int[]{0,3,7,2,5,8,4,6,0,1}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "4\n9",
+      python: "4\n9",
+      java: "4\n9",
+    },
+  },,
+
+  "trapping-rain-water": {
+    id: "trapping-rain-water",
+    title: "Trapping Rain Water",
+    difficulty: "Hard",
+    category: "Array • Two Pointers • Dynamic Programming • Stack • Monotonic Stack",
+    description: {
+      text: "Given n non-negative integers representing an elevation map where the width of each bar is 1, compute how much water it can trap after raining.",
+      notes: [],
+    },
+    examples: [
+      { input: "height = [0,1,0,2,1,0,1,3,2,1,2,1]", output: "6", explanation: "The above elevation map is represented by array [0,1,0,2,1,0,1,3,2,1,2,1]. In this case, 6 units of rain water are being trapped." },
+      { input: "height = [4,2,0,3,2,5]", output: "9" },
+    ],
+    constraints: ["n == height.length", "1 ≤ n ≤ 2 × 10⁴", "0 ≤ height[i] ≤ 10⁵"],
+    starterCode: {
+      javascript: `function trap(height) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(trap([0,1,0,2,1,0,1,3,2,1,2,1])); // Expected: 6
+console.log(trap([4,2,0,3,2,5])); // Expected: 9`,
+      python: `def trap(height):
+    # Write your solution here
+    pass
+
+# Test cases
+print(trap([0,1,0,2,1,0,1,3,2,1,2,1]))  # Expected: 6
+print(trap([4,2,0,3,2,5]))  # Expected: 9`,
+      java: `class Solution {
+    public static int trap(int[] height) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(trap(new int[]{0,1,0,2,1,0,1,3,2,1,2,1}));
+        System.out.println(trap(new int[]{4,2,0,3,2,5}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "6\n9",
+      python: "6\n9",
+      java: "6\n9",
+    },
   },
 };
