@@ -1665,5 +1665,219 @@ class Solution {
       python: "[1, 1, 2, 3, 4, 4]\n[]\n[0]",
       java: "[1,1,2,3,4,4]\n[]\n[0]",
     },
+  },,
+
+  "linked-list-cycle": {
+    id: "linked-list-cycle",
+    title: "Linked List Cycle",
+    difficulty: "Easy",
+    category: "Linked List • Two Pointers • Hash Table",
+    description: {
+      text: "Given head, the head of a linked list, determine if the linked list has a cycle in it. There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer.",
+      notes: ["Return true if there is a cycle in the linked list. Otherwise, return false."],
+    },
+    examples: [
+      { input: "head = [3,2,0,-4], pos = 1", output: "true", explanation: "There is a cycle, where the tail connects to the 1st node (0-indexed)." },
+      { input: "head = [1,2], pos = 0", output: "true" },
+      { input: "head = [1], pos = -1", output: "false" },
+    ],
+    constraints: ["The number of nodes in the list is in the range [0, 10⁴]", "-10⁵ ≤ Node.val ≤ 10⁵", "pos is -1 or a valid index in the linked-list"],
+    starterCode: {
+      javascript: `class ListNode {
+  constructor(val = 0, next = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+function hasCycle(head) {
+  // Write your solution here
+  // Hint: Use Floyd's Cycle Detection (slow and fast pointers)
+  
+}
+
+// Test with simple cases (cycle detection)
+console.log(hasCycle(null)); // Expected: false
+
+// Create a cycle for testing
+let node1 = new ListNode(3);
+let node2 = new ListNode(2);
+let node3 = new ListNode(0);
+let node4 = new ListNode(-4);
+node1.next = node2;
+node2.next = node3;
+node3.next = node4;
+node4.next = node2; // Creates cycle
+console.log(hasCycle(node1)); // Expected: true
+
+let single = new ListNode(1);
+console.log(hasCycle(single)); // Expected: false`,
+      python: `class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def hasCycle(head):
+    # Write your solution here
+    # Hint: Use Floyd's Cycle Detection (slow and fast pointers)
+    pass
+
+# Test cases
+print(hasCycle(None))  # Expected: False
+
+# Create a cycle for testing
+node1 = ListNode(3)
+node2 = ListNode(2)
+node3 = ListNode(0)
+node4 = ListNode(-4)
+node1.next = node2
+node2.next = node3
+node3.next = node4
+node4.next = node2  # Creates cycle
+print(hasCycle(node1))  # Expected: True
+
+single = ListNode(1)
+print(hasCycle(single))  # Expected: False`,
+      java: `class ListNode {
+    int val;
+    ListNode next;
+    ListNode(int val) { this.val = val; }
+}
+
+class Solution {
+    public static boolean hasCycle(ListNode head) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(hasCycle(null));
+        
+        ListNode node1 = new ListNode(3);
+        ListNode node2 = new ListNode(2);
+        node1.next = node2;
+        node2.next = node1;
+        System.out.println(hasCycle(node1));
+        
+        ListNode single = new ListNode(1);
+        System.out.println(hasCycle(single));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "false\ntrue\nfalse",
+      python: "False\nTrue\nFalse",
+      java: "false\ntrue\nfalse",
+    },
+  },,
+
+  "reorder-list": {
+    id: "reorder-list",
+    title: "Reorder List",
+    difficulty: "Medium",
+    category: "Linked List • Two Pointers • Stack • Recursion",
+    description: {
+      text: "You are given the head of a singly linked-list. The list can be represented as: L0 → L1 → … → Ln - 1 → Ln. Reorder the list to be on the following form: L0 → Ln → L1 → Ln - 1 → L2 → Ln - 2 → …",
+      notes: ["You may not modify the values in the list's nodes. Only nodes themselves may be changed."],
+    },
+    examples: [
+      { input: "head = [1,2,3,4]", output: "[1,4,2,3]" },
+      { input: "head = [1,2,3,4,5]", output: "[1,5,2,4,3]" },
+    ],
+    constraints: ["The number of nodes in the list is in the range [1, 5 × 10⁴]", "1 ≤ Node.val ≤ 1000"],
+    starterCode: {
+      javascript: `class ListNode {
+  constructor(val = 0, next = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+function reorderList(head) {
+  // Write your solution here
+  // Hint: Find middle, reverse second half, merge alternately
+  
+}
+
+function createList(arr) {
+  if (!arr.length) return null;
+  let head = new ListNode(arr[0]);
+  let current = head;
+  for (let i = 1; i < arr.length; i++) {
+    current.next = new ListNode(arr[i]);
+    current = current.next;
+  }
+  return head;
+}
+
+function listToArray(head) {
+  const result = [];
+  while (head) {
+    result.push(head.val);
+    head = head.next;
+  }
+  return result;
+}
+
+// Test cases
+let list1 = createList([1,2,3,4]);
+reorderList(list1);
+console.log(listToArray(list1)); // Expected: [1,4,2,3]
+
+let list2 = createList([1,2,3,4,5]);
+reorderList(list2);
+console.log(listToArray(list2)); // Expected: [1,5,2,4,3]`,
+      python: `class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def reorderList(head):
+    # Write your solution here
+    pass
+
+def create_list(arr):
+    if not arr:
+        return None
+    head = ListNode(arr[0])
+    current = head
+    for val in arr[1:]:
+        current.next = ListNode(val)
+        current = current.next
+    return head
+
+def list_to_array(head):
+    result = []
+    while head:
+        result.append(head.val)
+        head = head.next
+    return result
+
+# Test cases
+list1 = create_list([1,2,3,4])
+reorderList(list1)
+print(list_to_array(list1))  # Expected: [1,4,2,3]
+
+list2 = create_list([1,2,3,4,5])
+reorderList(list2)
+print(list_to_array(list2))  # Expected: [1,5,2,4,3]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static void reorderList(ListNode head) {
+        // Write your solution here
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("[1,4,2,3]");
+        System.out.println("[1,5,2,4,3]");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[1,4,2,3]\n[1,5,2,4,3]",
+      python: "[1, 4, 2, 3]\n[1, 5, 2, 4, 3]",
+      java: "[1,4,2,3]\n[1,5,2,4,3]",
+    },
   },
 };
