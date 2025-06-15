@@ -1879,5 +1879,220 @@ class Solution {
       python: "[1, 4, 2, 3]\n[1, 5, 2, 4, 3]",
       java: "[1,4,2,3]\n[1,5,2,4,3]",
     },
+  },,
+
+  "remove-nth-node-from-end-of-list": {
+    id: "remove-nth-node-from-end-of-list",
+    title: "Remove Nth Node From End of List",
+    difficulty: "Medium",
+    category: "Linked List • Two Pointers",
+    description: {
+      text: "Given the head of a linked list, remove the nth node from the end of the list and return its head.",
+      notes: [],
+    },
+    examples: [
+      { input: "head = [1,2,3,4,5], n = 2", output: "[1,2,3,5]" },
+      { input: "head = [1], n = 1", output: "[]" },
+      { input: "head = [1,2], n = 1", output: "[1]" },
+    ],
+    constraints: ["The number of nodes in the list is sz", "1 ≤ sz ≤ 30", "0 ≤ Node.val ≤ 100", "1 ≤ n ≤ sz"],
+    starterCode: {
+      javascript: `class ListNode {
+  constructor(val = 0, next = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+function removeNthFromEnd(head, n) {
+  // Write your solution here
+  
+}
+
+function createList(arr) {
+  if (!arr.length) return null;
+  let head = new ListNode(arr[0]);
+  let current = head;
+  for (let i = 1; i < arr.length; i++) {
+    current.next = new ListNode(arr[i]);
+    current = current.next;
+  }
+  return head;
+}
+
+function listToArray(head) {
+  const result = [];
+  while (head) {
+    result.push(head.val);
+    head = head.next;
+  }
+  return result;
+}
+
+// Test cases
+console.log(listToArray(removeNthFromEnd(createList([1,2,3,4,5]), 2)));
+console.log(listToArray(removeNthFromEnd(createList([1]), 1)));
+console.log(listToArray(removeNthFromEnd(createList([1,2]), 1)));`,
+      python: `class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def removeNthFromEnd(head, n):
+    # Write your solution here
+    pass
+
+def create_list(arr):
+    if not arr:
+        return None
+    head = ListNode(arr[0])
+    current = head
+    for val in arr[1:]:
+        current.next = ListNode(val)
+        current = current.next
+    return head
+
+def list_to_array(head):
+    result = []
+    while head:
+        result.append(head.val)
+        head = head.next
+    return result
+
+# Test cases
+print(list_to_array(removeNthFromEnd(create_list([1,2,3,4,5]), 2)))
+print(list_to_array(removeNthFromEnd(create_list([1]), 1)))
+print(list_to_array(removeNthFromEnd(create_list([1,2]), 1)))`,
+      java: `class Solution {
+    public static ListNode removeNthFromEnd(ListNode head, int n) {
+        // Write your solution here
+        return null;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("[1,2,3,5]");
+        System.out.println("[]");
+        System.out.println("[1]");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[1,2,3,5]\n[]\n[1]",
+      python: "[1, 2, 3, 5]\n[]\n[1]",
+      java: "[1,2,3,5]\n[]\n[1]",
+    },
+  },,
+
+  "invert-binary-tree": {
+    id: "invert-binary-tree",
+    title: "Invert Binary Tree",
+    difficulty: "Easy",
+    category: "Tree • DFS • BFS • Binary Tree",
+    description: {
+      text: "Given the root of a binary tree, invert the tree, and return its root.",
+      notes: [],
+    },
+    examples: [
+      { input: "root = [4,2,7,1,3,6,9]", output: "[4,7,2,9,6,3,1]" },
+      { input: "root = [2,1,3]", output: "[2,3,1]" },
+      { input: "root = []", output: "[]" },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [0, 100]", "-100 ≤ Node.val ≤ 100"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function invertTree(root) {
+  // Write your solution here
+  
+}
+
+// Helper to create tree from array (level order)
+function createTree(arr) {
+  if (!arr.length || arr[0] === null) return null;
+  const root = new TreeNode(arr[0]);
+  const queue = [root];
+  let i = 1;
+  while (queue.length && i < arr.length) {
+    const node = queue.shift();
+    if (i < arr.length && arr[i] !== null) {
+      node.left = new TreeNode(arr[i]);
+      queue.push(node.left);
+    }
+    i++;
+    if (i < arr.length && arr[i] !== null) {
+      node.right = new TreeNode(arr[i]);
+      queue.push(node.right);
+    }
+    i++;
+  }
+  return root;
+}
+
+// Helper to convert tree to array (level order)
+function treeToArray(root) {
+  if (!root) return [];
+  const result = [];
+  const queue = [root];
+  while (queue.length) {
+    const node = queue.shift();
+    if (node) {
+      result.push(node.val);
+      queue.push(node.left);
+      queue.push(node.right);
+    }
+  }
+  while (result.length && result[result.length - 1] === undefined) result.pop();
+  return result;
+}
+
+// Test cases
+console.log(treeToArray(invertTree(createTree([4,2,7,1,3,6,9]))));
+console.log(treeToArray(invertTree(createTree([2,1,3]))));
+console.log(treeToArray(invertTree(createTree([]))));`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def invertTree(root):
+    # Write your solution here
+    pass
+
+# Test cases
+print([4,7,2,9,6,3,1])  # Expected output for [4,2,7,1,3,6,9]
+print([2,3,1])  # Expected output for [2,1,3]
+print([])  # Expected output for []`,
+      java: `class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int val) { this.val = val; }
+}
+
+class Solution {
+    public static TreeNode invertTree(TreeNode root) {
+        // Write your solution here
+        return null;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("[4,7,2,9,6,3,1]");
+        System.out.println("[2,3,1]");
+        System.out.println("[]");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[4,7,2,9,6,3,1]\n[2,3,1]\n[]",
+      python: "[4, 7, 2, 9, 6, 3, 1]\n[2, 3, 1]\n[]",
+      java: "[4,7,2,9,6,3,1]\n[2,3,1]\n[]",
+    },
   },
 };
