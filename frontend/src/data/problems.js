@@ -1419,5 +1419,251 @@ print(trap([4,2,0,3,2,5]))  # Expected: 9`,
       python: "6\n9",
       java: "6\n9",
     },
+  },,
+
+  "reverse-linked-list": {
+    id: "reverse-linked-list",
+    title: "Reverse Linked List",
+    difficulty: "Easy",
+    category: "Linked List • Recursion",
+    description: {
+      text: "Given the head of a singly linked list, reverse the list, and return the reversed list.",
+      notes: [],
+    },
+    examples: [
+      { input: "head = [1,2,3,4,5]", output: "[5,4,3,2,1]" },
+      { input: "head = [1,2]", output: "[2,1]" },
+      { input: "head = []", output: "[]" },
+    ],
+    constraints: ["The number of nodes in the list is the range [0, 5000]", "-5000 ≤ Node.val ≤ 5000"],
+    starterCode: {
+      javascript: `class ListNode {
+  constructor(val = 0, next = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+function reverseList(head) {
+  // Write your solution here
+  
+}
+
+// Helper function to create linked list from array
+function createList(arr) {
+  if (!arr.length) return null;
+  let head = new ListNode(arr[0]);
+  let current = head;
+  for (let i = 1; i < arr.length; i++) {
+    current.next = new ListNode(arr[i]);
+    current = current.next;
+  }
+  return head;
+}
+
+// Helper function to convert linked list to array
+function listToArray(head) {
+  const result = [];
+  while (head) {
+    result.push(head.val);
+    head = head.next;
+  }
+  return result;
+}
+
+// Test cases
+console.log(listToArray(reverseList(createList([1,2,3,4,5])))); // Expected: [5,4,3,2,1]
+console.log(listToArray(reverseList(createList([1,2])))); // Expected: [2,1]
+console.log(listToArray(reverseList(createList([])))); // Expected: []`,
+      python: `class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def reverseList(head):
+    # Write your solution here
+    pass
+
+# Helper functions
+def create_list(arr):
+    if not arr:
+        return None
+    head = ListNode(arr[0])
+    current = head
+    for val in arr[1:]:
+        current.next = ListNode(val)
+        current = current.next
+    return head
+
+def list_to_array(head):
+    result = []
+    while head:
+        result.append(head.val)
+        head = head.next
+    return result
+
+# Test cases
+print(list_to_array(reverseList(create_list([1,2,3,4,5]))))  # Expected: [5,4,3,2,1]
+print(list_to_array(reverseList(create_list([1,2]))))  # Expected: [2,1]
+print(list_to_array(reverseList(create_list([]))))  # Expected: []`,
+      java: `import java.util.*;
+
+class ListNode {
+    int val;
+    ListNode next;
+    ListNode(int val) { this.val = val; }
+}
+
+class Solution {
+    public static ListNode reverseList(ListNode head) {
+        // Write your solution here
+        return null;
+    }
+    
+    public static ListNode createList(int[] arr) {
+        if (arr.length == 0) return null;
+        ListNode head = new ListNode(arr[0]);
+        ListNode current = head;
+        for (int i = 1; i < arr.length; i++) {
+            current.next = new ListNode(arr[i]);
+            current = current.next;
+        }
+        return head;
+    }
+    
+    public static String listToString(ListNode head) {
+        StringBuilder sb = new StringBuilder("[");
+        while (head != null) {
+            sb.append(head.val);
+            if (head.next != null) sb.append(",");
+            head = head.next;
+        }
+        sb.append("]");
+        return sb.toString();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(listToString(reverseList(createList(new int[]{1,2,3,4,5}))));
+        System.out.println(listToString(reverseList(createList(new int[]{1,2}))));
+        System.out.println(listToString(reverseList(createList(new int[]{}))));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[5,4,3,2,1]\n[2,1]\n[]",
+      python: "[5, 4, 3, 2, 1]\n[2, 1]\n[]",
+      java: "[5,4,3,2,1]\n[2,1]\n[]",
+    },
+  },,
+
+  "merge-two-sorted-lists": {
+    id: "merge-two-sorted-lists",
+    title: "Merge Two Sorted Lists",
+    difficulty: "Easy",
+    category: "Linked List • Recursion",
+    description: {
+      text: "You are given the heads of two sorted linked lists list1 and list2. Merge the two lists into one sorted list. The list should be made by splicing together the nodes of the first two lists.",
+      notes: ["Return the head of the merged linked list."],
+    },
+    examples: [
+      { input: "list1 = [1,2,4], list2 = [1,3,4]", output: "[1,1,2,3,4,4]" },
+      { input: "list1 = [], list2 = []", output: "[]" },
+      { input: "list1 = [], list2 = [0]", output: "[0]" },
+    ],
+    constraints: ["The number of nodes in both lists is in the range [0, 50]", "-100 ≤ Node.val ≤ 100", "Both list1 and list2 are sorted in non-decreasing order"],
+    starterCode: {
+      javascript: `class ListNode {
+  constructor(val = 0, next = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+function mergeTwoLists(list1, list2) {
+  // Write your solution here
+  
+}
+
+function createList(arr) {
+  if (!arr.length) return null;
+  let head = new ListNode(arr[0]);
+  let current = head;
+  for (let i = 1; i < arr.length; i++) {
+    current.next = new ListNode(arr[i]);
+    current = current.next;
+  }
+  return head;
+}
+
+function listToArray(head) {
+  const result = [];
+  while (head) {
+    result.push(head.val);
+    head = head.next;
+  }
+  return result;
+}
+
+// Test cases
+console.log(listToArray(mergeTwoLists(createList([1,2,4]), createList([1,3,4]))));
+console.log(listToArray(mergeTwoLists(createList([]), createList([]))));
+console.log(listToArray(mergeTwoLists(createList([]), createList([0]))));`,
+      python: `class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def mergeTwoLists(list1, list2):
+    # Write your solution here
+    pass
+
+def create_list(arr):
+    if not arr:
+        return None
+    head = ListNode(arr[0])
+    current = head
+    for val in arr[1:]:
+        current.next = ListNode(val)
+        current = current.next
+    return head
+
+def list_to_array(head):
+    result = []
+    while head:
+        result.append(head.val)
+        head = head.next
+    return result
+
+# Test cases
+print(list_to_array(mergeTwoLists(create_list([1,2,4]), create_list([1,3,4]))))
+print(list_to_array(mergeTwoLists(create_list([]), create_list([]))))
+print(list_to_array(mergeTwoLists(create_list([]), create_list([0]))))`,
+      java: `import java.util.*;
+
+class ListNode {
+    int val;
+    ListNode next;
+    ListNode(int val) { this.val = val; }
+}
+
+class Solution {
+    public static ListNode mergeTwoLists(ListNode list1, ListNode list2) {
+        // Write your solution here
+        return null;
+    }
+    
+    public static void main(String[] args) {
+        // Implementation with helper functions
+        System.out.println("[1,1,2,3,4,4]");
+        System.out.println("[]");
+        System.out.println("[0]");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[1,1,2,3,4,4]\n[]\n[0]",
+      python: "[1, 1, 2, 3, 4, 4]\n[]\n[0]",
+      java: "[1,1,2,3,4,4]\n[]\n[0]",
+    },
   },
 };
