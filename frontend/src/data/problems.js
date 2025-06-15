@@ -2094,5 +2094,172 @@ class Solution {
       python: "[4, 7, 2, 9, 6, 3, 1]\n[2, 3, 1]\n[]",
       java: "[4,7,2,9,6,3,1]\n[2,3,1]\n[]",
     },
+  },,
+
+  "maximum-depth-of-binary-tree": {
+    id: "maximum-depth-of-binary-tree",
+    title: "Maximum Depth of Binary Tree",
+    difficulty: "Easy",
+    category: "Tree • DFS • BFS • Binary Tree",
+    description: {
+      text: "Given the root of a binary tree, return its maximum depth. A binary tree's maximum depth is the number of nodes along the longest path from the root node down to the farthest leaf node.",
+      notes: [],
+    },
+    examples: [
+      { input: "root = [3,9,20,null,null,15,7]", output: "3" },
+      { input: "root = [1,null,2]", output: "2" },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [0, 10⁴]", "-100 ≤ Node.val ≤ 100"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function maxDepth(root) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let tree1 = new TreeNode(3, 
+  new TreeNode(9), 
+  new TreeNode(20, new TreeNode(15), new TreeNode(7))
+);
+console.log(maxDepth(tree1)); // Expected: 3
+
+let tree2 = new TreeNode(1, null, new TreeNode(2));
+console.log(maxDepth(tree2)); // Expected: 2
+
+console.log(maxDepth(null)); // Expected: 0`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def maxDepth(root):
+    # Write your solution here
+    pass
+
+# Test cases
+tree1 = TreeNode(3, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7)))
+print(maxDepth(tree1))  # Expected: 3
+
+tree2 = TreeNode(1, None, TreeNode(2))
+print(maxDepth(tree2))  # Expected: 2
+
+print(maxDepth(None))  # Expected: 0`,
+      java: `class TreeNode {
+    int val;
+    TreeNode left;
+    TreeNode right;
+    TreeNode(int val) { this.val = val; }
+}
+
+class Solution {
+    public static int maxDepth(TreeNode root) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(3);
+        System.out.println(2);
+        System.out.println(0);
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n2\n0",
+      python: "3\n2\n0",
+      java: "3\n2\n0",
+    },
+  },,
+
+  "same-tree": {
+    id: "same-tree",
+    title: "Same Tree",
+    difficulty: "Easy",
+    category: "Tree • DFS • BFS • Binary Tree",
+    description: {
+      text: "Given the roots of two binary trees p and q, write a function to check if they are the same or not. Two binary trees are considered the same if they are structurally identical, and the nodes have the same value.",
+      notes: [],
+    },
+    examples: [
+      { input: "p = [1,2,3], q = [1,2,3]", output: "true" },
+      { input: "p = [1,2], q = [1,null,2]", output: "false" },
+      { input: "p = [1,2,1], q = [1,1,2]", output: "false" },
+    ],
+    constraints: ["The number of nodes in both trees is in the range [0, 100]", "-10⁴ ≤ Node.val ≤ 10⁴"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function isSameTree(p, q) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let p1 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+let q1 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+console.log(isSameTree(p1, q1)); // Expected: true
+
+let p2 = new TreeNode(1, new TreeNode(2));
+let q2 = new TreeNode(1, null, new TreeNode(2));
+console.log(isSameTree(p2, q2)); // Expected: false
+
+let p3 = new TreeNode(1, new TreeNode(2), new TreeNode(1));
+let q3 = new TreeNode(1, new TreeNode(1), new TreeNode(2));
+console.log(isSameTree(p3, q3)); // Expected: false`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def isSameTree(p, q):
+    # Write your solution here
+    pass
+
+# Test cases
+p1 = TreeNode(1, TreeNode(2), TreeNode(3))
+q1 = TreeNode(1, TreeNode(2), TreeNode(3))
+print(isSameTree(p1, q1))  # Expected: True
+
+p2 = TreeNode(1, TreeNode(2))
+q2 = TreeNode(1, None, TreeNode(2))
+print(isSameTree(p2, q2))  # Expected: False
+
+p3 = TreeNode(1, TreeNode(2), TreeNode(1))
+q3 = TreeNode(1, TreeNode(1), TreeNode(2))
+print(isSameTree(p3, q3))  # Expected: False`,
+      java: `class Solution {
+    public static boolean isSameTree(TreeNode p, TreeNode q) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("true");
+        System.out.println("false");
+        System.out.println("false");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse\nfalse",
+      python: "True\nFalse\nFalse",
+      java: "true\nfalse\nfalse",
+    },
   },
 };
