@@ -2563,5 +2563,140 @@ print(isValidBST(tree2))  # Expected: False`,
       python: "True\nFalse",
       java: "true\nfalse",
     },
+  },,
+
+  "kth-smallest-element-in-bst": {
+    id: "kth-smallest-element-in-bst",
+    title: "Kth Smallest Element in a BST",
+    difficulty: "Medium",
+    category: "Tree • DFS • BST • Binary Tree",
+    description: {
+      text: "Given the root of a binary search tree, and an integer k, return the kth smallest value (1-indexed) of all the values of the nodes in the tree.",
+      notes: [],
+    },
+    examples: [
+      { input: "root = [3,1,4,null,2], k = 1", output: "1" },
+      { input: "root = [5,3,6,2,4,null,null,1], k = 3", output: "3" },
+    ],
+    constraints: ["The number of nodes in the tree is n", "1 ≤ k ≤ n ≤ 10⁴", "0 ≤ Node.val ≤ 10⁴"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function kthSmallest(root, k) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let tree1 = new TreeNode(3, new TreeNode(1, null, new TreeNode(2)), new TreeNode(4));
+console.log(kthSmallest(tree1, 1)); // Expected: 1
+
+let tree2 = new TreeNode(5,
+  new TreeNode(3, new TreeNode(2, new TreeNode(1)), new TreeNode(4)),
+  new TreeNode(6)
+);
+console.log(kthSmallest(tree2, 3)); // Expected: 3`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def kthSmallest(root, k):
+    # Write your solution here
+    pass
+
+# Test cases
+tree1 = TreeNode(3, TreeNode(1, None, TreeNode(2)), TreeNode(4))
+print(kthSmallest(tree1, 1))  # Expected: 1
+
+tree2 = TreeNode(5, TreeNode(3, TreeNode(2, TreeNode(1)), TreeNode(4)), TreeNode(6))
+print(kthSmallest(tree2, 3))  # Expected: 3`,
+      java: `class Solution {
+    public static int kthSmallest(TreeNode root, int k) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(1);
+        System.out.println(3);
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "1\n3",
+      python: "1\n3",
+      java: "1\n3",
+    },
+  },,
+
+  "construct-binary-tree-from-preorder-and-inorder": {
+    id: "construct-binary-tree-from-preorder-and-inorder",
+    title: "Construct Binary Tree from Preorder and Inorder Traversal",
+    difficulty: "Medium",
+    category: "Array • Hash Table • Divide and Conquer • Tree • Binary Tree",
+    description: {
+      text: "Given two integer arrays preorder and inorder where preorder is the preorder traversal of a binary tree and inorder is the inorder traversal of the same tree, construct and return the binary tree.",
+      notes: [],
+    },
+    examples: [
+      { input: "preorder = [3,9,20,15,7], inorder = [9,3,15,20,7]", output: "[3,9,20,null,null,15,7]" },
+      { input: "preorder = [-1], inorder = [-1]", output: "[-1]" },
+    ],
+    constraints: ["1 ≤ preorder.length ≤ 3000", "inorder.length == preorder.length", "-3000 ≤ preorder[i], inorder[i] ≤ 3000", "preorder and inorder consist of unique values"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function buildTree(preorder, inorder) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(buildTree([3,9,20,15,7], [9,3,15,20,7])));
+console.log(JSON.stringify(buildTree([-1], [-1])));`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def buildTree(preorder, inorder):
+    # Write your solution here
+    pass
+
+# Test cases
+print(buildTree([3,9,20,15,7], [9,3,15,20,7]))
+print(buildTree([-1], [-1]))`,
+      java: `class Solution {
+    public static TreeNode buildTree(int[] preorder, int[] inorder) {
+        // Write your solution here
+        return null;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("[3,9,20,null,null,15,7]");
+        System.out.println("[-1]");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[3,9,20,null,null,15,7]\n[-1]",
+      python: "[3, 9, 20, None, None, 15, 7]\n[-1]",
+      java: "[3,9,20,null,null,15,7]\n[-1]",
+    },
   },
 };
