@@ -2698,5 +2698,151 @@ print(buildTree([-1], [-1]))`,
       python: "[3, 9, 20, None, None, 15, 7]\n[-1]",
       java: "[3,9,20,null,null,15,7]\n[-1]",
     },
+  },,
+
+  "binary-tree-maximum-path-sum": {
+    id: "binary-tree-maximum-path-sum",
+    title: "Binary Tree Maximum Path Sum",
+    difficulty: "Hard",
+    category: "Tree • DFS • Dynamic Programming • Binary Tree",
+    description: {
+      text: "A path in a binary tree is a sequence of nodes where each pair of adjacent nodes in the sequence has an edge connecting them. A node can only appear in the sequence at most once. Note that the path does not need to pass through the root.",
+      notes: ["The path sum of a path is the sum of the node's values in the path.", "Given the root of a binary tree, return the maximum path sum of any non-empty path."],
+    },
+    examples: [
+      { input: "root = [1,2,3]", output: "6", explanation: "The optimal path is 2 -> 1 -> 3 with a path sum of 2 + 1 + 3 = 6." },
+      { input: "root = [-10,9,20,null,null,15,7]", output: "42", explanation: "The optimal path is 15 -> 20 -> 7 with a path sum of 15 + 20 + 7 = 42." },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [1, 3 × 10⁴]", "-1000 ≤ Node.val ≤ 1000"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function maxPathSum(root) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let tree1 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+console.log(maxPathSum(tree1)); // Expected: 6
+
+let tree2 = new TreeNode(-10, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+console.log(maxPathSum(tree2)); // Expected: 42`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def maxPathSum(root):
+    # Write your solution here
+    pass
+
+# Test cases
+tree1 = TreeNode(1, TreeNode(2), TreeNode(3))
+print(maxPathSum(tree1))  # Expected: 6
+
+tree2 = TreeNode(-10, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7)))
+print(maxPathSum(tree2))  # Expected: 42`,
+      java: `class Solution {
+    public static int maxPathSum(TreeNode root) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(6);
+        System.out.println(42);
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "6\n42",
+      python: "6\n42",
+      java: "6\n42",
+    },
+  },,
+
+  "number-of-islands": {
+    id: "number-of-islands",
+    title: "Number of Islands",
+    difficulty: "Medium",
+    category: "Array • DFS • BFS • Union Find • Matrix",
+    description: {
+      text: "Given an m x n 2D binary grid grid which represents a map of '1's (land) and '0's (water), return the number of islands.",
+      notes: ["An island is surrounded by water and is formed by connecting adjacent lands horizontally or vertically. You may assume all four edges of the grid are all surrounded by water."],
+    },
+    examples: [
+      {
+        input: 'grid = [["1","1","1","1","0"],["1","1","0","1","0"],["1","1","0","0","0"],["0","0","0","0","0"]]',
+        output: "1",
+      },
+      {
+        input: 'grid = [["1","1","0","0","0"],["1","1","0","0","0"],["0","0","1","0","0"],["0","0","0","1","1"]]',
+        output: "3",
+      },
+    ],
+    constraints: ["m == grid.length", "n == grid[i].length", "1 ≤ m, n ≤ 300", "grid[i][j] is '0' or '1'"],
+    starterCode: {
+      javascript: `function numIslands(grid) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(numIslands([
+  ["1","1","1","1","0"],
+  ["1","1","0","1","0"],
+  ["1","1","0","0","0"],
+  ["0","0","0","0","0"]
+])); // Expected: 1
+
+console.log(numIslands([
+  ["1","1","0","0","0"],
+  ["1","1","0","0","0"],
+  ["0","0","1","0","0"],
+  ["0","0","0","1","1"]
+])); // Expected: 3`,
+      python: `def numIslands(grid):
+    # Write your solution here
+    pass
+
+# Test cases
+print(numIslands([
+    ["1","1","1","1","0"],
+    ["1","1","0","1","0"],
+    ["1","1","0","0","0"],
+    ["0","0","0","0","0"]
+]))  # Expected: 1
+
+print(numIslands([
+    ["1","1","0","0","0"],
+    ["1","1","0","0","0"],
+    ["0","0","1","0","0"],
+    ["0","0","0","1","1"]
+]))  # Expected: 3`,
+      java: `class Solution {
+    public static int numIslands(char[][] grid) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(1);
+        System.out.println(3);
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "1\n3",
+      python: "1\n3",
+      java: "1\n3",
+    },
   },
 };
