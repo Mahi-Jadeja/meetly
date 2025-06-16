@@ -2261,5 +2261,157 @@ print(isSameTree(p3, q3))  # Expected: False`,
       python: "True\nFalse\nFalse",
       java: "true\nfalse\nfalse",
     },
+  },,
+
+  "subtree-of-another-tree": {
+    id: "subtree-of-another-tree",
+    title: "Subtree of Another Tree",
+    difficulty: "Easy",
+    category: "Tree • DFS • String Matching • Binary Tree • Hash Function",
+    description: {
+      text: "Given the roots of two binary trees root and subRoot, return true if there is a subtree of root with the same structure and node values of subRoot and false otherwise.",
+      notes: ["A subtree of a binary tree tree is a tree that consists of a node in tree and all of this node's descendants."],
+    },
+    examples: [
+      { input: "root = [3,4,5,1,2], subRoot = [4,1,2]", output: "true" },
+      { input: "root = [3,4,5,1,2,null,null,null,null,0], subRoot = [4,1,2]", output: "false" },
+    ],
+    constraints: ["The number of nodes in the root tree is in the range [1, 2000]", "The number of nodes in the subRoot tree is in the range [1, 1000]", "-10⁴ ≤ root.val ≤ 10⁴", "-10⁴ ≤ subRoot.val ≤ 10⁴"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function isSubtree(root, subRoot) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let root1 = new TreeNode(3,
+  new TreeNode(4, new TreeNode(1), new TreeNode(2)),
+  new TreeNode(5)
+);
+let sub1 = new TreeNode(4, new TreeNode(1), new TreeNode(2));
+console.log(isSubtree(root1, sub1)); // Expected: true
+
+let root2 = new TreeNode(3,
+  new TreeNode(4, new TreeNode(1), new TreeNode(2, new TreeNode(0))),
+  new TreeNode(5)
+);
+let sub2 = new TreeNode(4, new TreeNode(1), new TreeNode(2));
+console.log(isSubtree(root2, sub2)); // Expected: false`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def isSubtree(root, subRoot):
+    # Write your solution here
+    pass
+
+# Test cases
+root1 = TreeNode(3, TreeNode(4, TreeNode(1), TreeNode(2)), TreeNode(5))
+sub1 = TreeNode(4, TreeNode(1), TreeNode(2))
+print(isSubtree(root1, sub1))  # Expected: True
+
+root2 = TreeNode(3, TreeNode(4, TreeNode(1), TreeNode(2, TreeNode(0))), TreeNode(5))
+sub2 = TreeNode(4, TreeNode(1), TreeNode(2))
+print(isSubtree(root2, sub2))  # Expected: False`,
+      java: `class Solution {
+    public static boolean isSubtree(TreeNode root, TreeNode subRoot) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("true");
+        System.out.println("false");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse",
+      python: "True\nFalse",
+      java: "true\nfalse",
+    },
+  },,
+
+  "lowest-common-ancestor-of-bst": {
+    id: "lowest-common-ancestor-of-bst",
+    title: "Lowest Common Ancestor of a Binary Search Tree",
+    difficulty: "Medium",
+    category: "Tree • DFS • BST • Binary Tree",
+    description: {
+      text: "Given a binary search tree (BST), find the lowest common ancestor (LCA) node of two given nodes in the BST.",
+      notes: [
+        "The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).",
+      ],
+    },
+    examples: [
+      { input: "root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 8", output: "6", explanation: "The LCA of nodes 2 and 8 is 6." },
+      { input: "root = [6,2,8,0,4,7,9,null,null,3,5], p = 2, q = 4", output: "2", explanation: "The LCA of nodes 2 and 4 is 2." },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [2, 10⁵]", "-10⁹ ≤ Node.val ≤ 10⁹", "All Node.val are unique", "p != q", "p and q will exist in the BST"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function lowestCommonAncestor(root, p, q) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let root = new TreeNode(6,
+  new TreeNode(2, new TreeNode(0), new TreeNode(4, new TreeNode(3), new TreeNode(5))),
+  new TreeNode(8, new TreeNode(7), new TreeNode(9))
+);
+console.log(lowestCommonAncestor(root, root.left, root.right).val); // Expected: 6
+console.log(lowestCommonAncestor(root, root.left, root.left.right).val); // Expected: 2`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def lowestCommonAncestor(root, p, q):
+    # Write your solution here
+    pass
+
+# Test cases
+root = TreeNode(6,
+    TreeNode(2, TreeNode(0), TreeNode(4, TreeNode(3), TreeNode(5))),
+    TreeNode(8, TreeNode(7), TreeNode(9))
+)
+print(lowestCommonAncestor(root, root.left, root.right).val)  # Expected: 6
+print(lowestCommonAncestor(root, root.left, root.left.right).val)  # Expected: 2`,
+      java: `class Solution {
+    public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        // Write your solution here
+        return null;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(6);
+        System.out.println(2);
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "6\n2",
+      python: "6\n2",
+      java: "6\n2",
+    },
   },
 };
