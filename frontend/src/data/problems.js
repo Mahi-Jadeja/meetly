@@ -2413,5 +2413,155 @@ print(lowestCommonAncestor(root, root.left, root.left.right).val)  # Expected: 2
       python: "6\n2",
       java: "6\n2",
     },
+  },,
+
+  "binary-tree-level-order-traversal": {
+    id: "binary-tree-level-order-traversal",
+    title: "Binary Tree Level Order Traversal",
+    difficulty: "Medium",
+    category: "Tree • BFS • Binary Tree",
+    description: {
+      text: "Given the root of a binary tree, return the level order traversal of its nodes' values. (i.e., from left to right, level by level).",
+      notes: [],
+    },
+    examples: [
+      { input: "root = [3,9,20,null,null,15,7]", output: "[[3],[9,20],[15,7]]" },
+      { input: "root = [1]", output: "[[1]]" },
+      { input: "root = []", output: "[]" },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [0, 2000]", "-1000 ≤ Node.val ≤ 1000"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function levelOrder(root) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let tree1 = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+console.log(JSON.stringify(levelOrder(tree1))); // Expected: [[3],[9,20],[15,7]]
+
+let tree2 = new TreeNode(1);
+console.log(JSON.stringify(levelOrder(tree2))); // Expected: [[1]]
+
+console.log(JSON.stringify(levelOrder(null))); // Expected: []`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def levelOrder(root):
+    # Write your solution here
+    pass
+
+# Test cases
+tree1 = TreeNode(3, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7)))
+print(levelOrder(tree1))  # Expected: [[3],[9,20],[15,7]]
+
+tree2 = TreeNode(1)
+print(levelOrder(tree2))  # Expected: [[1]]
+
+print(levelOrder(None))  # Expected: []`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<Integer>> levelOrder(TreeNode root) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("[[3],[9,20],[15,7]]");
+        System.out.println("[[1]]");
+        System.out.println("[]");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[[3],[9,20],[15,7]]\n[[1]]\n[]",
+      python: "[[3], [9, 20], [15, 7]]\n[[1]]\n[]",
+      java: "[[3],[9,20],[15,7]]\n[[1]]\n[]",
+    },
+  },,
+
+  "validate-binary-search-tree": {
+    id: "validate-binary-search-tree",
+    title: "Validate Binary Search Tree",
+    difficulty: "Medium",
+    category: "Tree • DFS • BST • Binary Tree",
+    description: {
+      text: "Given the root of a binary tree, determine if it is a valid binary search tree (BST).",
+      notes: [
+        "The left subtree of a node contains only nodes with keys less than the node's key.",
+        "The right subtree of a node contains only nodes with keys greater than the node's key.",
+        "Both the left and right subtrees must also be binary search trees.",
+      ],
+    },
+    examples: [
+      { input: "root = [2,1,3]", output: "true" },
+      { input: "root = [5,1,4,null,null,3,6]", output: "false", explanation: "The root node's value is 5 but its right child's value is 4." },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [1, 10⁴]", "-2³¹ ≤ Node.val ≤ 2³¹ - 1"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function isValidBST(root) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let tree1 = new TreeNode(2, new TreeNode(1), new TreeNode(3));
+console.log(isValidBST(tree1)); // Expected: true
+
+let tree2 = new TreeNode(5, new TreeNode(1), new TreeNode(4, new TreeNode(3), new TreeNode(6)));
+console.log(isValidBST(tree2)); // Expected: false`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def isValidBST(root):
+    # Write your solution here
+    pass
+
+# Test cases
+tree1 = TreeNode(2, TreeNode(1), TreeNode(3))
+print(isValidBST(tree1))  # Expected: True
+
+tree2 = TreeNode(5, TreeNode(1), TreeNode(4, TreeNode(3), TreeNode(6)))
+print(isValidBST(tree2))  # Expected: False`,
+      java: `class Solution {
+    public static boolean isValidBST(TreeNode root) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("true");
+        System.out.println("false");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse",
+      python: "True\nFalse",
+      java: "true\nfalse",
+    },
   },
 };
