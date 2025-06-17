@@ -3102,5 +3102,105 @@ class Solution {
       python: "[0, 1]\n[0, 1, 2, 3]\n[0]",
       java: "[0, 1]\n[0, 1, 2, 3]\n[0]",
     },
+  },,
+
+  "number-of-connected-components": {
+    id: "number-of-connected-components",
+    title: "Number of Connected Components in an Undirected Graph",
+    difficulty: "Medium",
+    category: "DFS • BFS • Union Find • Graph",
+    description: {
+      text: "You have a graph of n nodes. You are given an integer n and an array edges where edges[i] = [ai, bi] indicates that there is an edge between ai and bi in the graph.",
+      notes: ["Return the number of connected components in the graph."],
+    },
+    examples: [
+      { input: "n = 5, edges = [[0,1],[1,2],[3,4]]", output: "2" },
+      { input: "n = 5, edges = [[0,1],[1,2],[2,3],[3,4]]", output: "1" },
+    ],
+    constraints: ["1 ≤ n ≤ 2000", "1 ≤ edges.length ≤ 5000", "edges[i].length == 2", "0 ≤ ai, bi < n", "ai != bi", "There are no repeated edges"],
+    starterCode: {
+      javascript: `function countComponents(n, edges) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(countComponents(5, [[0,1],[1,2],[3,4]])); // Expected: 2
+console.log(countComponents(5, [[0,1],[1,2],[2,3],[3,4]])); // Expected: 1`,
+      python: `def countComponents(n, edges):
+    # Write your solution here
+    pass
+
+# Test cases
+print(countComponents(5, [[0,1],[1,2],[3,4]]))  # Expected: 2
+print(countComponents(5, [[0,1],[1,2],[2,3],[3,4]]))  # Expected: 1`,
+      java: `class Solution {
+    public static int countComponents(int n, int[][] edges) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(countComponents(5, new int[][]{{0,1},{1,2},{3,4}}));
+        System.out.println(countComponents(5, new int[][]{{0,1},{1,2},{2,3},{3,4}}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2\n1",
+      python: "2\n1",
+      java: "2\n1",
+    },
+  },,
+
+  "graph-valid-tree": {
+    id: "graph-valid-tree",
+    title: "Graph Valid Tree",
+    difficulty: "Medium",
+    category: "DFS • BFS • Union Find • Graph",
+    description: {
+      text: "You have a graph of n nodes labeled from 0 to n - 1. You are given an integer n and a list of edges where edges[i] = [ai, bi] indicates that there is an undirected edge between nodes ai and bi in the graph.",
+      notes: ["Return true if the edges of the given graph make up a valid tree, and false otherwise."],
+    },
+    examples: [
+      { input: "n = 5, edges = [[0,1],[0,2],[0,3],[1,4]]", output: "true" },
+      { input: "n = 5, edges = [[0,1],[1,2],[2,3],[1,3],[1,4]]", output: "false" },
+    ],
+    constraints: ["1 ≤ n ≤ 2000", "0 ≤ edges.length ≤ 5000", "edges[i].length == 2", "0 ≤ ai, bi < n", "ai != bi", "There are no self-loops or repeated edges"],
+    starterCode: {
+      javascript: `function validTree(n, edges) {
+  // Write your solution here
+  // A valid tree has n-1 edges and is fully connected with no cycles
+  
+}
+
+// Test cases
+console.log(validTree(5, [[0,1],[0,2],[0,3],[1,4]])); // Expected: true
+console.log(validTree(5, [[0,1],[1,2],[2,3],[1,3],[1,4]])); // Expected: false`,
+      python: `def validTree(n, edges):
+    # Write your solution here
+    # A valid tree has n-1 edges and is fully connected with no cycles
+    pass
+
+# Test cases
+print(validTree(5, [[0,1],[0,2],[0,3],[1,4]]))  # Expected: True
+print(validTree(5, [[0,1],[1,2],[2,3],[1,3],[1,4]]))  # Expected: False`,
+      java: `class Solution {
+    public static boolean validTree(int n, int[][] edges) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(validTree(5, new int[][]{{0,1},{0,2},{0,3},{1,4}}));
+        System.out.println(validTree(5, new int[][]{{0,1},{1,2},{2,3},{1,3},{1,4}}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse",
+      python: "True\nFalse",
+      java: "true\nfalse",
+    },
   },
 };
