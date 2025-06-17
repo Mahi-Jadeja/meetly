@@ -2844,5 +2844,159 @@ print(numIslands([
       python: "1\n3",
       java: "1\n3",
     },
+  },,
+
+  "clone-graph": {
+    id: "clone-graph",
+    title: "Clone Graph",
+    difficulty: "Medium",
+    category: "Hash Table • DFS • BFS • Graph",
+    description: {
+      text: "Given a reference of a node in a connected undirected graph. Return a deep copy (clone) of the graph.",
+      notes: ["Each node in the graph contains a value (int) and a list (List[Node]) of its neighbors."],
+    },
+    examples: [
+      { input: "adjList = [[2,4],[1,3],[2,4],[1,3]]", output: "[[2,4],[1,3],[2,4],[1,3]]" },
+      { input: "adjList = [[]]", output: "[[]]" },
+      { input: "adjList = []", output: "[]" },
+    ],
+    constraints: ["The number of nodes in the graph is in the range [0, 100]", "1 ≤ Node.val ≤ 100", "Node.val is unique for each node", "There are no repeated edges and no self-loops in the graph"],
+    starterCode: {
+      javascript: `class Node {
+  constructor(val, neighbors = []) {
+    this.val = val;
+    this.neighbors = neighbors;
+  }
+}
+
+function cloneGraph(node) {
+  // Write your solution here
+  
+}
+
+// Test cases
+// Create graph: 1 -- 2
+//               |    |
+//               4 -- 3
+let n1 = new Node(1);
+let n2 = new Node(2);
+let n3 = new Node(3);
+let n4 = new Node(4);
+n1.neighbors = [n2, n4];
+n2.neighbors = [n1, n3];
+n3.neighbors = [n2, n4];
+n4.neighbors = [n1, n3];
+
+let cloned = cloneGraph(n1);
+console.log(cloned !== n1 && cloned.val === n1.val); // Expected: true
+console.log(cloneGraph(null) === null); // Expected: true`,
+      python: `class Node:
+    def __init__(self, val=0, neighbors=None):
+        self.val = val
+        self.neighbors = neighbors if neighbors is not None else []
+
+def cloneGraph(node):
+    # Write your solution here
+    pass
+
+# Test cases
+n1 = Node(1)
+n2 = Node(2)
+n3 = Node(3)
+n4 = Node(4)
+n1.neighbors = [n2, n4]
+n2.neighbors = [n1, n3]
+n3.neighbors = [n2, n4]
+n4.neighbors = [n1, n3]
+
+cloned = cloneGraph(n1)
+print(cloned is not n1 and cloned.val == n1.val)  # Expected: True
+print(cloneGraph(None) is None)  # Expected: True`,
+      java: `import java.util.*;
+
+class Node {
+    public int val;
+    public List<Node> neighbors;
+    public Node(int val) {
+        this.val = val;
+        this.neighbors = new ArrayList<>();
+    }
+}
+
+class Solution {
+    public static Node cloneGraph(Node node) {
+        // Write your solution here
+        return null;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("true");
+        System.out.println("true");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\ntrue",
+      python: "True\nTrue",
+      java: "true\ntrue",
+    },
+  },,
+
+  "pacific-atlantic-water-flow": {
+    id: "pacific-atlantic-water-flow",
+    title: "Pacific Atlantic Water Flow",
+    difficulty: "Medium",
+    category: "Array • DFS • BFS • Matrix",
+    description: {
+      text: "There is an m x n rectangular island that borders both the Pacific Ocean and Atlantic Ocean. The Pacific Ocean touches the island's left and top edges, and the Atlantic Ocean touches the island's right and bottom edges.",
+      notes: [
+        "The island is partitioned into a grid of square cells.",
+        "Given an m x n integer matrix heights where heights[r][c] represents the height above sea level of the cell at coordinate (r, c).",
+        "Return a 2D list of grid coordinates result where result[i] = [ri, ci] denotes that rain water can flow from cell (ri, ci) to both the Pacific and Atlantic oceans.",
+      ],
+    },
+    examples: [
+      {
+        input: "heights = [[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]",
+        output: "[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]",
+      },
+      { input: "heights = [[1]]", output: "[[0,0]]" },
+    ],
+    constraints: ["m == heights.length", "n == heights[r].length", "1 ≤ m, n ≤ 200", "0 ≤ heights[r][c] ≤ 10⁵"],
+    starterCode: {
+      javascript: `function pacificAtlantic(heights) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(pacificAtlantic([[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]])));
+console.log(JSON.stringify(pacificAtlantic([[1]])));`,
+      python: `def pacificAtlantic(heights):
+    # Write your solution here
+    pass
+
+# Test cases
+print(pacificAtlantic([[1,2,2,3,5],[3,2,3,4,4],[2,4,5,3,1],[6,7,1,4,5],[5,1,1,2,4]]))
+print(pacificAtlantic([[1]]))`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<Integer>> pacificAtlantic(int[][] heights) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]");
+        System.out.println("[[0,0]]");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]\n[[0,0]]',
+      python: "[[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]\n[[0, 0]]",
+      java: "[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]\n[[0,0]]",
+    },
   },
 };
