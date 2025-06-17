@@ -2998,5 +2998,109 @@ class Solution {
       python: "[[0, 4], [1, 3], [1, 4], [2, 2], [3, 0], [3, 1], [4, 0]]\n[[0, 0]]",
       java: "[[0,4],[1,3],[1,4],[2,2],[3,0],[3,1],[4,0]]\n[[0,0]]",
     },
+  },,
+
+  "course-schedule": {
+    id: "course-schedule",
+    title: "Course Schedule",
+    difficulty: "Medium",
+    category: "DFS • BFS • Graph • Topological Sort",
+    description: {
+      text: "There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.",
+      notes: ["Return true if you can finish all courses. Otherwise, return false."],
+    },
+    examples: [
+      { input: "numCourses = 2, prerequisites = [[1,0]]", output: "true", explanation: "Take course 0 then course 1." },
+      { input: "numCourses = 2, prerequisites = [[1,0],[0,1]]", output: "false", explanation: "You need to take course 0 before 1 and course 1 before 0. This is impossible." },
+    ],
+    constraints: ["1 ≤ numCourses ≤ 2000", "0 ≤ prerequisites.length ≤ 5000", "prerequisites[i].length == 2", "0 ≤ ai, bi < numCourses", "All the pairs prerequisites[i] are unique"],
+    starterCode: {
+      javascript: `function canFinish(numCourses, prerequisites) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(canFinish(2, [[1,0]])); // Expected: true
+console.log(canFinish(2, [[1,0],[0,1]])); // Expected: false`,
+      python: `def canFinish(numCourses, prerequisites):
+    # Write your solution here
+    pass
+
+# Test cases
+print(canFinish(2, [[1,0]]))  # Expected: True
+print(canFinish(2, [[1,0],[0,1]]))  # Expected: False`,
+      java: `class Solution {
+    public static boolean canFinish(int numCourses, int[][] prerequisites) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(canFinish(2, new int[][]{{1,0}}));
+        System.out.println(canFinish(2, new int[][]{{1,0},{0,1}}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse",
+      python: "True\nFalse",
+      java: "true\nfalse",
+    },
+  },,
+
+  "course-schedule-ii": {
+    id: "course-schedule-ii",
+    title: "Course Schedule II",
+    difficulty: "Medium",
+    category: "DFS • BFS • Graph • Topological Sort",
+    description: {
+      text: "There are a total of numCourses courses you have to take, labeled from 0 to numCourses - 1. You are given an array prerequisites where prerequisites[i] = [ai, bi] indicates that you must take course bi first if you want to take course ai.",
+      notes: ["Return the ordering of courses you should take to finish all courses. If there are many valid answers, return any of them. If it is impossible to finish all courses, return an empty array."],
+    },
+    examples: [
+      { input: "numCourses = 2, prerequisites = [[1,0]]", output: "[0,1]" },
+      { input: "numCourses = 4, prerequisites = [[1,0],[2,0],[3,1],[3,2]]", output: "[0,2,1,3]" },
+      { input: "numCourses = 1, prerequisites = []", output: "[0]" },
+    ],
+    constraints: ["1 ≤ numCourses ≤ 2000", "0 ≤ prerequisites.length ≤ numCourses × (numCourses - 1)", "prerequisites[i].length == 2", "0 ≤ ai, bi < numCourses", "ai != bi", "All the pairs [ai, bi] are distinct"],
+    starterCode: {
+      javascript: `function findOrder(numCourses, prerequisites) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(findOrder(2, [[1,0]])); // Expected: [0,1]
+console.log(findOrder(4, [[1,0],[2,0],[3,1],[3,2]])); // Expected: [0,1,2,3] or [0,2,1,3]
+console.log(findOrder(1, [])); // Expected: [0]`,
+      python: `def findOrder(numCourses, prerequisites):
+    # Write your solution here
+    pass
+
+# Test cases
+print(findOrder(2, [[1,0]]))  # Expected: [0, 1]
+print(findOrder(4, [[1,0],[2,0],[3,1],[3,2]]))  # Expected: [0,1,2,3] or [0,2,1,3]
+print(findOrder(1, []))  # Expected: [0]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int[] findOrder(int numCourses, int[][] prerequisites) {
+        // Write your solution here
+        return new int[0];
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(findOrder(2, new int[][]{{1,0}})));
+        System.out.println(Arrays.toString(findOrder(4, new int[][]{{1,0},{2,0},{3,1},{3,2}})));
+        System.out.println(Arrays.toString(findOrder(1, new int[][]{})));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[0,1]\n[0,1,2,3]\n[0]",
+      python: "[0, 1]\n[0, 1, 2, 3]\n[0]",
+      java: "[0, 1]\n[0, 1, 2, 3]\n[0]",
+    },
   },
 };
