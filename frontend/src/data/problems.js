@@ -3202,5 +3202,116 @@ print(validTree(5, [[0,1],[1,2],[2,3],[1,3],[1,4]]))  # Expected: False`,
       python: "True\nFalse",
       java: "true\nfalse",
     },
+  },,
+
+  "word-ladder": {
+    id: "word-ladder",
+    title: "Word Ladder",
+    difficulty: "Hard",
+    category: "Hash Table • String • BFS",
+    description: {
+      text: "A transformation sequence from word beginWord to word endWord using a dictionary wordList is a sequence of words beginWord -> s1 -> s2 -> ... -> sk such that every adjacent pair of words differs by a single letter.",
+      notes: [
+        "Given two words, beginWord and endWord, and a dictionary wordList, return the number of words in the shortest transformation sequence from beginWord to endWord, or 0 if no such sequence exists.",
+      ],
+    },
+    examples: [
+      { input: 'beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log","cog"]', output: "5", explanation: 'One shortest transformation sequence is "hit" -> "hot" -> "dot" -> "dog" -> "cog".' },
+      { input: 'beginWord = "hit", endWord = "cog", wordList = ["hot","dot","dog","lot","log"]', output: "0", explanation: "The endWord is not in wordList." },
+    ],
+    constraints: ["1 ≤ beginWord.length ≤ 10", "endWord.length == beginWord.length", "1 ≤ wordList.length ≤ 5000", "wordList[i].length == beginWord.length", "beginWord, endWord, and wordList[i] consist of lowercase English letters", "beginWord != endWord", "All the words in wordList are unique"],
+    starterCode: {
+      javascript: `function ladderLength(beginWord, endWord, wordList) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(ladderLength("hit", "cog", ["hot","dot","dog","lot","log","cog"])); // Expected: 5
+console.log(ladderLength("hit", "cog", ["hot","dot","dog","lot","log"])); // Expected: 0`,
+      python: `def ladderLength(beginWord, endWord, wordList):
+    # Write your solution here
+    pass
+
+# Test cases
+print(ladderLength("hit", "cog", ["hot","dot","dog","lot","log","cog"]))  # Expected: 5
+print(ladderLength("hit", "cog", ["hot","dot","dog","lot","log"]))  # Expected: 0`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int ladderLength(String beginWord, String endWord, List<String> wordList) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(ladderLength("hit", "cog", Arrays.asList("hot","dot","dog","lot","log","cog")));
+        System.out.println(ladderLength("hit", "cog", Arrays.asList("hot","dot","dog","lot","log")));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "5\n0",
+      python: "5\n0",
+      java: "5\n0",
+    },
+  },,
+
+  "combination-sum": {
+    id: "combination-sum",
+    title: "Combination Sum",
+    difficulty: "Medium",
+    category: "Array • Backtracking",
+    description: {
+      text: "Given an array of distinct integers candidates and a target integer target, return a list of all unique combinations of candidates where the chosen numbers sum to target. You may return the combinations in any order.",
+      notes: [
+        "The same number may be chosen from candidates an unlimited number of times.",
+        "Two combinations are unique if the frequency of at least one of the chosen numbers is different.",
+      ],
+    },
+    examples: [
+      { input: "candidates = [2,3,6,7], target = 7", output: "[[2,2,3],[7]]" },
+      { input: "candidates = [2,3,5], target = 8", output: "[[2,2,2,2],[2,3,3],[3,5]]" },
+      { input: "candidates = [2], target = 1", output: "[]" },
+    ],
+    constraints: ["1 ≤ candidates.length ≤ 30", "2 ≤ candidates[i] ≤ 40", "All elements of candidates are distinct", "1 ≤ target ≤ 40"],
+    starterCode: {
+      javascript: `function combinationSum(candidates, target) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(combinationSum([2,3,6,7], 7))); // Expected: [[2,2,3],[7]]
+console.log(JSON.stringify(combinationSum([2,3,5], 8))); // Expected: [[2,2,2,2],[2,3,3],[3,5]]
+console.log(JSON.stringify(combinationSum([2], 1))); // Expected: []`,
+      python: `def combinationSum(candidates, target):
+    # Write your solution here
+    pass
+
+# Test cases
+print(combinationSum([2,3,6,7], 7))  # Expected: [[2,2,3],[7]]
+print(combinationSum([2,3,5], 8))  # Expected: [[2,2,2,2],[2,3,3],[3,5]]
+print(combinationSum([2], 1))  # Expected: []`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<Integer>> combinationSum(int[] candidates, int target) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(combinationSum(new int[]{2,3,6,7}, 7));
+        System.out.println(combinationSum(new int[]{2,3,5}, 8));
+        System.out.println(combinationSum(new int[]{2}, 1));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[[2,2,3],[7]]\n[[2,2,2,2],[2,3,3],[3,5]]\n[]',
+      python: "[[2, 2, 3], [7]]\n[[2, 2, 2, 2], [2, 3, 3], [3, 5]]\n[]",
+      java: "[[2, 2, 3], [7]]\n[[2, 2, 2, 2], [2, 3, 3], [3, 5]]\n[]",
+    },
   },
 };
