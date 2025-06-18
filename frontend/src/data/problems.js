@@ -3313,5 +3313,113 @@ class Solution {
       python: "[[2, 2, 3], [7]]\n[[2, 2, 2, 2], [2, 3, 3], [3, 5]]\n[]",
       java: "[[2, 2, 3], [7]]\n[[2, 2, 2, 2], [2, 3, 3], [3, 5]]\n[]",
     },
+  },,
+
+  "word-search": {
+    id: "word-search",
+    title: "Word Search",
+    difficulty: "Medium",
+    category: "Array • String • Backtracking • Matrix",
+    description: {
+      text: "Given an m x n grid of characters board and a string word, return true if word exists in the grid.",
+      notes: [
+        "The word can be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring.",
+        "The same letter cell may not be used more than once.",
+      ],
+    },
+    examples: [
+      { input: 'board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCCED"', output: "true" },
+      { input: 'board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "SEE"', output: "true" },
+      { input: 'board = [["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], word = "ABCB"', output: "false" },
+    ],
+    constraints: ["m == board.length", "n = board[i].length", "1 ≤ m, n ≤ 6", "1 ≤ word.length ≤ 15", "board and word consists of only lowercase and uppercase English letters"],
+    starterCode: {
+      javascript: `function exist(board, word) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "ABCCED")); // Expected: true
+console.log(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "SEE")); // Expected: true
+console.log(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "ABCB")); // Expected: false`,
+      python: `def exist(board, word):
+    # Write your solution here
+    pass
+
+# Test cases
+print(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "ABCCED"))  # Expected: True
+print(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "SEE"))  # Expected: True
+print(exist([["A","B","C","E"],["S","F","C","S"],["A","D","E","E"]], "ABCB"))  # Expected: False`,
+      java: `class Solution {
+    public static boolean exist(char[][] board, String word) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        char[][] board = {{'A','B','C','E'},{'S','F','C','S'},{'A','D','E','E'}};
+        System.out.println(exist(board, "ABCCED"));
+        System.out.println(exist(board, "SEE"));
+        System.out.println(exist(board, "ABCB"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\ntrue\nfalse",
+      python: "True\nTrue\nFalse",
+      java: "true\ntrue\nfalse",
+    },
+  },,
+
+  "subsets": {
+    id: "subsets",
+    title: "Subsets",
+    difficulty: "Medium",
+    category: "Array • Backtracking • Bit Manipulation",
+    description: {
+      text: "Given an integer array nums of unique elements, return all possible subsets (the power set).",
+      notes: ["The solution set must not contain duplicate subsets. Return the solution in any order."],
+    },
+    examples: [
+      { input: "nums = [1,2,3]", output: "[[],[1],[2],[1,2],[3],[1,3],[2,3],[1,2,3]]" },
+      { input: "nums = [0]", output: "[[],[0]]" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 10", "-10 ≤ nums[i] ≤ 10", "All the numbers of nums are unique"],
+    starterCode: {
+      javascript: `function subsets(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(subsets([1,2,3])));
+console.log(JSON.stringify(subsets([0])));`,
+      python: `def subsets(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(subsets([1,2,3]))
+print(subsets([0]))`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<Integer>> subsets(int[] nums) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(subsets(new int[]{1,2,3}));
+        System.out.println(subsets(new int[]{0}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[[],[1],[1,2],[1,2,3],[1,3],[2],[2,3],[3]]\n[[],[0]]',
+      python: "[[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]]\n[[], [0]]",
+      java: "[[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]]\n[[], [0]]",
+    },
   },
 };
