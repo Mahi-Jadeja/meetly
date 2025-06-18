@@ -3527,5 +3527,110 @@ class Solution {
       python: "[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]\n[[0, 1], [1, 0]]\n[[1]]",
       java: "[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]\n[[0, 1], [1, 0]]\n[[1]]",
     },
+  },,
+
+  "permutations-ii": {
+    id: "permutations-ii",
+    title: "Permutations II",
+    difficulty: "Medium",
+    category: "Array • Backtracking",
+    description: {
+      text: "Given a collection of numbers, nums, that might contain duplicates, return all possible unique permutations in any order.",
+      notes: [],
+    },
+    examples: [
+      { input: "nums = [1,1,2]", output: "[[1,1,2],[1,2,1],[2,1,1]]" },
+      { input: "nums = [1,2,3]", output: "[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 8", "-10 ≤ nums[i] ≤ 10"],
+    starterCode: {
+      javascript: `function permuteUnique(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(permuteUnique([1,1,2])));
+console.log(JSON.stringify(permuteUnique([1,2,3])));`,
+      python: `def permuteUnique(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(permuteUnique([1,1,2]))
+print(permuteUnique([1,2,3]))`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<Integer>> permuteUnique(int[] nums) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(permuteUnique(new int[]{1,1,2}));
+        System.out.println(permuteUnique(new int[]{1,2,3}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[[1,1,2],[1,2,1],[2,1,1]]\n[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]',
+      python: "[[1, 1, 2], [1, 2, 1], [2, 1, 1]]\n[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]",
+      java: "[[1, 1, 2], [1, 2, 1], [2, 1, 1]]\n[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]",
+    },
+  },,
+
+  "combination-sum-ii": {
+    id: "combination-sum-ii",
+    title: "Combination Sum II",
+    difficulty: "Medium",
+    category: "Array • Backtracking",
+    description: {
+      text: "Given a collection of candidate numbers (candidates) and a target number (target), find all unique combinations in candidates where the candidate numbers sum to target.",
+      notes: [
+        "Each number in candidates may only be used once in the combination.",
+        "The solution set must not contain duplicate combinations.",
+      ],
+    },
+    examples: [
+      { input: "candidates = [10,1,2,7,6,1,5], target = 8", output: "[[1,1,6],[1,2,5],[1,7],[2,6]]" },
+      { input: "candidates = [2,5,2,1,2], target = 5", output: "[[1,2,2],[5]]" },
+    ],
+    constraints: ["1 ≤ candidates.length ≤ 100", "1 ≤ candidates[i] ≤ 50", "1 ≤ target ≤ 30"],
+    starterCode: {
+      javascript: `function combinationSum2(candidates, target) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(combinationSum2([10,1,2,7,6,1,5], 8)));
+console.log(JSON.stringify(combinationSum2([2,5,2,1,2], 5)));`,
+      python: `def combinationSum2(candidates, target):
+    # Write your solution here
+    pass
+
+# Test cases
+print(combinationSum2([10,1,2,7,6,1,5], 8))
+print(combinationSum2([2,5,2,1,2], 5))`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<Integer>> combinationSum2(int[] candidates, int target) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(combinationSum2(new int[]{10,1,2,7,6,1,5}, 8));
+        System.out.println(combinationSum2(new int[]{2,5,2,1,2}, 5));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[[1,1,6],[1,2,5],[1,7],[2,6]]\n[[1,2,2],[5]]',
+      python: "[[1, 1, 6], [1, 2, 5], [1, 7], [2, 6]]\n[[1, 2, 2], [5]]",
+      java: "[[1, 1, 6], [1, 2, 5], [1, 7], [2, 6]]\n[[1, 2, 2], [5]]",
+    },
   },
 };
