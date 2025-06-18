@@ -3421,5 +3421,111 @@ class Solution {
       python: "[[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]]\n[[], [0]]",
       java: "[[], [1], [1, 2], [1, 2, 3], [1, 3], [2], [2, 3], [3]]\n[[], [0]]",
     },
+  },,
+
+  "subsets-ii": {
+    id: "subsets-ii",
+    title: "Subsets II",
+    difficulty: "Medium",
+    category: "Array • Backtracking • Bit Manipulation",
+    description: {
+      text: "Given an integer array nums that may contain duplicates, return all possible subsets (the power set).",
+      notes: ["The solution set must not contain duplicate subsets. Return the solution in any order."],
+    },
+    examples: [
+      { input: "nums = [1,2,2]", output: "[[],[1],[1,2],[1,2,2],[2],[2,2]]" },
+      { input: "nums = [0]", output: "[[],[0]]" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 10", "-10 ≤ nums[i] ≤ 10"],
+    starterCode: {
+      javascript: `function subsetsWithDup(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(subsetsWithDup([1,2,2])));
+console.log(JSON.stringify(subsetsWithDup([0])));`,
+      python: `def subsetsWithDup(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(subsetsWithDup([1,2,2]))
+print(subsetsWithDup([0]))`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<Integer>> subsetsWithDup(int[] nums) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(subsetsWithDup(new int[]{1,2,2}));
+        System.out.println(subsetsWithDup(new int[]{0}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[[],[1],[1,2],[1,2,2],[2],[2,2]]\n[[],[0]]',
+      python: "[[], [1], [1, 2], [1, 2, 2], [2], [2, 2]]\n[[], [0]]",
+      java: "[[], [1], [1, 2], [1, 2, 2], [2], [2, 2]]\n[[], [0]]",
+    },
+  },,
+
+  "permutations": {
+    id: "permutations",
+    title: "Permutations",
+    difficulty: "Medium",
+    category: "Array • Backtracking",
+    description: {
+      text: "Given an array nums of distinct integers, return all the possible permutations. You can return the answer in any order.",
+      notes: [],
+    },
+    examples: [
+      { input: "nums = [1,2,3]", output: "[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]" },
+      { input: "nums = [0,1]", output: "[[0,1],[1,0]]" },
+      { input: "nums = [1]", output: "[[1]]" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 6", "-10 ≤ nums[i] ≤ 10", "All the integers of nums are unique"],
+    starterCode: {
+      javascript: `function permute(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(permute([1,2,3])));
+console.log(JSON.stringify(permute([0,1])));
+console.log(JSON.stringify(permute([1])));`,
+      python: `def permute(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(permute([1,2,3]))
+print(permute([0,1]))
+print(permute([1]))`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<Integer>> permute(int[] nums) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(permute(new int[]{1,2,3}));
+        System.out.println(permute(new int[]{0,1}));
+        System.out.println(permute(new int[]{1}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]\n[[0,1],[1,0]]\n[[1]]',
+      python: "[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]\n[[0, 1], [1, 0]]\n[[1]]",
+      java: "[[1, 2, 3], [1, 3, 2], [2, 1, 3], [2, 3, 1], [3, 1, 2], [3, 2, 1]]\n[[0, 1], [1, 0]]\n[[1]]",
+    },
   },
 };
