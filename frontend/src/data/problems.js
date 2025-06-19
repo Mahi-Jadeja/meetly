@@ -3996,5 +3996,147 @@ class MedianFinder {
       python: "1.5\n2.0",
       java: "1.5\n2.0",
     },
+  },,
+
+  "merge-k-sorted-lists": {
+    id: "merge-k-sorted-lists",
+    title: "Merge k Sorted Lists",
+    difficulty: "Hard",
+    category: "Linked List • Divide and Conquer • Heap • Merge Sort",
+    description: {
+      text: "You are given an array of k linked-lists lists, each linked-list is sorted in ascending order. Merge all the linked-lists into one sorted linked-list and return it.",
+      notes: [],
+    },
+    examples: [
+      { input: "lists = [[1,4,5],[1,3,4],[2,6]]", output: "[1,1,2,3,4,4,5,6]" },
+      { input: "lists = []", output: "[]" },
+      { input: "lists = [[]]", output: "[]" },
+    ],
+    constraints: ["k == lists.length", "0 ≤ k ≤ 10⁴", "0 ≤ lists[i].length ≤ 500", "-10⁴ ≤ lists[i][j] ≤ 10⁴", "lists[i] is sorted in ascending order", "The sum of lists[i].length will not exceed 10⁴"],
+    starterCode: {
+      javascript: `class ListNode {
+  constructor(val = 0, next = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+function mergeKLists(lists) {
+  // Write your solution here
+  
+}
+
+// Helper to create list
+function createList(arr) {
+  if (!arr.length) return null;
+  let head = new ListNode(arr[0]);
+  let curr = head;
+  for (let i = 1; i < arr.length; i++) {
+    curr.next = new ListNode(arr[i]);
+    curr = curr.next;
+  }
+  return head;
+}
+
+// Helper to convert to array
+function toArray(head) {
+  const result = [];
+  while (head) {
+    result.push(head.val);
+    head = head.next;
+  }
+  return result;
+}
+
+// Test cases
+const lists = [createList([1,4,5]), createList([1,3,4]), createList([2,6])];
+console.log(toArray(mergeKLists(lists)));
+console.log(toArray(mergeKLists([])));`,
+      python: `class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def mergeKLists(lists):
+    # Write your solution here
+    pass
+
+# Test cases
+print([1,1,2,3,4,4,5,6])
+print([])`,
+      java: `import java.util.*;
+
+class Solution {
+    public static ListNode mergeKLists(ListNode[] lists) {
+        // Write your solution here
+        return null;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("[1,1,2,3,4,4,5,6]");
+        System.out.println("[]");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[1,1,2,3,4,4,5,6]\n[]",
+      python: "[1, 1, 2, 3, 4, 4, 5, 6]\n[]",
+      java: "[1,1,2,3,4,4,5,6]\n[]",
+    },
+  },,
+
+  "task-scheduler": {
+    id: "task-scheduler",
+    title: "Task Scheduler",
+    difficulty: "Medium",
+    category: "Array • Hash Table • Greedy • Sorting • Heap • Counting",
+    description: {
+      text: "Given a characters array tasks, representing the tasks a CPU needs to do, where each letter represents a different task. Tasks could be done in any order. Each task is done in one unit of time. For each unit of time, the CPU could complete either one task or just be idle.",
+      notes: ["However, there is a non-negative integer n that represents the cooldown period between two same tasks (the same letter in the array), that is that there must be at least n units of time between any two same tasks.", "Return the least number of units of times that the CPU will take to finish all the given tasks."],
+    },
+    examples: [
+      { input: 'tasks = ["A","A","A","B","B","B"], n = 2', output: "8", explanation: "A -> B -> idle -> A -> B -> idle -> A -> B" },
+      { input: 'tasks = ["A","A","A","B","B","B"], n = 0', output: "6" },
+      { input: 'tasks = ["A","A","A","A","A","A","B","C","D","E","F","G"], n = 2', output: "16" },
+    ],
+    constraints: ["1 ≤ tasks.length ≤ 10⁴", "tasks[i] is upper-case English letter", "The integer n is in the range [0, 100]"],
+    starterCode: {
+      javascript: `function leastInterval(tasks, n) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(leastInterval(["A","A","A","B","B","B"], 2)); // Expected: 8
+console.log(leastInterval(["A","A","A","B","B","B"], 0)); // Expected: 6
+console.log(leastInterval(["A","A","A","A","A","A","B","C","D","E","F","G"], 2)); // Expected: 16`,
+      python: `def leastInterval(tasks, n):
+    # Write your solution here
+    pass
+
+# Test cases
+print(leastInterval(["A","A","A","B","B","B"], 2))  # Expected: 8
+print(leastInterval(["A","A","A","B","B","B"], 0))  # Expected: 6
+print(leastInterval(["A","A","A","A","A","A","B","C","D","E","F","G"], 2))  # Expected: 16`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int leastInterval(char[] tasks, int n) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(leastInterval(new char[]{'A','A','A','B','B','B'}, 2));
+        System.out.println(leastInterval(new char[]{'A','A','A','B','B','B'}, 0));
+        System.out.println(leastInterval(new char[]{'A','A','A','A','A','A','B','C','D','E','F','G'}, 2));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "8\n6\n16",
+      python: "8\n6\n16",
+      java: "8\n6\n16",
+    },
   },
 };
