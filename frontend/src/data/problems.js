@@ -3844,5 +3844,157 @@ class Solution {
       python: "['((()))', '(()())', '(())()', '()(())', '()()()']\n['()']",
       java: "[((())), (()()), (())(), ()(()), ()()()]\n[()]",
     },
+  },,
+
+  "kth-largest-element-in-an-array": {
+    id: "kth-largest-element-in-an-array",
+    title: "Kth Largest Element in an Array",
+    difficulty: "Medium",
+    category: "Array • Divide and Conquer • Sorting • Heap • Quickselect",
+    description: {
+      text: "Given an integer array nums and an integer k, return the kth largest element in the array.",
+      notes: ["Note that it is the kth largest element in the sorted order, not the kth distinct element."],
+    },
+    examples: [
+      { input: "nums = [3,2,1,5,6,4], k = 2", output: "5" },
+      { input: "nums = [3,2,3,1,2,4,5,5,6], k = 4", output: "4" },
+    ],
+    constraints: ["1 ≤ k ≤ nums.length ≤ 10⁵", "-10⁴ ≤ nums[i] ≤ 10⁴"],
+    starterCode: {
+      javascript: `function findKthLargest(nums, k) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(findKthLargest([3,2,1,5,6,4], 2)); // Expected: 5
+console.log(findKthLargest([3,2,3,1,2,4,5,5,6], 4)); // Expected: 4`,
+      python: `def findKthLargest(nums, k):
+    # Write your solution here
+    pass
+
+# Test cases
+print(findKthLargest([3,2,1,5,6,4], 2))  # Expected: 5
+print(findKthLargest([3,2,3,1,2,4,5,5,6], 4))  # Expected: 4`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int findKthLargest(int[] nums, int k) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(findKthLargest(new int[]{3,2,1,5,6,4}, 2));
+        System.out.println(findKthLargest(new int[]{3,2,3,1,2,4,5,5,6}, 4));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "5\n4",
+      python: "5\n4",
+      java: "5\n4",
+    },
+  },,
+
+  "find-median-from-data-stream": {
+    id: "find-median-from-data-stream",
+    title: "Find Median from Data Stream",
+    difficulty: "Hard",
+    category: "Two Pointers • Design • Sorting • Heap • Data Stream",
+    description: {
+      text: "The median is the middle value in an ordered integer list. If the size of the list is even, there is no middle value, and the median is the mean of the two middle values.",
+      notes: [
+        "Implement the MedianFinder class:",
+        "MedianFinder() initializes the MedianFinder object.",
+        "void addNum(int num) adds the integer num from the data stream to the data structure.",
+        "double findMedian() returns the median of all elements so far.",
+      ],
+    },
+    examples: [
+      {
+        input: '["MedianFinder", "addNum", "addNum", "findMedian", "addNum", "findMedian"]\n[[], [1], [2], [], [3], []]',
+        output: "[null, null, null, 1.5, null, 2.0]",
+      },
+    ],
+    constraints: ["-10⁵ ≤ num ≤ 10⁵", "There will be at least one element in the data structure before calling findMedian", "At most 5 × 10⁴ calls will be made to addNum and findMedian"],
+    starterCode: {
+      javascript: `class MedianFinder {
+  constructor() {
+    // Initialize your data structure here
+    
+  }
+  
+  addNum(num) {
+    // Add a number to the data structure
+    
+  }
+  
+  findMedian() {
+    // Return the median
+    
+  }
+}
+
+// Test cases
+const mf = new MedianFinder();
+mf.addNum(1);
+mf.addNum(2);
+console.log(mf.findMedian()); // Expected: 1.5
+mf.addNum(3);
+console.log(mf.findMedian()); // Expected: 2`,
+      python: `import heapq
+
+class MedianFinder:
+    def __init__(self):
+        # Initialize your data structure here
+        pass
+    
+    def addNum(self, num):
+        # Add a number to the data structure
+        pass
+    
+    def findMedian(self):
+        # Return the median
+        pass
+
+# Test cases
+mf = MedianFinder()
+mf.addNum(1)
+mf.addNum(2)
+print(mf.findMedian())  # Expected: 1.5
+mf.addNum(3)
+print(mf.findMedian())  # Expected: 2.0`,
+      java: `import java.util.*;
+
+class MedianFinder {
+    public MedianFinder() {
+        // Initialize your data structure here
+    }
+    
+    public void addNum(int num) {
+        // Add a number to the data structure
+    }
+    
+    public double findMedian() {
+        // Return the median
+        return 0.0;
+    }
+    
+    public static void main(String[] args) {
+        MedianFinder mf = new MedianFinder();
+        mf.addNum(1);
+        mf.addNum(2);
+        System.out.println(mf.findMedian());
+        mf.addNum(3);
+        System.out.println(mf.findMedian());
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "1.5\n2",
+      python: "1.5\n2.0",
+      java: "1.5\n2.0",
+    },
   },
 };
