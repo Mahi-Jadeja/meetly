@@ -3742,5 +3742,107 @@ class Solution {
       python: "['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']\n[]\n['a', 'b', 'c']",
       java: "[ad, ae, af, bd, be, bf, cd, ce, cf]\n[]\n[a, b, c]",
     },
+  },,
+
+  "n-queens": {
+    id: "n-queens",
+    title: "N-Queens",
+    difficulty: "Hard",
+    category: "Array • Backtracking",
+    description: {
+      text: "The n-queens puzzle is the problem of placing n queens on an n x n chessboard such that no two queens attack each other.",
+      notes: ["Given an integer n, return all distinct solutions to the n-queens puzzle. Each solution contains a distinct board configuration of the n-queens' placement, where 'Q' and '.' both indicate a queen and an empty space, respectively."],
+    },
+    examples: [
+      { input: "n = 4", output: '[[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]' },
+      { input: "n = 1", output: '[["Q"]]' },
+    ],
+    constraints: ["1 ≤ n ≤ 9"],
+    starterCode: {
+      javascript: `function solveNQueens(n) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(solveNQueens(4)));
+console.log(JSON.stringify(solveNQueens(1)));`,
+      python: `def solveNQueens(n):
+    # Write your solution here
+    pass
+
+# Test cases
+print(solveNQueens(4))
+print(solveNQueens(1))`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<String>> solveNQueens(int n) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(solveNQueens(4));
+        System.out.println(solveNQueens(1));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[[".Q..","...Q","Q...","..Q."],["..Q.","Q...","...Q",".Q.."]]\n[["Q"]]',
+      python: "[[\".Q..\", \"...Q\", \"Q...\", \"..Q.\"], [\"..Q.\", \"Q...\", \"...Q\", \".Q..\"]]\n[[\"Q\"]]",
+      java: "[[.Q.., ...Q, Q..., ..Q.], [..Q., Q..., ...Q, .Q..]]\n[[Q]]",
+    },
+  },,
+
+  "generate-parentheses": {
+    id: "generate-parentheses",
+    title: "Generate Parentheses",
+    difficulty: "Medium",
+    category: "String • Dynamic Programming • Backtracking",
+    description: {
+      text: "Given n pairs of parentheses, write a function to generate all combinations of well-formed parentheses.",
+      notes: [],
+    },
+    examples: [
+      { input: "n = 3", output: '["((()))","(()())","(())()","()(())","()()()"]' },
+      { input: "n = 1", output: '["()"]' },
+    ],
+    constraints: ["1 ≤ n ≤ 8"],
+    starterCode: {
+      javascript: `function generateParenthesis(n) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(generateParenthesis(3)));
+console.log(JSON.stringify(generateParenthesis(1)));`,
+      python: `def generateParenthesis(n):
+    # Write your solution here
+    pass
+
+# Test cases
+print(generateParenthesis(3))
+print(generateParenthesis(1))`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<String> generateParenthesis(int n) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(generateParenthesis(3));
+        System.out.println(generateParenthesis(1));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '["((()))","(()())","(())()","()(())","()()()"]]\n["()"]',
+      python: "['((()))', '(()())', '(())()', '()(())', '()()()']\n['()']",
+      java: "[((())), (()()), (())(), ()(()), ()()()]\n[()]",
+    },
   },
 };
