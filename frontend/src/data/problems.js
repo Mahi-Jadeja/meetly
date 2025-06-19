@@ -3632,5 +3632,115 @@ class Solution {
       python: "[[1, 1, 6], [1, 2, 5], [1, 7], [2, 6]]\n[[1, 2, 2], [5]]",
       java: "[[1, 1, 6], [1, 2, 5], [1, 7], [2, 6]]\n[[1, 2, 2], [5]]",
     },
+  },,
+
+  "palindrome-partitioning": {
+    id: "palindrome-partitioning",
+    title: "Palindrome Partitioning",
+    difficulty: "Medium",
+    category: "String • Dynamic Programming • Backtracking",
+    description: {
+      text: "Given a string s, partition s such that every substring of the partition is a palindrome. Return all possible palindrome partitioning of s.",
+      notes: [],
+    },
+    examples: [
+      { input: 's = "aab"', output: '[["a","a","b"],["aa","b"]]' },
+      { input: 's = "a"', output: '[["a"]]' },
+    ],
+    constraints: ["1 ≤ s.length ≤ 16", "s contains only lowercase English letters"],
+    starterCode: {
+      javascript: `function partition(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(partition("aab")));
+console.log(JSON.stringify(partition("a")));`,
+      python: `def partition(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(partition("aab"))
+print(partition("a"))`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<String>> partition(String s) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(partition("aab"));
+        System.out.println(partition("a"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[["a","a","b"],["aa","b"]]\n[["a"]]',
+      python: "[['a', 'a', 'b'], ['aa', 'b']]\n[['a']]",
+      java: "[[a, a, b], [aa, b]]\n[[a]]",
+    },
+  },,
+
+  "letter-combinations-of-a-phone-number": {
+    id: "letter-combinations-of-a-phone-number",
+    title: "Letter Combinations of a Phone Number",
+    difficulty: "Medium",
+    category: "Hash Table • String • Backtracking",
+    description: {
+      text: "Given a string containing digits from 2-9 inclusive, return all possible letter combinations that the number could represent. Return the answer in any order.",
+      notes: ["A mapping of digits to letters (just like on the telephone buttons) is given below."],
+    },
+    examples: [
+      { input: 'digits = "23"', output: '["ad","ae","af","bd","be","bf","cd","ce","cf"]' },
+      { input: 'digits = ""', output: "[]" },
+      { input: 'digits = "2"', output: '["a","b","c"]' },
+    ],
+    constraints: ["0 ≤ digits.length ≤ 4", "digits[i] is a digit in the range ['2', '9']"],
+    starterCode: {
+      javascript: `function letterCombinations(digits) {
+  // Write your solution here
+  // Mapping: 2->"abc", 3->"def", 4->"ghi", 5->"jkl", 
+  //          6->"mno", 7->"pqrs", 8->"tuv", 9->"wxyz"
+  
+}
+
+// Test cases
+console.log(JSON.stringify(letterCombinations("23")));
+console.log(JSON.stringify(letterCombinations("")));
+console.log(JSON.stringify(letterCombinations("2")));`,
+      python: `def letterCombinations(digits):
+    # Write your solution here
+    # Mapping: 2->"abc", 3->"def", 4->"ghi", 5->"jkl", 
+    #          6->"mno", 7->"pqrs", 8->"tuv", 9->"wxyz"
+    pass
+
+# Test cases
+print(letterCombinations("23"))
+print(letterCombinations(""))
+print(letterCombinations("2"))`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<String> letterCombinations(String digits) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(letterCombinations("23"));
+        System.out.println(letterCombinations(""));
+        System.out.println(letterCombinations("2"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '["ad","ae","af","bd","be","bf","cd","ce","cf"]\n[]\n["a","b","c"]',
+      python: "['ad', 'ae', 'af', 'bd', 'be', 'bf', 'cd', 'ce', 'cf']\n[]\n['a', 'b', 'c']",
+      java: "[ad, ae, af, bd, be, bf, cd, ce, cf]\n[]\n[a, b, c]",
+    },
   },
 };
