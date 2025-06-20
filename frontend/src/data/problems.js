@@ -4310,5 +4310,111 @@ class Solution {
       python: "[[1, 5], [6, 9]]\n[[1, 2], [3, 10], [12, 16]]",
       java: "[[1, 5], [6, 9]]\n[[1, 2], [3, 10], [12, 16]]",
     },
+  },,
+
+  "non-overlapping-intervals": {
+    id: "non-overlapping-intervals",
+    title: "Non-overlapping Intervals",
+    difficulty: "Medium",
+    category: "Array • Dynamic Programming • Greedy • Sorting",
+    description: {
+      text: "Given an array of intervals intervals where intervals[i] = [starti, endi], return the minimum number of intervals you need to remove to make the rest of the intervals non-overlapping.",
+      notes: [],
+    },
+    examples: [
+      { input: "intervals = [[1,2],[2,3],[3,4],[1,3]]", output: "1", explanation: "[1,3] can be removed and the rest are non-overlapping." },
+      { input: "intervals = [[1,2],[1,2],[1,2]]", output: "2", explanation: "You need to remove two [1,2] to make the rest non-overlapping." },
+      { input: "intervals = [[1,2],[2,3]]", output: "0", explanation: "You don't need to remove any intervals." },
+    ],
+    constraints: ["1 ≤ intervals.length ≤ 10⁵", "intervals[i].length == 2", "-5 × 10⁴ ≤ starti < endi ≤ 5 × 10⁴"],
+    starterCode: {
+      javascript: `function eraseOverlapIntervals(intervals) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(eraseOverlapIntervals([[1,2],[2,3],[3,4],[1,3]])); // Expected: 1
+console.log(eraseOverlapIntervals([[1,2],[1,2],[1,2]])); // Expected: 2
+console.log(eraseOverlapIntervals([[1,2],[2,3]])); // Expected: 0`,
+      python: `def eraseOverlapIntervals(intervals):
+    # Write your solution here
+    pass
+
+# Test cases
+print(eraseOverlapIntervals([[1,2],[2,3],[3,4],[1,3]]))  # Expected: 1
+print(eraseOverlapIntervals([[1,2],[1,2],[1,2]]))  # Expected: 2
+print(eraseOverlapIntervals([[1,2],[2,3]]))  # Expected: 0`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int eraseOverlapIntervals(int[][] intervals) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(eraseOverlapIntervals(new int[][]{{1,2},{2,3},{3,4},{1,3}}));
+        System.out.println(eraseOverlapIntervals(new int[][]{{1,2},{1,2},{1,2}}));
+        System.out.println(eraseOverlapIntervals(new int[][]{{1,2},{2,3}}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "1\n2\n0",
+      python: "1\n2\n0",
+      java: "1\n2\n0",
+    },
+  },,
+
+  "meeting-rooms": {
+    id: "meeting-rooms",
+    title: "Meeting Rooms",
+    difficulty: "Easy",
+    category: "Array • Sorting",
+    description: {
+      text: "Given an array of meeting time intervals where intervals[i] = [starti, endi], determine if a person could attend all meetings.",
+      notes: [],
+    },
+    examples: [
+      { input: "intervals = [[0,30],[5,10],[15,20]]", output: "false" },
+      { input: "intervals = [[7,10],[2,4]]", output: "true" },
+    ],
+    constraints: ["0 ≤ intervals.length ≤ 10⁴", "intervals[i].length == 2", "0 ≤ starti < endi ≤ 10⁶"],
+    starterCode: {
+      javascript: `function canAttendMeetings(intervals) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(canAttendMeetings([[0,30],[5,10],[15,20]])); // Expected: false
+console.log(canAttendMeetings([[7,10],[2,4]])); // Expected: true`,
+      python: `def canAttendMeetings(intervals):
+    # Write your solution here
+    pass
+
+# Test cases
+print(canAttendMeetings([[0,30],[5,10],[15,20]]))  # Expected: False
+print(canAttendMeetings([[7,10],[2,4]]))  # Expected: True`,
+      java: `import java.util.*;
+
+class Solution {
+    public static boolean canAttendMeetings(int[][] intervals) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(canAttendMeetings(new int[][]{{0,30},{5,10},{15,20}}));
+        System.out.println(canAttendMeetings(new int[][]{{7,10},{2,4}}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "false\ntrue",
+      python: "False\nTrue",
+      java: "false\ntrue",
+    },
   },
 };
