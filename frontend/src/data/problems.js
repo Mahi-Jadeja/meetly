@@ -4634,5 +4634,124 @@ class Solution {
       python: "[1, 2, 3, 6, 9, 8, 7, 4, 5]\n[1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]",
       java: "[1, 2, 3, 6, 9, 8, 7, 4, 5]\n[1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]",
     },
+  },,
+
+  "set-matrix-zeroes": {
+    id: "set-matrix-zeroes",
+    title: "Set Matrix Zeroes",
+    difficulty: "Medium",
+    category: "Array • Hash Table • Matrix",
+    description: {
+      text: "Given an m x n integer matrix matrix, if an element is 0, set its entire row and column to 0's.",
+      notes: ["You must do it in place."],
+    },
+    examples: [
+      { input: "matrix = [[1,1,1],[1,0,1],[1,1,1]]", output: "[[1,0,1],[0,0,0],[1,0,1]]" },
+      { input: "matrix = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]", output: "[[0,0,0,0],[0,4,5,0],[0,3,1,0]]" },
+    ],
+    constraints: ["m == matrix.length", "n == matrix[0].length", "1 ≤ m, n ≤ 200", "-2³¹ ≤ matrix[i][j] ≤ 2³¹ - 1"],
+    starterCode: {
+      javascript: `function setZeroes(matrix) {
+  // Write your solution here (modify in-place)
+  
+}
+
+// Test cases
+let matrix1 = [[1,1,1],[1,0,1],[1,1,1]];
+setZeroes(matrix1);
+console.log(JSON.stringify(matrix1)); // Expected: [[1,0,1],[0,0,0],[1,0,1]]
+
+let matrix2 = [[0,1,2,0],[3,4,5,2],[1,3,1,5]];
+setZeroes(matrix2);
+console.log(JSON.stringify(matrix2)); // Expected: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]`,
+      python: `def setZeroes(matrix):
+    # Write your solution here (modify in-place)
+    pass
+
+# Test cases
+matrix1 = [[1,1,1],[1,0,1],[1,1,1]]
+setZeroes(matrix1)
+print(matrix1)  # Expected: [[1,0,1],[0,0,0],[1,0,1]]
+
+matrix2 = [[0,1,2,0],[3,4,5,2],[1,3,1,5]]
+setZeroes(matrix2)
+print(matrix2)  # Expected: [[0,0,0,0],[0,4,5,0],[0,3,1,0]]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static void setZeroes(int[][] matrix) {
+        // Write your solution here (modify in-place)
+    }
+    
+    public static void main(String[] args) {
+        int[][] matrix1 = {{1,1,1},{1,0,1},{1,1,1}};
+        setZeroes(matrix1);
+        System.out.println(Arrays.deepToString(matrix1));
+        
+        int[][] matrix2 = {{0,1,2,0},{3,4,5,2},{1,3,1,5}};
+        setZeroes(matrix2);
+        System.out.println(Arrays.deepToString(matrix2));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[[1,0,1],[0,0,0],[1,0,1]]\n[[0,0,0,0],[0,4,5,0],[0,3,1,0]]',
+      python: "[[1, 0, 1], [0, 0, 0], [1, 0, 1]]\n[[0, 0, 0, 0], [0, 4, 5, 0], [0, 3, 1, 0]]",
+      java: "[[1, 0, 1], [0, 0, 0], [1, 0, 1]]\n[[0, 0, 0, 0], [0, 4, 5, 0], [0, 3, 1, 0]]",
+    },
+  },,
+
+  "word-search-ii": {
+    id: "word-search-ii",
+    title: "Word Search II",
+    difficulty: "Hard",
+    category: "Array • String • Backtracking • Trie • Matrix",
+    description: {
+      text: "Given an m x n board of characters and a list of strings words, return all words on the board.",
+      notes: ["Each word must be constructed from letters of sequentially adjacent cells, where adjacent cells are horizontally or vertically neighboring. The same letter cell may not be used more than once in a word."],
+    },
+    examples: [
+      { input: 'board = [["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], words = ["oath","pea","eat","rain"]', output: '["eat","oath"]' },
+      { input: 'board = [["a","b"],["c","d"]], words = ["abcb"]', output: "[]" },
+    ],
+    constraints: ["m == board.length", "n == board[i].length", "1 ≤ m, n ≤ 12", "board[i][j] is a lowercase English letter", "1 ≤ words.length ≤ 3 × 10⁴", "1 ≤ words[i].length ≤ 10", "words[i] consists of lowercase English letters", "All the strings of words are unique"],
+    starterCode: {
+      javascript: `function findWords(board, words) {
+  // Write your solution here
+  // Hint: Use a Trie for efficient word lookup
+  
+}
+
+// Test cases
+console.log(findWords([["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], ["oath","pea","eat","rain"]));
+console.log(findWords([["a","b"],["c","d"]], ["abcb"]));`,
+      python: `def findWords(board, words):
+    # Write your solution here
+    # Hint: Use a Trie for efficient word lookup
+    pass
+
+# Test cases
+print(findWords([["o","a","a","n"],["e","t","a","e"],["i","h","k","r"],["i","f","l","v"]], ["oath","pea","eat","rain"]))
+print(findWords([["a","b"],["c","d"]], ["abcb"]))`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<String> findWords(char[][] board, String[] words) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        char[][] board = {{'o','a','a','n'},{'e','t','a','e'},{'i','h','k','r'},{'i','f','l','v'}};
+        System.out.println(findWords(board, new String[]{"oath","pea","eat","rain"}));
+        System.out.println(findWords(new char[][]{{'a','b'},{'c','d'}}, new String[]{"abcb"}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '["eat","oath"]\n[]',
+      python: "['eat', 'oath']\n[]",
+      java: "[eat, oath]\n[]",
+    },
   },
 };
