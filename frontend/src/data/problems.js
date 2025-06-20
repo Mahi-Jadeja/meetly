@@ -4138,5 +4138,177 @@ class Solution {
       python: "8\n6\n16",
       java: "8\n6\n16",
     },
+  },,
+
+  "design-twitter": {
+    id: "design-twitter",
+    title: "Design Twitter",
+    difficulty: "Medium",
+    category: "Hash Table • Linked List • Design • Heap",
+    description: {
+      text: "Design a simplified version of Twitter where users can post tweets, follow/unfollow another user, and is able to see the 10 most recent tweets in the user's news feed.",
+      notes: [
+        "Implement the Twitter class with these methods:",
+        "void postTweet(int userId, int tweetId): Composes a new tweet with ID tweetId by the user userId.",
+        "List<Integer> getNewsFeed(int userId): Retrieves the 10 most recent tweet IDs in the user's news feed.",
+        "void follow(int followerId, int followeeId): The user with ID followerId started following the user with ID followeeId.",
+        "void unfollow(int followerId, int followeeId): The user with ID followerId started unfollowing the user with ID followeeId.",
+      ],
+    },
+    examples: [
+      {
+        input: '["Twitter", "postTweet", "getNewsFeed", "follow", "postTweet", "getNewsFeed", "unfollow", "getNewsFeed"]',
+        output: "[null, null, [5], null, null, [6, 5], null, [5]]",
+      },
+    ],
+    constraints: ["1 ≤ userId, followerId, followeeId ≤ 500", "0 ≤ tweetId ≤ 10⁴", "All the tweets have unique IDs"],
+    starterCode: {
+      javascript: `class Twitter {
+  constructor() {
+    // Initialize
+  }
+  
+  postTweet(userId, tweetId) {
+    // Post a tweet
+  }
+  
+  getNewsFeed(userId) {
+    // Get 10 most recent tweets
+  }
+  
+  follow(followerId, followeeId) {
+    // Follow a user
+  }
+  
+  unfollow(followerId, followeeId) {
+    // Unfollow a user
+  }
+}
+
+// Test cases
+const twitter = new Twitter();
+twitter.postTweet(1, 5);
+console.log(twitter.getNewsFeed(1)); // Expected: [5]
+twitter.follow(1, 2);
+twitter.postTweet(2, 6);
+console.log(twitter.getNewsFeed(1)); // Expected: [6, 5]`,
+      python: `class Twitter:
+    def __init__(self):
+        # Initialize
+        pass
+    
+    def postTweet(self, userId, tweetId):
+        # Post a tweet
+        pass
+    
+    def getNewsFeed(self, userId):
+        # Get 10 most recent tweets
+        pass
+    
+    def follow(self, followerId, followeeId):
+        # Follow a user
+        pass
+    
+    def unfollow(self, followerId, followeeId):
+        # Unfollow a user
+        pass
+
+# Test cases
+twitter = Twitter()
+twitter.postTweet(1, 5)
+print(twitter.getNewsFeed(1))  # Expected: [5]
+twitter.follow(1, 2)
+twitter.postTweet(2, 6)
+print(twitter.getNewsFeed(1))  # Expected: [6, 5]`,
+      java: `import java.util.*;
+
+class Twitter {
+    public Twitter() {
+        // Initialize
+    }
+    
+    public void postTweet(int userId, int tweetId) {
+        // Post a tweet
+    }
+    
+    public List<Integer> getNewsFeed(int userId) {
+        // Get 10 most recent tweets
+        return new ArrayList<>();
+    }
+    
+    public void follow(int followerId, int followeeId) {
+        // Follow a user
+    }
+    
+    public void unfollow(int followerId, int followeeId) {
+        // Unfollow a user
+    }
+    
+    public static void main(String[] args) {
+        Twitter twitter = new Twitter();
+        twitter.postTweet(1, 5);
+        System.out.println(twitter.getNewsFeed(1));
+        twitter.follow(1, 2);
+        twitter.postTweet(2, 6);
+        System.out.println(twitter.getNewsFeed(1));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[5]\n[6,5]",
+      python: "[5]\n[6, 5]",
+      java: "[5]\n[6, 5]",
+    },
+  },,
+
+  "insert-interval": {
+    id: "insert-interval",
+    title: "Insert Interval",
+    difficulty: "Medium",
+    category: "Array",
+    description: {
+      text: "You are given an array of non-overlapping intervals intervals where intervals[i] = [starti, endi] represent the start and the end of the ith interval and intervals is sorted in ascending order by starti. You are also given an interval newInterval = [start, end] that represents the start and end of another interval.",
+      notes: ["Insert newInterval into intervals such that intervals is still sorted in ascending order by starti and intervals still does not have any overlapping intervals (merge overlapping intervals if necessary).", "Return intervals after the insertion."],
+    },
+    examples: [
+      { input: "intervals = [[1,3],[6,9]], newInterval = [2,5]", output: "[[1,5],[6,9]]" },
+      { input: "intervals = [[1,2],[3,5],[6,7],[8,10],[12,16]], newInterval = [4,8]", output: "[[1,2],[3,10],[12,16]]" },
+    ],
+    constraints: ["0 ≤ intervals.length ≤ 10⁴", "intervals[i].length == 2", "0 ≤ starti ≤ endi ≤ 10⁵", "intervals is sorted by starti in ascending order", "newInterval.length == 2", "0 ≤ start ≤ end ≤ 10⁵"],
+    starterCode: {
+      javascript: `function insert(intervals, newInterval) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(insert([[1,3],[6,9]], [2,5]))); // Expected: [[1,5],[6,9]]
+console.log(JSON.stringify(insert([[1,2],[3,5],[6,7],[8,10],[12,16]], [4,8]))); // Expected: [[1,2],[3,10],[12,16]]`,
+      python: `def insert(intervals, newInterval):
+    # Write your solution here
+    pass
+
+# Test cases
+print(insert([[1,3],[6,9]], [2,5]))  # Expected: [[1,5],[6,9]]
+print(insert([[1,2],[3,5],[6,7],[8,10],[12,16]], [4,8]))  # Expected: [[1,2],[3,10],[12,16]]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int[][] insert(int[][] intervals, int[] newInterval) {
+        // Write your solution here
+        return new int[0][0];
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(Arrays.deepToString(insert(new int[][]{{1,3},{6,9}}, new int[]{2,5})));
+        System.out.println(Arrays.deepToString(insert(new int[][]{{1,2},{3,5},{6,7},{8,10},{12,16}}, new int[]{4,8})));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[[1,5],[6,9]]\n[[1,2],[3,10],[12,16]]',
+      python: "[[1, 5], [6, 9]]\n[[1, 2], [3, 10], [12, 16]]",
+      java: "[[1, 5], [6, 9]]\n[[1, 2], [3, 10], [12, 16]]",
+    },
   },
 };
