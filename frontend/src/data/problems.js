@@ -4416,5 +4416,107 @@ class Solution {
       python: "False\nTrue",
       java: "false\ntrue",
     },
+  },,
+
+  "meeting-rooms-ii": {
+    id: "meeting-rooms-ii",
+    title: "Meeting Rooms II",
+    difficulty: "Medium",
+    category: "Array • Two Pointers • Greedy • Sorting • Heap",
+    description: {
+      text: "Given an array of meeting time intervals intervals where intervals[i] = [starti, endi], return the minimum number of conference rooms required.",
+      notes: [],
+    },
+    examples: [
+      { input: "intervals = [[0,30],[5,10],[15,20]]", output: "2" },
+      { input: "intervals = [[7,10],[2,4]]", output: "1" },
+    ],
+    constraints: ["1 ≤ intervals.length ≤ 10⁴", "0 ≤ starti < endi ≤ 10⁶"],
+    starterCode: {
+      javascript: `function minMeetingRooms(intervals) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(minMeetingRooms([[0,30],[5,10],[15,20]])); // Expected: 2
+console.log(minMeetingRooms([[7,10],[2,4]])); // Expected: 1`,
+      python: `def minMeetingRooms(intervals):
+    # Write your solution here
+    pass
+
+# Test cases
+print(minMeetingRooms([[0,30],[5,10],[15,20]]))  # Expected: 2
+print(minMeetingRooms([[7,10],[2,4]]))  # Expected: 1`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int minMeetingRooms(int[][] intervals) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(minMeetingRooms(new int[][]{{0,30},{5,10},{15,20}}));
+        System.out.println(minMeetingRooms(new int[][]{{7,10},{2,4}}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2\n1",
+      python: "2\n1",
+      java: "2\n1",
+    },
+  },,
+
+  "minimum-interval-to-include-each-query": {
+    id: "minimum-interval-to-include-each-query",
+    title: "Minimum Interval to Include Each Query",
+    difficulty: "Hard",
+    category: "Array • Binary Search • Sorting • Heap • Line Sweep",
+    description: {
+      text: "You are given a 2D integer array intervals, where intervals[i] = [lefti, righti] describes the ith interval starting at lefti and ending at righti (inclusive). The size of an interval is defined as the number of integers it contains, or more formally righti - lefti + 1.",
+      notes: ["You are also given an integer array queries. The answer to the jth query is the size of the smallest interval i such that lefti <= queries[j] <= righti. If no such interval exists, the answer is -1."],
+    },
+    examples: [
+      { input: "intervals = [[1,4],[2,4],[3,6],[4,4]], queries = [2,3,4,5]", output: "[3,3,1,4]" },
+      { input: "intervals = [[2,3],[2,5],[1,8],[20,25]], queries = [2,19,5,22]", output: "[2,-1,4,6]" },
+    ],
+    constraints: ["1 ≤ intervals.length ≤ 10⁵", "1 ≤ queries.length ≤ 10⁵", "intervals[i].length == 2", "1 ≤ lefti ≤ righti ≤ 10⁷", "1 ≤ queries[j] ≤ 10⁷"],
+    starterCode: {
+      javascript: `function minInterval(intervals, queries) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(minInterval([[1,4],[2,4],[3,6],[4,4]], [2,3,4,5])); // Expected: [3,3,1,4]
+console.log(minInterval([[2,3],[2,5],[1,8],[20,25]], [2,19,5,22])); // Expected: [2,-1,4,6]`,
+      python: `def minInterval(intervals, queries):
+    # Write your solution here
+    pass
+
+# Test cases
+print(minInterval([[1,4],[2,4],[3,6],[4,4]], [2,3,4,5]))  # Expected: [3,3,1,4]
+print(minInterval([[2,3],[2,5],[1,8],[20,25]], [2,19,5,22]))  # Expected: [2,-1,4,6]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int[] minInterval(int[][] intervals, int[] queries) {
+        // Write your solution here
+        return new int[0];
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(minInterval(new int[][]{{1,4},{2,4},{3,6},{4,4}}, new int[]{2,3,4,5})));
+        System.out.println(Arrays.toString(minInterval(new int[][]{{2,3},{2,5},{1,8},{20,25}}, new int[]{2,19,5,22})));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[3,3,1,4]\n[2,-1,4,6]",
+      python: "[3, 3, 1, 4]\n[2, -1, 4, 6]",
+      java: "[3, 3, 1, 4]\n[2, -1, 4, 6]",
+    },
   },
 };
