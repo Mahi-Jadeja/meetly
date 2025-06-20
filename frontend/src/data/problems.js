@@ -4518,5 +4518,121 @@ class Solution {
       python: "[3, 3, 1, 4]\n[2, -1, 4, 6]",
       java: "[3, 3, 1, 4]\n[2, -1, 4, 6]",
     },
+  },,
+
+  "rotate-image": {
+    id: "rotate-image",
+    title: "Rotate Image",
+    difficulty: "Medium",
+    category: "Array • Math • Matrix",
+    description: {
+      text: "You are given an n x n 2D matrix representing an image, rotate the image by 90 degrees (clockwise).",
+      notes: ["You have to rotate the image in-place, which means you have to modify the input 2D matrix directly. DO NOT allocate another 2D matrix and do the rotation."],
+    },
+    examples: [
+      { input: "matrix = [[1,2,3],[4,5,6],[7,8,9]]", output: "[[7,4,1],[8,5,2],[9,6,3]]" },
+      { input: "matrix = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]", output: "[[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]" },
+    ],
+    constraints: ["n == matrix.length == matrix[i].length", "1 ≤ n ≤ 20", "-1000 ≤ matrix[i][j] ≤ 1000"],
+    starterCode: {
+      javascript: `function rotate(matrix) {
+  // Write your solution here (modify in-place)
+  
+}
+
+// Test cases
+let matrix1 = [[1,2,3],[4,5,6],[7,8,9]];
+rotate(matrix1);
+console.log(JSON.stringify(matrix1)); // Expected: [[7,4,1],[8,5,2],[9,6,3]]
+
+let matrix2 = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]];
+rotate(matrix2);
+console.log(JSON.stringify(matrix2)); // Expected: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]`,
+      python: `def rotate(matrix):
+    # Write your solution here (modify in-place)
+    pass
+
+# Test cases
+matrix1 = [[1,2,3],[4,5,6],[7,8,9]]
+rotate(matrix1)
+print(matrix1)  # Expected: [[7,4,1],[8,5,2],[9,6,3]]
+
+matrix2 = [[5,1,9,11],[2,4,8,10],[13,3,6,7],[15,14,12,16]]
+rotate(matrix2)
+print(matrix2)  # Expected: [[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static void rotate(int[][] matrix) {
+        // Write your solution here (modify in-place)
+    }
+    
+    public static void main(String[] args) {
+        int[][] matrix1 = {{1,2,3},{4,5,6},{7,8,9}};
+        rotate(matrix1);
+        System.out.println(Arrays.deepToString(matrix1));
+        
+        int[][] matrix2 = {{5,1,9,11},{2,4,8,10},{13,3,6,7},{15,14,12,16}};
+        rotate(matrix2);
+        System.out.println(Arrays.deepToString(matrix2));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[[7,4,1],[8,5,2],[9,6,3]]\n[[15,13,2,5],[14,3,4,1],[12,6,8,9],[16,7,10,11]]',
+      python: "[[7, 4, 1], [8, 5, 2], [9, 6, 3]]\n[[15, 13, 2, 5], [14, 3, 4, 1], [12, 6, 8, 9], [16, 7, 10, 11]]",
+      java: "[[7, 4, 1], [8, 5, 2], [9, 6, 3]]\n[[15, 13, 2, 5], [14, 3, 4, 1], [12, 6, 8, 9], [16, 7, 10, 11]]",
+    },
+  },,
+
+  "spiral-matrix": {
+    id: "spiral-matrix",
+    title: "Spiral Matrix",
+    difficulty: "Medium",
+    category: "Array • Matrix • Simulation",
+    description: {
+      text: "Given an m x n matrix, return all elements of the matrix in spiral order.",
+      notes: [],
+    },
+    examples: [
+      { input: "matrix = [[1,2,3],[4,5,6],[7,8,9]]", output: "[1,2,3,6,9,8,7,4,5]" },
+      { input: "matrix = [[1,2,3,4],[5,6,7,8],[9,10,11,12]]", output: "[1,2,3,4,8,12,11,10,9,5,6,7]" },
+    ],
+    constraints: ["m == matrix.length", "n == matrix[i].length", "1 ≤ m, n ≤ 10", "-100 ≤ matrix[i][j] ≤ 100"],
+    starterCode: {
+      javascript: `function spiralOrder(matrix) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(spiralOrder([[1,2,3],[4,5,6],[7,8,9]])); // Expected: [1,2,3,6,9,8,7,4,5]
+console.log(spiralOrder([[1,2,3,4],[5,6,7,8],[9,10,11,12]])); // Expected: [1,2,3,4,8,12,11,10,9,5,6,7]`,
+      python: `def spiralOrder(matrix):
+    # Write your solution here
+    pass
+
+# Test cases
+print(spiralOrder([[1,2,3],[4,5,6],[7,8,9]]))  # Expected: [1,2,3,6,9,8,7,4,5]
+print(spiralOrder([[1,2,3,4],[5,6,7,8],[9,10,11,12]]))  # Expected: [1,2,3,4,8,12,11,10,9,5,6,7]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<Integer> spiralOrder(int[][] matrix) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(spiralOrder(new int[][]{{1,2,3},{4,5,6},{7,8,9}}));
+        System.out.println(spiralOrder(new int[][]{{1,2,3,4},{5,6,7,8},{9,10,11,12}}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[1,2,3,6,9,8,7,4,5]\n[1,2,3,4,8,12,11,10,9,5,6,7]",
+      python: "[1, 2, 3, 6, 9, 8, 7, 4, 5]\n[1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]",
+      java: "[1, 2, 3, 6, 9, 8, 7, 4, 5]\n[1, 2, 3, 4, 8, 12, 11, 10, 9, 5, 6, 7]",
+    },
   },
 };
