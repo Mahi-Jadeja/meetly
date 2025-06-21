@@ -4861,5 +4861,105 @@ print(hammingWeight(2147483645))  # Expected: 30`,
       python: "3\n1\n30",
       java: "3\n1\n30",
     },
+  },,
+
+  "counting-bits": {
+    id: "counting-bits",
+    title: "Counting Bits",
+    difficulty: "Easy",
+    category: "Dynamic Programming • Bit Manipulation",
+    description: {
+      text: "Given an integer n, return an array ans of length n + 1 such that for each i (0 <= i <= n), ans[i] is the number of 1's in the binary representation of i.",
+      notes: [],
+    },
+    examples: [
+      { input: "n = 2", output: "[0,1,1]", explanation: "0 --> 0, 1 --> 1, 2 --> 10" },
+      { input: "n = 5", output: "[0,1,1,2,1,2]", explanation: "0 --> 0, 1 --> 1, 2 --> 10, 3 --> 11, 4 --> 100, 5 --> 101" },
+    ],
+    constraints: ["0 ≤ n ≤ 10⁵"],
+    starterCode: {
+      javascript: `function countBits(n) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(countBits(2)); // Expected: [0,1,1]
+console.log(countBits(5)); // Expected: [0,1,1,2,1,2]`,
+      python: `def countBits(n):
+    # Write your solution here
+    pass
+
+# Test cases
+print(countBits(2))  # Expected: [0,1,1]
+print(countBits(5))  # Expected: [0,1,1,2,1,2]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int[] countBits(int n) {
+        // Write your solution here
+        return new int[0];
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(countBits(2)));
+        System.out.println(Arrays.toString(countBits(5)));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[0,1,1]\n[0,1,1,2,1,2]",
+      python: "[0, 1, 1]\n[0, 1, 1, 2, 1, 2]",
+      java: "[0, 1, 1]\n[0, 1, 1, 2, 1, 2]",
+    },
+  },,
+
+  "reverse-bits": {
+    id: "reverse-bits",
+    title: "Reverse Bits",
+    difficulty: "Easy",
+    category: "Divide and Conquer • Bit Manipulation",
+    description: {
+      text: "Reverse bits of a given 32 bits unsigned integer.",
+      notes: [],
+    },
+    examples: [
+      { input: "n = 00000010100101000001111010011100", output: "964176192 (00111001011110000010100101000000)", explanation: "The input binary string represents the unsigned integer 43261596." },
+      { input: "n = 11111111111111111111111111111101", output: "3221225471 (10111111111111111111111111111111)" },
+    ],
+    constraints: ["The input must be a binary string of length 32"],
+    starterCode: {
+      javascript: `function reverseBits(n) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(reverseBits(43261596)); // Expected: 964176192
+console.log(reverseBits(4294967293)); // Expected: 3221225471`,
+      python: `def reverseBits(n):
+    # Write your solution here
+    pass
+
+# Test cases
+print(reverseBits(43261596))  # Expected: 964176192
+print(reverseBits(4294967293))  # Expected: 3221225471`,
+      java: `class Solution {
+    public static int reverseBits(int n) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(Integer.toUnsignedLong(reverseBits(43261596)));
+        System.out.println(Integer.toUnsignedLong(reverseBits(-3)));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "964176192\n3221225471",
+      python: "964176192\n3221225471",
+      java: "964176192\n3221225471",
+    },
   },
 };
