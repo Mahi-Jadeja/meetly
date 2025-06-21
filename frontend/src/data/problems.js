@@ -4961,5 +4961,112 @@ print(reverseBits(4294967293))  # Expected: 3221225471`,
       python: "964176192\n3221225471",
       java: "964176192\n3221225471",
     },
+  },,
+
+  "missing-number": {
+    id: "missing-number",
+    title: "Missing Number",
+    difficulty: "Easy",
+    category: "Array • Hash Table • Math • Binary Search • Bit Manipulation • Sorting",
+    description: {
+      text: "Given an array nums containing n distinct numbers in the range [0, n], return the only number in the range that is missing from the array.",
+      notes: [],
+    },
+    examples: [
+      { input: "nums = [3,0,1]", output: "2", explanation: "n = 3 since there are 3 numbers, so all numbers are in the range [0,3]. 2 is missing." },
+      { input: "nums = [0,1]", output: "2" },
+      { input: "nums = [9,6,4,2,3,5,7,0,1]", output: "8" },
+    ],
+    constraints: ["n == nums.length", "1 ≤ n ≤ 10⁴", "0 ≤ nums[i] ≤ n", "All the numbers of nums are unique"],
+    starterCode: {
+      javascript: `function missingNumber(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(missingNumber([3,0,1])); // Expected: 2
+console.log(missingNumber([0,1])); // Expected: 2
+console.log(missingNumber([9,6,4,2,3,5,7,0,1])); // Expected: 8`,
+      python: `def missingNumber(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(missingNumber([3,0,1]))  # Expected: 2
+print(missingNumber([0,1]))  # Expected: 2
+print(missingNumber([9,6,4,2,3,5,7,0,1]))  # Expected: 8`,
+      java: `class Solution {
+    public static int missingNumber(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(missingNumber(new int[]{3,0,1}));
+        System.out.println(missingNumber(new int[]{0,1}));
+        System.out.println(missingNumber(new int[]{9,6,4,2,3,5,7,0,1}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2\n2\n8",
+      python: "2\n2\n8",
+      java: "2\n2\n8",
+    },
+  },,
+
+  "sum-of-two-integers": {
+    id: "sum-of-two-integers",
+    title: "Sum of Two Integers",
+    difficulty: "Medium",
+    category: "Math • Bit Manipulation",
+    description: {
+      text: "Given two integers a and b, return the sum of the two integers without using the operators + and -.",
+      notes: [],
+    },
+    examples: [
+      { input: "a = 1, b = 2", output: "3" },
+      { input: "a = 2, b = 3", output: "5" },
+    ],
+    constraints: ["-1000 ≤ a, b ≤ 1000"],
+    starterCode: {
+      javascript: `function getSum(a, b) {
+  // Write your solution here
+  // Hint: Use XOR for sum without carry, AND + left shift for carry
+  
+}
+
+// Test cases
+console.log(getSum(1, 2)); // Expected: 3
+console.log(getSum(2, 3)); // Expected: 5
+console.log(getSum(-1, 1)); // Expected: 0`,
+      python: `def getSum(a, b):
+    # Write your solution here
+    # Hint: Use XOR for sum without carry, AND + left shift for carry
+    pass
+
+# Test cases
+print(getSum(1, 2))  # Expected: 3
+print(getSum(2, 3))  # Expected: 5
+print(getSum(-1, 1))  # Expected: 0`,
+      java: `class Solution {
+    public static int getSum(int a, int b) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(getSum(1, 2));
+        System.out.println(getSum(2, 3));
+        System.out.println(getSum(-1, 1));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n5\n0",
+      python: "3\n5\n0",
+      java: "3\n5\n0",
+    },
   },
 };
