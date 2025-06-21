@@ -4753,5 +4753,113 @@ class Solution {
       python: "['eat', 'oath']\n[]",
       java: "[eat, oath]\n[]",
     },
+  },,
+
+  "single-number": {
+    id: "single-number",
+    title: "Single Number",
+    difficulty: "Easy",
+    category: "Array • Bit Manipulation",
+    description: {
+      text: "Given a non-empty array of integers nums, every element appears twice except for one. Find that single one.",
+      notes: ["You must implement a solution with a linear runtime complexity and use only constant extra space."],
+    },
+    examples: [
+      { input: "nums = [2,2,1]", output: "1" },
+      { input: "nums = [4,1,2,1,2]", output: "4" },
+      { input: "nums = [1]", output: "1" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 3 × 10⁴", "-3 × 10⁴ ≤ nums[i] ≤ 3 × 10⁴", "Each element in the array appears twice except for one element which appears only once"],
+    starterCode: {
+      javascript: `function singleNumber(nums) {
+  // Write your solution here
+  // Hint: XOR operation
+  
+}
+
+// Test cases
+console.log(singleNumber([2,2,1])); // Expected: 1
+console.log(singleNumber([4,1,2,1,2])); // Expected: 4
+console.log(singleNumber([1])); // Expected: 1`,
+      python: `def singleNumber(nums):
+    # Write your solution here
+    # Hint: XOR operation
+    pass
+
+# Test cases
+print(singleNumber([2,2,1]))  # Expected: 1
+print(singleNumber([4,1,2,1,2]))  # Expected: 4
+print(singleNumber([1]))  # Expected: 1`,
+      java: `class Solution {
+    public static int singleNumber(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(singleNumber(new int[]{2,2,1}));
+        System.out.println(singleNumber(new int[]{4,1,2,1,2}));
+        System.out.println(singleNumber(new int[]{1}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "1\n4\n1",
+      python: "1\n4\n1",
+      java: "1\n4\n1",
+    },
+  },,
+
+  "number-of-1-bits": {
+    id: "number-of-1-bits",
+    title: "Number of 1 Bits",
+    difficulty: "Easy",
+    category: "Divide and Conquer • Bit Manipulation",
+    description: {
+      text: "Write a function that takes the binary representation of a positive integer and returns the number of set bits it has (also known as the Hamming weight).",
+      notes: [],
+    },
+    examples: [
+      { input: "n = 11", output: "3", explanation: "The input binary string 1011 has a total of three set bits." },
+      { input: "n = 128", output: "1", explanation: "The input binary string 10000000 has a total of one set bit." },
+      { input: "n = 2147483645", output: "30" },
+    ],
+    constraints: ["1 ≤ n ≤ 2³¹ - 1"],
+    starterCode: {
+      javascript: `function hammingWeight(n) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(hammingWeight(11)); // Expected: 3
+console.log(hammingWeight(128)); // Expected: 1
+console.log(hammingWeight(2147483645)); // Expected: 30`,
+      python: `def hammingWeight(n):
+    # Write your solution here
+    pass
+
+# Test cases
+print(hammingWeight(11))  # Expected: 3
+print(hammingWeight(128))  # Expected: 1
+print(hammingWeight(2147483645))  # Expected: 30`,
+      java: `class Solution {
+    public static int hammingWeight(int n) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(hammingWeight(11));
+        System.out.println(hammingWeight(128));
+        System.out.println(hammingWeight(2147483645));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n1\n30",
+      python: "3\n1\n30",
+      java: "3\n1\n30",
+    },
   },
 };
