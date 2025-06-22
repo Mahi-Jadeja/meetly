@@ -5068,5 +5068,110 @@ print(getSum(-1, 1))  # Expected: 0`,
       python: "3\n5\n0",
       java: "3\n5\n0",
     },
+  },,
+
+  "reverse-integer": {
+    id: "reverse-integer",
+    title: "Reverse Integer",
+    difficulty: "Medium",
+    category: "Math",
+    description: {
+      text: "Given a signed 32-bit integer x, return x with its digits reversed. If reversing x causes the value to go outside the signed 32-bit integer range [-2³¹, 2³¹ - 1], then return 0.",
+      notes: ["Assume the environment does not allow you to store 64-bit integers (signed or unsigned)."],
+    },
+    examples: [
+      { input: "x = 123", output: "321" },
+      { input: "x = -123", output: "-321" },
+      { input: "x = 120", output: "21" },
+    ],
+    constraints: ["-2³¹ ≤ x ≤ 2³¹ - 1"],
+    starterCode: {
+      javascript: `function reverse(x) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(reverse(123)); // Expected: 321
+console.log(reverse(-123)); // Expected: -321
+console.log(reverse(120)); // Expected: 21`,
+      python: `def reverse(x):
+    # Write your solution here
+    pass
+
+# Test cases
+print(reverse(123))  # Expected: 321
+print(reverse(-123))  # Expected: -321
+print(reverse(120))  # Expected: 21`,
+      java: `class Solution {
+    public static int reverse(int x) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(reverse(123));
+        System.out.println(reverse(-123));
+        System.out.println(reverse(120));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "321\n-321\n21",
+      python: "321\n-321\n21",
+      java: "321\n-321\n21",
+    },
+  },,
+
+  "unique-paths": {
+    id: "unique-paths",
+    title: "Unique Paths",
+    difficulty: "Medium",
+    category: "Math • Dynamic Programming • Combinatorics",
+    description: {
+      text: "There is a robot on an m x n grid. The robot is initially located at the top-left corner (i.e., grid[0][0]). The robot tries to move to the bottom-right corner (i.e., grid[m - 1][n - 1]). The robot can only move either down or right at any point in time.",
+      notes: ["Given the two integers m and n, return the number of possible unique paths that the robot can take to reach the bottom-right corner."],
+    },
+    examples: [
+      { input: "m = 3, n = 7", output: "28" },
+      { input: "m = 3, n = 2", output: "3", explanation: "From the top-left corner, there are 3 ways to reach the bottom-right corner: Right -> Down -> Down, Down -> Down -> Right, Down -> Right -> Down" },
+    ],
+    constraints: ["1 ≤ m, n ≤ 100"],
+    starterCode: {
+      javascript: `function uniquePaths(m, n) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(uniquePaths(3, 7)); // Expected: 28
+console.log(uniquePaths(3, 2)); // Expected: 3
+console.log(uniquePaths(7, 3)); // Expected: 28`,
+      python: `def uniquePaths(m, n):
+    # Write your solution here
+    pass
+
+# Test cases
+print(uniquePaths(3, 7))  # Expected: 28
+print(uniquePaths(3, 2))  # Expected: 3
+print(uniquePaths(7, 3))  # Expected: 28`,
+      java: `class Solution {
+    public static int uniquePaths(int m, int n) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(uniquePaths(3, 7));
+        System.out.println(uniquePaths(3, 2));
+        System.out.println(uniquePaths(7, 3));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "28\n3\n28",
+      python: "28\n3\n28",
+      java: "28\n3\n28",
+    },
   },
 };
