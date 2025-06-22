@@ -5275,5 +5275,113 @@ print(numDecodings("06"))  # Expected: 0`,
       python: "2\n3\n0",
       java: "2\n3\n0",
     },
+  },,
+
+  "word-break": {
+    id: "word-break",
+    title: "Word Break",
+    difficulty: "Medium",
+    category: "Array • Hash Table • String • Dynamic Programming • Trie • Memoization",
+    description: {
+      text: "Given a string s and a dictionary of strings wordDict, return true if s can be segmented into a space-separated sequence of one or more dictionary words.",
+      notes: ["Note that the same word in the dictionary may be reused multiple times in the segmentation."],
+    },
+    examples: [
+      { input: 's = "leetcode", wordDict = ["leet","code"]', output: "true", explanation: 'Return true because "leetcode" can be segmented as "leet code".' },
+      { input: 's = "applepenapple", wordDict = ["apple","pen"]', output: "true", explanation: 'Return true because "applepenapple" can be segmented as "apple pen apple".' },
+      { input: 's = "catsandog", wordDict = ["cats","dog","sand","and","cat"]', output: "false" },
+    ],
+    constraints: ["1 ≤ s.length ≤ 300", "1 ≤ wordDict.length ≤ 1000", "1 ≤ wordDict[i].length ≤ 20", "s and wordDict[i] consist of only lowercase English letters", "All the strings of wordDict are unique"],
+    starterCode: {
+      javascript: `function wordBreak(s, wordDict) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(wordBreak("leetcode", ["leet","code"])); // Expected: true
+console.log(wordBreak("applepenapple", ["apple","pen"])); // Expected: true
+console.log(wordBreak("catsandog", ["cats","dog","sand","and","cat"])); // Expected: false`,
+      python: `def wordBreak(s, wordDict):
+    # Write your solution here
+    pass
+
+# Test cases
+print(wordBreak("leetcode", ["leet","code"]))  # Expected: True
+print(wordBreak("applepenapple", ["apple","pen"]))  # Expected: True
+print(wordBreak("catsandog", ["cats","dog","sand","and","cat"]))  # Expected: False`,
+      java: `import java.util.*;
+
+class Solution {
+    public static boolean wordBreak(String s, List<String> wordDict) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(wordBreak("leetcode", Arrays.asList("leet","code")));
+        System.out.println(wordBreak("applepenapple", Arrays.asList("apple","pen")));
+        System.out.println(wordBreak("catsandog", Arrays.asList("cats","dog","sand","and","cat")));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\ntrue\nfalse",
+      python: "True\nTrue\nFalse",
+      java: "true\ntrue\nfalse",
+    },
+  },,
+
+  "longest-increasing-subsequence": {
+    id: "longest-increasing-subsequence",
+    title: "Longest Increasing Subsequence",
+    difficulty: "Medium",
+    category: "Array • Binary Search • Dynamic Programming",
+    description: {
+      text: "Given an integer array nums, return the length of the longest strictly increasing subsequence.",
+      notes: [],
+    },
+    examples: [
+      { input: "nums = [10,9,2,5,3,7,101,18]", output: "4", explanation: "The longest increasing subsequence is [2,3,7,101], therefore the length is 4." },
+      { input: "nums = [0,1,0,3,2,3]", output: "4" },
+      { input: "nums = [7,7,7,7,7,7,7]", output: "1" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 2500", "-10⁴ ≤ nums[i] ≤ 10⁴"],
+    starterCode: {
+      javascript: `function lengthOfLIS(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(lengthOfLIS([10,9,2,5,3,7,101,18])); // Expected: 4
+console.log(lengthOfLIS([0,1,0,3,2,3])); // Expected: 4
+console.log(lengthOfLIS([7,7,7,7,7,7,7])); // Expected: 1`,
+      python: `def lengthOfLIS(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(lengthOfLIS([10,9,2,5,3,7,101,18]))  # Expected: 4
+print(lengthOfLIS([0,1,0,3,2,3]))  # Expected: 4
+print(lengthOfLIS([7,7,7,7,7,7,7]))  # Expected: 1`,
+      java: `class Solution {
+    public static int lengthOfLIS(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(lengthOfLIS(new int[]{10,9,2,5,3,7,101,18}));
+        System.out.println(lengthOfLIS(new int[]{0,1,0,3,2,3}));
+        System.out.println(lengthOfLIS(new int[]{7,7,7,7,7,7,7}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "4\n4\n1",
+      python: "4\n4\n1",
+      java: "4\n4\n1",
+    },
   },
 };
