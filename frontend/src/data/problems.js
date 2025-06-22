@@ -5383,5 +5383,107 @@ print(lengthOfLIS([7,7,7,7,7,7,7]))  # Expected: 1`,
       python: "4\n4\n1",
       java: "4\n4\n1",
     },
+  },,
+
+  "partition-equal-subset-sum": {
+    id: "partition-equal-subset-sum",
+    title: "Partition Equal Subset Sum",
+    difficulty: "Medium",
+    category: "Array • Dynamic Programming",
+    description: {
+      text: "Given an integer array nums, return true if you can partition the array into two subsets such that the sum of the elements in both subsets is equal or false otherwise.",
+      notes: [],
+    },
+    examples: [
+      { input: "nums = [1,5,11,5]", output: "true", explanation: "The array can be partitioned as [1, 5, 5] and [11]." },
+      { input: "nums = [1,2,3,5]", output: "false", explanation: "The array cannot be partitioned into equal sum subsets." },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 200", "1 ≤ nums[i] ≤ 100"],
+    starterCode: {
+      javascript: `function canPartition(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(canPartition([1,5,11,5])); // Expected: true
+console.log(canPartition([1,2,3,5])); // Expected: false`,
+      python: `def canPartition(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(canPartition([1,5,11,5]))  # Expected: True
+print(canPartition([1,2,3,5]))  # Expected: False`,
+      java: `class Solution {
+    public static boolean canPartition(int[] nums) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(canPartition(new int[]{1,5,11,5}));
+        System.out.println(canPartition(new int[]{1,2,3,5}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse",
+      python: "True\nFalse",
+      java: "true\nfalse",
+    },
+  },,
+
+  "house-robber-ii": {
+    id: "house-robber-ii",
+    title: "House Robber II",
+    difficulty: "Medium",
+    category: "Array • Dynamic Programming",
+    description: {
+      text: "You are a professional robber planning to rob houses along a street. Each house has a certain amount of money stashed. All houses at this place are arranged in a circle. That means the first house is the neighbor of the last one.",
+      notes: ["Adjacent houses have security systems connected and it will automatically contact the police if two adjacent houses were broken into on the same night.", "Given an integer array nums representing the amount of money of each house, return the maximum amount of money you can rob tonight without alerting the police."],
+    },
+    examples: [
+      { input: "nums = [2,3,2]", output: "3", explanation: "You cannot rob house 1 (money = 2) and then rob house 3 (money = 2), because they are adjacent houses." },
+      { input: "nums = [1,2,3,1]", output: "4", explanation: "Rob house 1 (money = 1) and then rob house 3 (money = 3). Total = 1 + 3 = 4." },
+      { input: "nums = [1,2,3]", output: "3" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 100", "0 ≤ nums[i] ≤ 1000"],
+    starterCode: {
+      javascript: `function rob(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(rob([2,3,2])); // Expected: 3
+console.log(rob([1,2,3,1])); // Expected: 4
+console.log(rob([1,2,3])); // Expected: 3`,
+      python: `def rob(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(rob([2,3,2]))  # Expected: 3
+print(rob([1,2,3,1]))  # Expected: 4
+print(rob([1,2,3]))  # Expected: 3`,
+      java: `class Solution {
+    public static int rob(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(rob(new int[]{2,3,2}));
+        System.out.println(rob(new int[]{1,2,3,1}));
+        System.out.println(rob(new int[]{1,2,3}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n4\n3",
+      python: "3\n4\n3",
+      java: "3\n4\n3",
+    },
   },
 };
