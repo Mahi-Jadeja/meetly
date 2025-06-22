@@ -5173,5 +5173,107 @@ print(uniquePaths(7, 3))  # Expected: 28`,
       python: "28\n3\n28",
       java: "28\n3\n28",
     },
+  },,
+
+  "unique-paths-ii": {
+    id: "unique-paths-ii",
+    title: "Unique Paths II",
+    difficulty: "Medium",
+    category: "Array • Dynamic Programming • Matrix",
+    description: {
+      text: "You are given an m x n integer array grid. There is a robot initially located at the top-left corner. The robot tries to move to the bottom-right corner. The robot can only move either down or right at any point in time.",
+      notes: ["An obstacle and space are marked as 1 or 0 respectively in grid. A path that the robot takes cannot include any square that is an obstacle.", "Return the number of possible unique paths that the robot can take to reach the bottom-right corner."],
+    },
+    examples: [
+      { input: "obstacleGrid = [[0,0,0],[0,1,0],[0,0,0]]", output: "2", explanation: "There is one obstacle in the middle of the 3x3 grid. There are two ways to reach the bottom-right corner." },
+      { input: "obstacleGrid = [[0,1],[0,0]]", output: "1" },
+    ],
+    constraints: ["m == obstacleGrid.length", "n == obstacleGrid[i].length", "1 ≤ m, n ≤ 100", "obstacleGrid[i][j] is 0 or 1"],
+    starterCode: {
+      javascript: `function uniquePathsWithObstacles(obstacleGrid) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(uniquePathsWithObstacles([[0,0,0],[0,1,0],[0,0,0]])); // Expected: 2
+console.log(uniquePathsWithObstacles([[0,1],[0,0]])); // Expected: 1`,
+      python: `def uniquePathsWithObstacles(obstacleGrid):
+    # Write your solution here
+    pass
+
+# Test cases
+print(uniquePathsWithObstacles([[0,0,0],[0,1,0],[0,0,0]]))  # Expected: 2
+print(uniquePathsWithObstacles([[0,1],[0,0]]))  # Expected: 1`,
+      java: `class Solution {
+    public static int uniquePathsWithObstacles(int[][] obstacleGrid) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(uniquePathsWithObstacles(new int[][]{{0,0,0},{0,1,0},{0,0,0}}));
+        System.out.println(uniquePathsWithObstacles(new int[][]{{0,1},{0,0}}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2\n1",
+      python: "2\n1",
+      java: "2\n1",
+    },
+  },,
+
+  "decode-ways": {
+    id: "decode-ways",
+    title: "Decode Ways",
+    difficulty: "Medium",
+    category: "String • Dynamic Programming",
+    description: {
+      text: "A message containing letters from A-Z can be encoded into numbers using the following mapping: 'A' -> \"1\", 'B' -> \"2\", ..., 'Z' -> \"26\".",
+      notes: ["To decode an encoded message, all the digits must be grouped then mapped back into letters using the reverse of the mapping above.", "Given a string s containing only digits, return the number of ways to decode it."],
+    },
+    examples: [
+      { input: 's = "12"', output: "2", explanation: '"12" could be decoded as "AB" (1 2) or "L" (12).' },
+      { input: 's = "226"', output: "3", explanation: '"226" could be decoded as "BZ" (2 26), "VF" (22 6), or "BBF" (2 2 6).' },
+      { input: 's = "06"', output: "0", explanation: '"06" cannot be mapped to "F" because the leading zero makes it invalid.' },
+    ],
+    constraints: ["1 ≤ s.length ≤ 100", "s contains only digits and may contain leading zero(s)"],
+    starterCode: {
+      javascript: `function numDecodings(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(numDecodings("12")); // Expected: 2
+console.log(numDecodings("226")); // Expected: 3
+console.log(numDecodings("06")); // Expected: 0`,
+      python: `def numDecodings(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(numDecodings("12"))  # Expected: 2
+print(numDecodings("226"))  # Expected: 3
+print(numDecodings("06"))  # Expected: 0`,
+      java: `class Solution {
+    public static int numDecodings(String s) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(numDecodings("12"));
+        System.out.println(numDecodings("226"));
+        System.out.println(numDecodings("06"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2\n3\n0",
+      python: "2\n3\n0",
+      java: "2\n3\n0",
+    },
   },
 };
