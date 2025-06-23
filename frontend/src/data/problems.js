@@ -5686,5 +5686,115 @@ print(numDistinct("babgbag", "bag"))  # Expected: 5`,
       python: "3\n5",
       java: "3\n5",
     },
+  },,
+
+  "burst-balloons": {
+    id: "burst-balloons",
+    title: "Burst Balloons",
+    difficulty: "Hard",
+    category: "Array • Dynamic Programming",
+    description: {
+      text: "You are given n balloons, indexed from 0 to n - 1. Each balloon is painted with a number on it represented by an array nums. You are asked to burst all the balloons.",
+      notes: [
+        "If you burst the ith balloon, you will get nums[i - 1] * nums[i] * nums[i + 1] coins.",
+        "If i - 1 or i + 1 goes out of bounds of the array, then treat it as if there is a balloon with a 1 painted on it.",
+        "Return the maximum coins you can collect by bursting the balloons wisely.",
+      ],
+    },
+    examples: [
+      { input: "nums = [3,1,5,8]", output: "167", explanation: "nums = [3,1,5,8] --> [3,5,8] --> [3,8] --> [8] --> []. coins = 3*1*5 + 3*5*8 + 1*3*8 + 1*8*1 = 167" },
+      { input: "nums = [1,5]", output: "10" },
+    ],
+    constraints: ["n == nums.length", "1 ≤ n ≤ 300", "0 ≤ nums[i] ≤ 100"],
+    starterCode: {
+      javascript: `function maxCoins(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(maxCoins([3,1,5,8])); // Expected: 167
+console.log(maxCoins([1,5])); // Expected: 10`,
+      python: `def maxCoins(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(maxCoins([3,1,5,8]))  # Expected: 167
+print(maxCoins([1,5]))  # Expected: 10`,
+      java: `class Solution {
+    public static int maxCoins(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(maxCoins(new int[]{3,1,5,8}));
+        System.out.println(maxCoins(new int[]{1,5}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "167\n10",
+      python: "167\n10",
+      java: "167\n10",
+    },
+  },,
+
+  "regular-expression-matching": {
+    id: "regular-expression-matching",
+    title: "Regular Expression Matching",
+    difficulty: "Hard",
+    category: "String • Dynamic Programming • Recursion",
+    description: {
+      text: "Given an input string s and a pattern p, implement regular expression matching with support for '.' and '*' where:",
+      notes: [
+        "'.' Matches any single character.",
+        "'*' Matches zero or more of the preceding element.",
+        "The matching should cover the entire input string (not partial).",
+      ],
+    },
+    examples: [
+      { input: 's = "aa", p = "a"', output: "false", explanation: '"a" does not match the entire string "aa".' },
+      { input: 's = "aa", p = "a*"', output: "true", explanation: '"*" means zero or more of the preceding element, "a".' },
+      { input: 's = "ab", p = ".*"', output: "true", explanation: '".*" means zero or more of any character.' },
+    ],
+    constraints: ["1 ≤ s.length ≤ 20", "1 ≤ p.length ≤ 20", "s contains only lowercase English letters", "p contains only lowercase English letters, '.', and '*'", "It is guaranteed for each appearance of '*', there will be a previous valid character to match"],
+    starterCode: {
+      javascript: `function isMatch(s, p) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(isMatch("aa", "a")); // Expected: false
+console.log(isMatch("aa", "a*")); // Expected: true
+console.log(isMatch("ab", ".*")); // Expected: true`,
+      python: `def isMatch(s, p):
+    # Write your solution here
+    pass
+
+# Test cases
+print(isMatch("aa", "a"))  # Expected: False
+print(isMatch("aa", "a*"))  # Expected: True
+print(isMatch("ab", ".*"))  # Expected: True`,
+      java: `class Solution {
+    public static boolean isMatch(String s, String p) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(isMatch("aa", "a"));
+        System.out.println(isMatch("aa", "a*"));
+        System.out.println(isMatch("ab", ".*"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "false\ntrue\ntrue",
+      python: "False\nTrue\nTrue",
+      java: "false\ntrue\ntrue",
+    },
   },
 };
