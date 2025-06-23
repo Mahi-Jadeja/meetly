@@ -5485,5 +5485,103 @@ print(rob([1,2,3]))  # Expected: 3`,
       python: "3\n4\n3",
       java: "3\n4\n3",
     },
+  },,
+
+  "palindromic-substrings": {
+    id: "palindromic-substrings",
+    title: "Palindromic Substrings",
+    difficulty: "Medium",
+    category: "Two Pointers • String • Dynamic Programming",
+    description: {
+      text: "Given a string s, return the number of palindromic substrings in it.",
+      notes: ["A string is a palindrome when it reads the same backward as forward.", "A substring is a contiguous sequence of characters within the string."],
+    },
+    examples: [
+      { input: 's = "abc"', output: "3", explanation: "Three palindromic strings: \"a\", \"b\", \"c\"." },
+      { input: 's = "aaa"', output: "6", explanation: 'Six palindromic strings: "a", "a", "a", "aa", "aa", "aaa".' },
+    ],
+    constraints: ["1 ≤ s.length ≤ 1000", "s consists of lowercase English letters"],
+    starterCode: {
+      javascript: `function countSubstrings(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(countSubstrings("abc")); // Expected: 3
+console.log(countSubstrings("aaa")); // Expected: 6`,
+      python: `def countSubstrings(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(countSubstrings("abc"))  # Expected: 3
+print(countSubstrings("aaa"))  # Expected: 6`,
+      java: `class Solution {
+    public static int countSubstrings(String s) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(countSubstrings("abc"));
+        System.out.println(countSubstrings("aaa"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n6",
+      python: "3\n6",
+      java: "3\n6",
+    },
+  },,
+
+  "longest-palindromic-substring": {
+    id: "longest-palindromic-substring",
+    title: "Longest Palindromic Substring",
+    difficulty: "Medium",
+    category: "Two Pointers • String • Dynamic Programming",
+    description: {
+      text: "Given a string s, return the longest palindromic substring in s.",
+      notes: [],
+    },
+    examples: [
+      { input: 's = "babad"', output: '"bab"', explanation: '"aba" is also a valid answer.' },
+      { input: 's = "cbbd"', output: '"bb"' },
+    ],
+    constraints: ["1 ≤ s.length ≤ 1000", "s consist of only digits and English letters"],
+    starterCode: {
+      javascript: `function longestPalindrome(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(longestPalindrome("babad")); // Expected: "bab" or "aba"
+console.log(longestPalindrome("cbbd")); // Expected: "bb"`,
+      python: `def longestPalindrome(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(longestPalindrome("babad"))  # Expected: "bab" or "aba"
+print(longestPalindrome("cbbd"))  # Expected: "bb"`,
+      java: `class Solution {
+    public static String longestPalindrome(String s) {
+        // Write your solution here
+        return "";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(longestPalindrome("babad"));
+        System.out.println(longestPalindrome("cbbd"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "bab\nbb",
+      python: "bab\nbb",
+      java: "bab\nbb",
+    },
   },
 };
