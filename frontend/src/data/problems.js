@@ -5583,5 +5583,108 @@ print(longestPalindrome("cbbd"))  # Expected: "bb"`,
       python: "bab\nbb",
       java: "bab\nbb",
     },
+  },,
+
+  "edit-distance": {
+    id: "edit-distance",
+    title: "Edit Distance",
+    difficulty: "Medium",
+    category: "String • Dynamic Programming",
+    description: {
+      text: "Given two strings word1 and word2, return the minimum number of operations required to convert word1 to word2.",
+      notes: [
+        "You have the following three operations permitted on a word:",
+        "Insert a character",
+        "Delete a character",
+        "Replace a character",
+      ],
+    },
+    examples: [
+      { input: 'word1 = "horse", word2 = "ros"', output: "3", explanation: "horse -> rorse (replace 'h' with 'r') -> rose (remove 'r') -> ros (remove 'e')" },
+      { input: 'word1 = "intention", word2 = "execution"', output: "5" },
+    ],
+    constraints: ["0 ≤ word1.length, word2.length ≤ 500", "word1 and word2 consist of lowercase English letters"],
+    starterCode: {
+      javascript: `function minDistance(word1, word2) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(minDistance("horse", "ros")); // Expected: 3
+console.log(minDistance("intention", "execution")); // Expected: 5`,
+      python: `def minDistance(word1, word2):
+    # Write your solution here
+    pass
+
+# Test cases
+print(minDistance("horse", "ros"))  # Expected: 3
+print(minDistance("intention", "execution"))  # Expected: 5`,
+      java: `class Solution {
+    public static int minDistance(String word1, String word2) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(minDistance("horse", "ros"));
+        System.out.println(minDistance("intention", "execution"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n5",
+      python: "3\n5",
+      java: "3\n5",
+    },
+  },,
+
+  "distinct-subsequences": {
+    id: "distinct-subsequences",
+    title: "Distinct Subsequences",
+    difficulty: "Hard",
+    category: "String • Dynamic Programming",
+    description: {
+      text: "Given two strings s and t, return the number of distinct subsequences of s which equals t.",
+      notes: ["The test cases are generated so that the answer fits on a 32-bit signed integer."],
+    },
+    examples: [
+      { input: 's = "rabbbit", t = "rabbit"', output: "3", explanation: 'There are 3 ways to select "rabbit" from "rabbbit".' },
+      { input: 's = "babgbag", t = "bag"', output: "5" },
+    ],
+    constraints: ["1 ≤ s.length, t.length ≤ 1000", "s and t consist of English letters"],
+    starterCode: {
+      javascript: `function numDistinct(s, t) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(numDistinct("rabbbit", "rabbit")); // Expected: 3
+console.log(numDistinct("babgbag", "bag")); // Expected: 5`,
+      python: `def numDistinct(s, t):
+    # Write your solution here
+    pass
+
+# Test cases
+print(numDistinct("rabbbit", "rabbit"))  # Expected: 3
+print(numDistinct("babgbag", "bag"))  # Expected: 5`,
+      java: `class Solution {
+    public static int numDistinct(String s, String t) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(numDistinct("rabbbit", "rabbit"));
+        System.out.println(numDistinct("babgbag", "bag"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n5",
+      python: "3\n5",
+      java: "3\n5",
+    },
   },
 };
