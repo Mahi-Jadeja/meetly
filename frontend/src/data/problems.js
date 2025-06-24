@@ -5796,5 +5796,223 @@ print(isMatch("ab", ".*"))  # Expected: True`,
       python: "False\nTrue\nTrue",
       java: "false\ntrue\ntrue",
     },
+  },,
+
+  "implement-trie": {
+    id: "implement-trie",
+    title: "Implement Trie (Prefix Tree)",
+    difficulty: "Medium",
+    category: "Hash Table • String • Design • Trie",
+    description: {
+      text: "A trie (pronounced as \"try\") or prefix tree is a tree data structure used to efficiently store and retrieve keys in a dataset of strings.",
+      notes: [
+        "Implement the Trie class:",
+        "Trie() Initializes the trie object.",
+        "void insert(String word) Inserts the string word into the trie.",
+        "boolean search(String word) Returns true if the string word is in the trie (i.e., was inserted before), and false otherwise.",
+        "boolean startsWith(String prefix) Returns true if there is a previously inserted string word that has the prefix prefix, and false otherwise.",
+      ],
+    },
+    examples: [
+      {
+        input: '["Trie", "insert", "search", "search", "startsWith", "insert", "search"]\n[[], ["apple"], ["apple"], ["app"], ["app"], ["app"], ["app"]]',
+        output: "[null, null, true, false, true, null, true]",
+      },
+    ],
+    constraints: ["1 ≤ word.length, prefix.length ≤ 2000", "word and prefix consist only of lowercase English letters", "At most 3 × 10⁴ calls in total will be made to insert, search, and startsWith"],
+    starterCode: {
+      javascript: `class Trie {
+  constructor() {
+    // Initialize
+    
+  }
+  
+  insert(word) {
+    // Insert a word into the trie
+    
+  }
+  
+  search(word) {
+    // Search if word exists in trie
+    
+  }
+  
+  startsWith(prefix) {
+    // Check if any word starts with prefix
+    
+  }
+}
+
+// Test cases
+const trie = new Trie();
+trie.insert("apple");
+console.log(trie.search("apple")); // Expected: true
+console.log(trie.search("app")); // Expected: false
+console.log(trie.startsWith("app")); // Expected: true
+trie.insert("app");
+console.log(trie.search("app")); // Expected: true`,
+      python: `class Trie:
+    def __init__(self):
+        # Initialize
+        pass
+    
+    def insert(self, word):
+        # Insert a word into the trie
+        pass
+    
+    def search(self, word):
+        # Search if word exists in trie
+        pass
+    
+    def startsWith(self, prefix):
+        # Check if any word starts with prefix
+        pass
+
+# Test cases
+trie = Trie()
+trie.insert("apple")
+print(trie.search("apple"))  # Expected: True
+print(trie.search("app"))  # Expected: False
+print(trie.startsWith("app"))  # Expected: True
+trie.insert("app")
+print(trie.search("app"))  # Expected: True`,
+      java: `class Trie {
+    public Trie() {
+        // Initialize
+    }
+    
+    public void insert(String word) {
+        // Insert a word into the trie
+    }
+    
+    public boolean search(String word) {
+        // Search if word exists in trie
+        return false;
+    }
+    
+    public boolean startsWith(String prefix) {
+        // Check if any word starts with prefix
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        Trie trie = new Trie();
+        trie.insert("apple");
+        System.out.println(trie.search("apple"));
+        System.out.println(trie.search("app"));
+        System.out.println(trie.startsWith("app"));
+        trie.insert("app");
+        System.out.println(trie.search("app"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse\ntrue\ntrue",
+      python: "True\nFalse\nTrue\nTrue",
+      java: "true\nfalse\ntrue\ntrue",
+    },
+  },,
+
+  "design-add-and-search-words": {
+    id: "design-add-and-search-words",
+    title: "Design Add and Search Words Data Structure",
+    difficulty: "Medium",
+    category: "String • DFS • Design • Trie",
+    description: {
+      text: "Design a data structure that supports adding new words and finding if a string matches any previously added string.",
+      notes: [
+        "Implement the WordDictionary class:",
+        "WordDictionary() Initializes the object.",
+        "void addWord(word) Adds word to the data structure, it can be matched later.",
+        "bool search(word) Returns true if there is any string in the data structure that matches word or false otherwise. word may contain dots '.' where dots can be matched with any letter.",
+      ],
+    },
+    examples: [
+      {
+        input: '["WordDictionary","addWord","addWord","addWord","search","search","search","search"]\n[[],["bad"],["dad"],["mad"],["pad"],["bad"],[".ad"],["b.."]]',
+        output: "[null,null,null,null,false,true,true,true]",
+      },
+    ],
+    constraints: ["1 ≤ word.length ≤ 25", "word in addWord consists of lowercase English letters", "word in search consist of '.' or lowercase English letters", "There will be at most 2 dots in word for search queries", "At most 10⁴ calls will be made to addWord and search"],
+    starterCode: {
+      javascript: `class WordDictionary {
+  constructor() {
+    // Initialize
+    
+  }
+  
+  addWord(word) {
+    // Add a word
+    
+  }
+  
+  search(word) {
+    // Search with support for '.'
+    
+  }
+}
+
+// Test cases
+const wd = new WordDictionary();
+wd.addWord("bad");
+wd.addWord("dad");
+wd.addWord("mad");
+console.log(wd.search("pad")); // Expected: false
+console.log(wd.search("bad")); // Expected: true
+console.log(wd.search(".ad")); // Expected: true
+console.log(wd.search("b..")); // Expected: true`,
+      python: `class WordDictionary:
+    def __init__(self):
+        # Initialize
+        pass
+    
+    def addWord(self, word):
+        # Add a word
+        pass
+    
+    def search(self, word):
+        # Search with support for '.'
+        pass
+
+# Test cases
+wd = WordDictionary()
+wd.addWord("bad")
+wd.addWord("dad")
+wd.addWord("mad")
+print(wd.search("pad"))  # Expected: False
+print(wd.search("bad"))  # Expected: True
+print(wd.search(".ad"))  # Expected: True
+print(wd.search("b.."))  # Expected: True`,
+      java: `class WordDictionary {
+    public WordDictionary() {
+        // Initialize
+    }
+    
+    public void addWord(String word) {
+        // Add a word
+    }
+    
+    public boolean search(String word) {
+        // Search with support for '.'
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        WordDictionary wd = new WordDictionary();
+        wd.addWord("bad");
+        wd.addWord("dad");
+        wd.addWord("mad");
+        System.out.println(wd.search("pad"));
+        System.out.println(wd.search("bad"));
+        System.out.println(wd.search(".ad"));
+        System.out.println(wd.search("b.."));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "false\ntrue\ntrue\ntrue",
+      python: "False\nTrue\nTrue\nTrue",
+      java: "false\ntrue\ntrue\ntrue",
+    },
   },
 };
