@@ -6014,5 +6014,252 @@ print(wd.search("b.."))  # Expected: True`,
       python: "False\nTrue\nTrue\nTrue",
       java: "false\ntrue\ntrue\ntrue",
     },
+  },,
+
+  "lru-cache": {
+    id: "lru-cache",
+    title: "LRU Cache",
+    difficulty: "Medium",
+    category: "Hash Table • Linked List • Design • Doubly-Linked List",
+    description: {
+      text: "Design a data structure that follows the constraints of a Least Recently Used (LRU) cache.",
+      notes: [
+        "Implement the LRUCache class:",
+        "LRUCache(int capacity) Initialize the LRU cache with positive size capacity.",
+        "int get(int key) Return the value of the key if the key exists, otherwise return -1.",
+        "void put(int key, int value) Update the value of the key if the key exists. Otherwise, add the key-value pair to the cache. If the number of keys exceeds the capacity from this operation, evict the least recently used key.",
+        "The functions get and put must each run in O(1) average time complexity.",
+      ],
+    },
+    examples: [
+      {
+        input: '["LRUCache", "put", "put", "get", "put", "get", "put", "get", "get", "get"]\n[[2], [1, 1], [2, 2], [1], [3, 3], [2], [4, 4], [1], [3], [4]]',
+        output: "[null, null, null, 1, null, -1, null, -1, 3, 4]",
+      },
+    ],
+    constraints: ["1 ≤ capacity ≤ 3000", "0 ≤ key ≤ 10⁴", "0 ≤ value ≤ 10⁵", "At most 2 × 10⁵ calls will be made to get and put"],
+    starterCode: {
+      javascript: `class LRUCache {
+  constructor(capacity) {
+    // Initialize with capacity
+    
+  }
+  
+  get(key) {
+    // Get value by key
+    
+  }
+  
+  put(key, value) {
+    // Put key-value pair
+    
+  }
+}
+
+// Test cases
+const cache = new LRUCache(2);
+cache.put(1, 1);
+cache.put(2, 2);
+console.log(cache.get(1)); // Expected: 1
+cache.put(3, 3);
+console.log(cache.get(2)); // Expected: -1
+cache.put(4, 4);
+console.log(cache.get(1)); // Expected: -1
+console.log(cache.get(3)); // Expected: 3
+console.log(cache.get(4)); // Expected: 4`,
+      python: `class LRUCache:
+    def __init__(self, capacity):
+        # Initialize with capacity
+        pass
+    
+    def get(self, key):
+        # Get value by key
+        pass
+    
+    def put(self, key, value):
+        # Put key-value pair
+        pass
+
+# Test cases
+cache = LRUCache(2)
+cache.put(1, 1)
+cache.put(2, 2)
+print(cache.get(1))  # Expected: 1
+cache.put(3, 3)
+print(cache.get(2))  # Expected: -1
+cache.put(4, 4)
+print(cache.get(1))  # Expected: -1
+print(cache.get(3))  # Expected: 3
+print(cache.get(4))  # Expected: 4`,
+      java: `import java.util.*;
+
+class LRUCache {
+    public LRUCache(int capacity) {
+        // Initialize with capacity
+    }
+    
+    public int get(int key) {
+        // Get value by key
+        return -1;
+    }
+    
+    public void put(int key, int value) {
+        // Put key-value pair
+    }
+    
+    public static void main(String[] args) {
+        LRUCache cache = new LRUCache(2);
+        cache.put(1, 1);
+        cache.put(2, 2);
+        System.out.println(cache.get(1));
+        cache.put(3, 3);
+        System.out.println(cache.get(2));
+        cache.put(4, 4);
+        System.out.println(cache.get(1));
+        System.out.println(cache.get(3));
+        System.out.println(cache.get(4));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "1\n-1\n-1\n3\n4",
+      python: "1\n-1\n-1\n3\n4",
+      java: "1\n-1\n-1\n3\n4",
+    },
+  },,
+
+  "min-stack": {
+    id: "min-stack",
+    title: "Min Stack",
+    difficulty: "Medium",
+    category: "Stack • Design",
+    description: {
+      text: "Design a stack that supports push, pop, top, and retrieving the minimum element in constant time.",
+      notes: [
+        "Implement the MinStack class:",
+        "MinStack() initializes the stack object.",
+        "void push(int val) pushes the element val onto the stack.",
+        "void pop() removes the element on the top of the stack.",
+        "int top() gets the top element of the stack.",
+        "int getMin() retrieves the minimum element in the stack.",
+        "You must implement a solution with O(1) time complexity for each function.",
+      ],
+    },
+    examples: [
+      {
+        input: '["MinStack","push","push","push","getMin","pop","top","getMin"]\n[[],[-2],[0],[-3],[],[],[],[]]',
+        output: "[null,null,null,null,-3,null,0,-2]",
+      },
+    ],
+    constraints: ["-2³¹ ≤ val ≤ 2³¹ - 1", "Methods pop, top and getMin operations will always be called on non-empty stacks", "At most 3 × 10⁴ calls will be made to push, pop, top, and getMin"],
+    starterCode: {
+      javascript: `class MinStack {
+  constructor() {
+    // Initialize
+    
+  }
+  
+  push(val) {
+    // Push val
+    
+  }
+  
+  pop() {
+    // Pop top
+    
+  }
+  
+  top() {
+    // Get top
+    
+  }
+  
+  getMin() {
+    // Get minimum
+    
+  }
+}
+
+// Test cases
+const minStack = new MinStack();
+minStack.push(-2);
+minStack.push(0);
+minStack.push(-3);
+console.log(minStack.getMin()); // Expected: -3
+minStack.pop();
+console.log(minStack.top()); // Expected: 0
+console.log(minStack.getMin()); // Expected: -2`,
+      python: `class MinStack:
+    def __init__(self):
+        # Initialize
+        pass
+    
+    def push(self, val):
+        # Push val
+        pass
+    
+    def pop(self):
+        # Pop top
+        pass
+    
+    def top(self):
+        # Get top
+        pass
+    
+    def getMin(self):
+        # Get minimum
+        pass
+
+# Test cases
+minStack = MinStack()
+minStack.push(-2)
+minStack.push(0)
+minStack.push(-3)
+print(minStack.getMin())  # Expected: -3
+minStack.pop()
+print(minStack.top())  # Expected: 0
+print(minStack.getMin())  # Expected: -2`,
+      java: `import java.util.*;
+
+class MinStack {
+    public MinStack() {
+        // Initialize
+    }
+    
+    public void push(int val) {
+        // Push val
+    }
+    
+    public void pop() {
+        // Pop top
+    }
+    
+    public int top() {
+        // Get top
+        return 0;
+    }
+    
+    public int getMin() {
+        // Get minimum
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        MinStack minStack = new MinStack();
+        minStack.push(-2);
+        minStack.push(0);
+        minStack.push(-3);
+        System.out.println(minStack.getMin());
+        minStack.pop();
+        System.out.println(minStack.top());
+        System.out.println(minStack.getMin());
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "-3\n0\n-2",
+      python: "-3\n0\n-2",
+      java: "-3\n0\n-2",
+    },
   },
 };
