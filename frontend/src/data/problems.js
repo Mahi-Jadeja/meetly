@@ -6261,5 +6261,119 @@ class MinStack {
       python: "-3\n0\n-2",
       java: "-3\n0\n-2",
     },
+  },,
+
+  "daily-temperatures": {
+    id: "daily-temperatures",
+    title: "Daily Temperatures",
+    difficulty: "Medium",
+    category: "Array • Stack • Monotonic Stack",
+    description: {
+      text: "Given an array of integers temperatures represents the daily temperatures, return an array answer such that answer[i] is the number of days you have to wait after the ith day to get a warmer temperature. If there is no future day for which this is possible, keep answer[i] == 0 instead.",
+      notes: [],
+    },
+    examples: [
+      { input: "temperatures = [73,74,75,71,69,72,76,73]", output: "[1,1,4,2,1,1,0,0]" },
+      { input: "temperatures = [30,40,50,60]", output: "[1,1,1,0]" },
+      { input: "temperatures = [30,60,90]", output: "[1,1,0]" },
+    ],
+    constraints: ["1 ≤ temperatures.length ≤ 10⁵", "30 ≤ temperatures[i] ≤ 100"],
+    starterCode: {
+      javascript: `function dailyTemperatures(temperatures) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(dailyTemperatures([73,74,75,71,69,72,76,73])); // Expected: [1,1,4,2,1,1,0,0]
+console.log(dailyTemperatures([30,40,50,60])); // Expected: [1,1,1,0]
+console.log(dailyTemperatures([30,60,90])); // Expected: [1,1,0]`,
+      python: `def dailyTemperatures(temperatures):
+    # Write your solution here
+    pass
+
+# Test cases
+print(dailyTemperatures([73,74,75,71,69,72,76,73]))  # Expected: [1,1,4,2,1,1,0,0]
+print(dailyTemperatures([30,40,50,60]))  # Expected: [1,1,1,0]
+print(dailyTemperatures([30,60,90]))  # Expected: [1,1,0]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int[] dailyTemperatures(int[] temperatures) {
+        // Write your solution here
+        return new int[0];
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(dailyTemperatures(new int[]{73,74,75,71,69,72,76,73})));
+        System.out.println(Arrays.toString(dailyTemperatures(new int[]{30,40,50,60})));
+        System.out.println(Arrays.toString(dailyTemperatures(new int[]{30,60,90})));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[1,1,4,2,1,1,0,0]\n[1,1,1,0]\n[1,1,0]",
+      python: "[1, 1, 4, 2, 1, 1, 0, 0]\n[1, 1, 1, 0]\n[1, 1, 0]",
+      java: "[1, 1, 4, 2, 1, 1, 0, 0]\n[1, 1, 1, 0]\n[1, 1, 0]",
+    },
+  },,
+
+  "car-fleet": {
+    id: "car-fleet",
+    title: "Car Fleet",
+    difficulty: "Medium",
+    category: "Array • Stack • Sorting • Monotonic Stack",
+    description: {
+      text: "There are n cars going to the same destination along a one-lane road. The destination is target miles away. You are given two integer array position and speed, both of length n, where position[i] is the position of the ith car and speed[i] is the speed of the ith car (in miles per hour).",
+      notes: [
+        "A car can never pass another car ahead of it, but it can catch up to it and drive bumper to bumper at the same speed.",
+        "A car fleet is some non-empty set of cars driving at the same position and same speed.",
+        "Return the number of car fleets that will arrive at the destination.",
+      ],
+    },
+    examples: [
+      { input: "target = 12, position = [10,8,0,5,3], speed = [2,4,1,1,3]", output: "3" },
+      { input: "target = 10, position = [3], speed = [3]", output: "1" },
+      { input: "target = 100, position = [0,2,4], speed = [4,2,1]", output: "1" },
+    ],
+    constraints: ["n == position.length == speed.length", "1 ≤ n ≤ 10⁵", "0 < target ≤ 10⁶", "0 ≤ position[i] < target", "All the values of position are unique", "0 < speed[i] ≤ 10⁶"],
+    starterCode: {
+      javascript: `function carFleet(target, position, speed) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(carFleet(12, [10,8,0,5,3], [2,4,1,1,3])); // Expected: 3
+console.log(carFleet(10, [3], [3])); // Expected: 1
+console.log(carFleet(100, [0,2,4], [4,2,1])); // Expected: 1`,
+      python: `def carFleet(target, position, speed):
+    # Write your solution here
+    pass
+
+# Test cases
+print(carFleet(12, [10,8,0,5,3], [2,4,1,1,3]))  # Expected: 3
+print(carFleet(10, [3], [3]))  # Expected: 1
+print(carFleet(100, [0,2,4], [4,2,1]))  # Expected: 1`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int carFleet(int target, int[] position, int[] speed) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(carFleet(12, new int[]{10,8,0,5,3}, new int[]{2,4,1,1,3}));
+        System.out.println(carFleet(10, new int[]{3}, new int[]{3}));
+        System.out.println(carFleet(100, new int[]{0,2,4}, new int[]{4,2,1}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n1\n1",
+      python: "3\n1\n1",
+      java: "3\n1\n1",
+    },
   },
 };
