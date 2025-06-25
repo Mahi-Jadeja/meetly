@@ -6375,5 +6375,117 @@ class Solution {
       python: "3\n1\n1",
       java: "3\n1\n1",
     },
+  },,
+
+  "largest-rectangle-in-histogram": {
+    id: "largest-rectangle-in-histogram",
+    title: "Largest Rectangle in Histogram",
+    difficulty: "Hard",
+    category: "Array • Stack • Monotonic Stack",
+    description: {
+      text: "Given an array of integers heights representing the histogram's bar height where the width of each bar is 1, return the area of the largest rectangle in the histogram.",
+      notes: [],
+    },
+    examples: [
+      { input: "heights = [2,1,5,6,2,3]", output: "10", explanation: "The largest rectangle has an area = 10 units (heights[2] to heights[3])." },
+      { input: "heights = [2,4]", output: "4" },
+    ],
+    constraints: ["1 ≤ heights.length ≤ 10⁵", "0 ≤ heights[i] ≤ 10⁴"],
+    starterCode: {
+      javascript: `function largestRectangleArea(heights) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(largestRectangleArea([2,1,5,6,2,3])); // Expected: 10
+console.log(largestRectangleArea([2,4])); // Expected: 4`,
+      python: `def largestRectangleArea(heights):
+    # Write your solution here
+    pass
+
+# Test cases
+print(largestRectangleArea([2,1,5,6,2,3]))  # Expected: 10
+print(largestRectangleArea([2,4]))  # Expected: 4`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int largestRectangleArea(int[] heights) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(largestRectangleArea(new int[]{2,1,5,6,2,3}));
+        System.out.println(largestRectangleArea(new int[]{2,4}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "10\n4",
+      python: "10\n4",
+      java: "10\n4",
+    },
+  },,
+
+  "evaluate-reverse-polish-notation": {
+    id: "evaluate-reverse-polish-notation",
+    title: "Evaluate Reverse Polish Notation",
+    difficulty: "Medium",
+    category: "Array • Math • Stack",
+    description: {
+      text: "You are given an array of strings tokens that represents an arithmetic expression in a Reverse Polish Notation. Evaluate the expression. Return an integer that represents the value of the expression.",
+      notes: [
+        "The valid operators are '+', '-', '*', and '/'.",
+        "Each operand may be an integer or another expression.",
+        "The division between two integers always truncates toward zero.",
+        "There will not be any division by zero.",
+        "The input represents a valid arithmetic expression in reverse polish notation.",
+      ],
+    },
+    examples: [
+      { input: 'tokens = ["2","1","+","3","*"]', output: "9", explanation: "((2 + 1) * 3) = 9" },
+      { input: 'tokens = ["4","13","5","/","+"]', output: "6", explanation: "(4 + (13 / 5)) = 6" },
+      { input: 'tokens = ["10","6","9","3","+","-11","*","/","*","17","+","5","+"]', output: "22" },
+    ],
+    constraints: ["1 ≤ tokens.length ≤ 10⁴", "tokens[i] is either an operator: \"+\", \"-\", \"*\", or \"/\", or an integer in the range [-200, 200]"],
+    starterCode: {
+      javascript: `function evalRPN(tokens) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(evalRPN(["2","1","+","3","*"])); // Expected: 9
+console.log(evalRPN(["4","13","5","/","+"])); // Expected: 6
+console.log(evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","+"])); // Expected: 22`,
+      python: `def evalRPN(tokens):
+    # Write your solution here
+    pass
+
+# Test cases
+print(evalRPN(["2","1","+","3","*"]))  # Expected: 9
+print(evalRPN(["4","13","5","/","+"]))  # Expected: 6
+print(evalRPN(["10","6","9","3","+","-11","*","/","*","17","+","5","+"]))  # Expected: 22`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int evalRPN(String[] tokens) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(evalRPN(new String[]{"2","1","+","3","*"}));
+        System.out.println(evalRPN(new String[]{"4","13","5","/","+"}));
+        System.out.println(evalRPN(new String[]{"10","6","9","3","+","-11","*","/","*","17","+","5","+"}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "9\n6\n22",
+      python: "9\n6\n22",
+      java: "9\n6\n22",
+    },
   },
 };
