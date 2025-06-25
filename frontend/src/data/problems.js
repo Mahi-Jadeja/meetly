@@ -6593,5 +6593,105 @@ class Solution {
       python: "[3, 3, 5, 5, 6, 7]\n[1]",
       java: "[3, 3, 5, 5, 6, 7]\n[1]",
     },
+  },,
+
+  "permutation-in-string": {
+    id: "permutation-in-string",
+    title: "Permutation in String",
+    difficulty: "Medium",
+    category: "Hash Table • Two Pointers • String • Sliding Window",
+    description: {
+      text: "Given two strings s1 and s2, return true if s2 contains a permutation of s1, or false otherwise.",
+      notes: ["In other words, return true if one of s1's permutations is the substring of s2."],
+    },
+    examples: [
+      { input: 's1 = "ab", s2 = "eidbaooo"', output: "true", explanation: "s2 contains one permutation of s1 (\"ba\")." },
+      { input: 's1 = "ab", s2 = "eidboaoo"', output: "false" },
+    ],
+    constraints: ["1 ≤ s1.length, s2.length ≤ 10⁴", "s1 and s2 consist of lowercase English letters"],
+    starterCode: {
+      javascript: `function checkInclusion(s1, s2) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(checkInclusion("ab", "eidbaooo")); // Expected: true
+console.log(checkInclusion("ab", "eidboaoo")); // Expected: false`,
+      python: `def checkInclusion(s1, s2):
+    # Write your solution here
+    pass
+
+# Test cases
+print(checkInclusion("ab", "eidbaooo"))  # Expected: True
+print(checkInclusion("ab", "eidboaoo"))  # Expected: False`,
+      java: `import java.util.*;
+
+class Solution {
+    public static boolean checkInclusion(String s1, String s2) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(checkInclusion("ab", "eidbaooo"));
+        System.out.println(checkInclusion("ab", "eidboaoo"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse",
+      python: "True\nFalse",
+      java: "true\nfalse",
+    },
+  },,
+
+  "search-a-2d-matrix": {
+    id: "search-a-2d-matrix",
+    title: "Search a 2D Matrix",
+    difficulty: "Medium",
+    category: "Array • Binary Search • Matrix",
+    description: {
+      text: "You are given an m x n integer matrix matrix with the following two properties: Each row is sorted in non-decreasing order. The first integer of each row is greater than the last integer of the previous row.",
+      notes: ["Given an integer target, return true if target is in matrix or false otherwise.", "You must write a solution in O(log(m * n)) time complexity."],
+    },
+    examples: [
+      { input: "matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 3", output: "true" },
+      { input: "matrix = [[1,3,5,7],[10,11,16,20],[23,30,34,60]], target = 13", output: "false" },
+    ],
+    constraints: ["m == matrix.length", "n == matrix[i].length", "1 ≤ m, n ≤ 100", "-10⁴ ≤ matrix[i][j], target ≤ 10⁴"],
+    starterCode: {
+      javascript: `function searchMatrix(matrix, target) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(searchMatrix([[1,3,5,7],[10,11,16,20],[23,30,34,60]], 3)); // Expected: true
+console.log(searchMatrix([[1,3,5,7],[10,11,16,20],[23,30,34,60]], 13)); // Expected: false`,
+      python: `def searchMatrix(matrix, target):
+    # Write your solution here
+    pass
+
+# Test cases
+print(searchMatrix([[1,3,5,7],[10,11,16,20],[23,30,34,60]], 3))  # Expected: True
+print(searchMatrix([[1,3,5,7],[10,11,16,20],[23,30,34,60]], 13))  # Expected: False`,
+      java: `class Solution {
+    public static boolean searchMatrix(int[][] matrix, int target) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(searchMatrix(new int[][]{{1,3,5,7},{10,11,16,20},{23,30,34,60}}, 3));
+        System.out.println(searchMatrix(new int[][]{{1,3,5,7},{10,11,16,20},{23,30,34,60}}, 13));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse",
+      python: "True\nFalse",
+      java: "true\nfalse",
+    },
   },
 };
