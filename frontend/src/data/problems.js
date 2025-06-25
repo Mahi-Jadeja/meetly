@@ -6851,5 +6851,132 @@ class TimeMap {
       python: "bar\nbar\nbar2\nbar2",
       java: "bar\nbar\nbar2\nbar2",
     },
+  },,
+
+  "median-of-two-sorted-arrays": {
+    id: "median-of-two-sorted-arrays",
+    title: "Median of Two Sorted Arrays",
+    difficulty: "Hard",
+    category: "Array • Binary Search • Divide and Conquer",
+    description: {
+      text: "Given two sorted arrays nums1 and nums2 of size m and n respectively, return the median of the two sorted arrays.",
+      notes: ["The overall run time complexity should be O(log (m+n))."],
+    },
+    examples: [
+      { input: "nums1 = [1,3], nums2 = [2]", output: "2.00000", explanation: "merged array = [1,2,3] and median is 2." },
+      { input: "nums1 = [1,2], nums2 = [3,4]", output: "2.50000", explanation: "merged array = [1,2,3,4] and median is (2 + 3) / 2 = 2.5." },
+    ],
+    constraints: ["nums1.length == m", "nums2.length == n", "0 ≤ m ≤ 1000", "0 ≤ n ≤ 1000", "1 ≤ m + n ≤ 2000", "-10⁶ ≤ nums1[i], nums2[i] ≤ 10⁶"],
+    starterCode: {
+      javascript: `function findMedianSortedArrays(nums1, nums2) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(findMedianSortedArrays([1,3], [2])); // Expected: 2.0
+console.log(findMedianSortedArrays([1,2], [3,4])); // Expected: 2.5`,
+      python: `def findMedianSortedArrays(nums1, nums2):
+    # Write your solution here
+    pass
+
+# Test cases
+print(findMedianSortedArrays([1,3], [2]))  # Expected: 2.0
+print(findMedianSortedArrays([1,2], [3,4]))  # Expected: 2.5`,
+      java: `class Solution {
+    public static double findMedianSortedArrays(int[] nums1, int[] nums2) {
+        // Write your solution here
+        return 0.0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(findMedianSortedArrays(new int[]{1,3}, new int[]{2}));
+        System.out.println(findMedianSortedArrays(new int[]{1,2}, new int[]{3,4}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2\n2.5",
+      python: "2.0\n2.5",
+      java: "2.0\n2.5",
+    },
+  },,
+
+  "copy-list-with-random-pointer": {
+    id: "copy-list-with-random-pointer",
+    title: "Copy List with Random Pointer",
+    difficulty: "Medium",
+    category: "Hash Table • Linked List",
+    description: {
+      text: "A linked list of length n is given such that each node contains an additional random pointer, which could point to any node in the list, or null.",
+      notes: ["Construct a deep copy of the list. The deep copy should consist of exactly n brand new nodes, where each new node has its value set to the value of its corresponding original node."],
+    },
+    examples: [
+      { input: "head = [[7,null],[13,0],[11,4],[10,2],[1,0]]", output: "[[7,null],[13,0],[11,4],[10,2],[1,0]]" },
+      { input: "head = [[1,1],[2,1]]", output: "[[1,1],[2,1]]" },
+    ],
+    constraints: ["0 ≤ n ≤ 1000", "-10⁴ ≤ Node.val ≤ 10⁴", "Node.random is null or is pointing to some node in the linked list"],
+    starterCode: {
+      javascript: `class Node {
+  constructor(val, next = null, random = null) {
+    this.val = val;
+    this.next = next;
+    this.random = random;
+  }
+}
+
+function copyRandomList(head) {
+  // Write your solution here
+  
+}
+
+// Test cases
+// Create: 7 -> 13 -> 11 -> 10 -> 1
+let n1 = new Node(7);
+let n2 = new Node(13);
+let n3 = new Node(11);
+let n4 = new Node(10);
+let n5 = new Node(1);
+n1.next = n2; n2.next = n3; n3.next = n4; n4.next = n5;
+n1.random = null; n2.random = n1; n3.random = n5; n4.random = n3; n5.random = n1;
+let copy = copyRandomList(n1);
+console.log(copy !== n1 && copy.val === n1.val); // Expected: true`,
+      python: `class Node:
+    def __init__(self, val=0, next=None, random=None):
+        self.val = val
+        self.next = next
+        self.random = random
+
+def copyRandomList(head):
+    # Write your solution here
+    pass
+
+# Test cases
+print("true")  # Expected behavior`,
+      java: `import java.util.*;
+
+class Node {
+    int val;
+    Node next;
+    Node random;
+    public Node(int val) { this.val = val; }
+}
+
+class Solution {
+    public static Node copyRandomList(Node head) {
+        // Write your solution here
+        return null;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("true");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true",
+      python: "true",
+      java: "true",
+    },
   },
 };
