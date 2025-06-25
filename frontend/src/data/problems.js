@@ -6693,5 +6693,163 @@ print(searchMatrix([[1,3,5,7],[10,11,16,20],[23,30,34,60]], 13))  # Expected: Fa
       python: "True\nFalse",
       java: "true\nfalse",
     },
+  },,
+
+  "koko-eating-bananas": {
+    id: "koko-eating-bananas",
+    title: "Koko Eating Bananas",
+    difficulty: "Medium",
+    category: "Array • Binary Search",
+    description: {
+      text: "Koko loves to eat bananas. There are n piles of bananas, the ith pile has piles[i] bananas. The guards have gone and will come back in h hours.",
+      notes: [
+        "Koko can decide her bananas-per-hour eating speed of k. Each hour, she chooses some pile of bananas and eats k bananas from that pile. If the pile has less than k bananas, she eats all of them instead and will not eat any more bananas during this hour.",
+        "Return the minimum integer k such that she can eat all the bananas within h hours.",
+      ],
+    },
+    examples: [
+      { input: "piles = [3,6,7,11], h = 8", output: "4" },
+      { input: "piles = [30,11,23,4,20], h = 5", output: "30" },
+      { input: "piles = [30,11,23,4,20], h = 6", output: "23" },
+    ],
+    constraints: ["1 ≤ piles.length ≤ 10⁴", "piles.length ≤ h ≤ 10⁹", "1 ≤ piles[i] ≤ 10⁹"],
+    starterCode: {
+      javascript: `function minEatingSpeed(piles, h) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(minEatingSpeed([3,6,7,11], 8)); // Expected: 4
+console.log(minEatingSpeed([30,11,23,4,20], 5)); // Expected: 30
+console.log(minEatingSpeed([30,11,23,4,20], 6)); // Expected: 23`,
+      python: `def minEatingSpeed(piles, h):
+    # Write your solution here
+    pass
+
+# Test cases
+print(minEatingSpeed([3,6,7,11], 8))  # Expected: 4
+print(minEatingSpeed([30,11,23,4,20], 5))  # Expected: 30
+print(minEatingSpeed([30,11,23,4,20], 6))  # Expected: 23`,
+      java: `class Solution {
+    public static int minEatingSpeed(int[] piles, int h) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(minEatingSpeed(new int[]{3,6,7,11}, 8));
+        System.out.println(minEatingSpeed(new int[]{30,11,23,4,20}, 5));
+        System.out.println(minEatingSpeed(new int[]{30,11,23,4,20}, 6));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "4\n30\n23",
+      python: "4\n30\n23",
+      java: "4\n30\n23",
+    },
+  },,
+
+  "time-based-key-value-store": {
+    id: "time-based-key-value-store",
+    title: "Time Based Key-Value Store",
+    difficulty: "Medium",
+    category: "Hash Table • String • Binary Search • Design",
+    description: {
+      text: "Design a time-based key-value data structure that can store multiple values for the same key at different time stamps and retrieve the key's value at a certain timestamp.",
+      notes: [
+        "Implement the TimeMap class:",
+        "TimeMap() Initializes the object of the data structure.",
+        "void set(String key, String value, int timestamp) Stores the key key with the value value at the given time timestamp.",
+        "String get(String key, int timestamp) Returns a value such that set was called previously, with timestamp_prev <= timestamp. If there are multiple such values, it returns the value associated with the largest timestamp_prev. If there are no values, it returns \"\".",
+      ],
+    },
+    examples: [
+      {
+        input: '["TimeMap", "set", "get", "get", "set", "get", "get"]\n[[], ["foo", "bar", 1], ["foo", 1], ["foo", 3], ["foo", "bar2", 4], ["foo", 4], ["foo", 5]]',
+        output: '[null, null, "bar", "bar", null, "bar2", "bar2"]',
+      },
+    ],
+    constraints: ["1 ≤ key.length, value.length ≤ 100", "key and value consist of lowercase English letters and digits", "1 ≤ timestamp ≤ 10⁷", "All the timestamps of set are strictly increasing", "At most 2 × 10⁵ calls will be made to set and get"],
+    starterCode: {
+      javascript: `class TimeMap {
+  constructor() {
+    // Initialize
+    
+  }
+  
+  set(key, value, timestamp) {
+    // Store key-value at timestamp
+    
+  }
+  
+  get(key, timestamp) {
+    // Get value at timestamp
+    
+  }
+}
+
+// Test cases
+const timeMap = new TimeMap();
+timeMap.set("foo", "bar", 1);
+console.log(timeMap.get("foo", 1)); // Expected: "bar"
+console.log(timeMap.get("foo", 3)); // Expected: "bar"
+timeMap.set("foo", "bar2", 4);
+console.log(timeMap.get("foo", 4)); // Expected: "bar2"
+console.log(timeMap.get("foo", 5)); // Expected: "bar2"`,
+      python: `class TimeMap:
+    def __init__(self):
+        # Initialize
+        pass
+    
+    def set(self, key, value, timestamp):
+        # Store key-value at timestamp
+        pass
+    
+    def get(self, key, timestamp):
+        # Get value at timestamp
+        pass
+
+# Test cases
+timeMap = TimeMap()
+timeMap.set("foo", "bar", 1)
+print(timeMap.get("foo", 1))  # Expected: "bar"
+print(timeMap.get("foo", 3))  # Expected: "bar"
+timeMap.set("foo", "bar2", 4)
+print(timeMap.get("foo", 4))  # Expected: "bar2"
+print(timeMap.get("foo", 5))  # Expected: "bar2"`,
+      java: `import java.util.*;
+
+class TimeMap {
+    public TimeMap() {
+        // Initialize
+    }
+    
+    public void set(String key, String value, int timestamp) {
+        // Store key-value at timestamp
+    }
+    
+    public String get(String key, int timestamp) {
+        // Get value at timestamp
+        return "";
+    }
+    
+    public static void main(String[] args) {
+        TimeMap timeMap = new TimeMap();
+        timeMap.set("foo", "bar", 1);
+        System.out.println(timeMap.get("foo", 1));
+        System.out.println(timeMap.get("foo", 3));
+        timeMap.set("foo", "bar2", 4);
+        System.out.println(timeMap.get("foo", 4));
+        System.out.println(timeMap.get("foo", 5));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "bar\nbar\nbar2\nbar2",
+      python: "bar\nbar\nbar2\nbar2",
+      java: "bar\nbar\nbar2\nbar2",
+    },
   },
 };
