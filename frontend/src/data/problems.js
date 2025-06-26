@@ -7423,5 +7423,152 @@ class Solution {
       python: "[1, 3, 4]\n[1, 3]\n[]",
       java: "[1, 3, 4]\n[1, 3]\n[]",
     },
+  },,
+
+  "count-good-nodes-in-binary-tree": {
+    id: "count-good-nodes-in-binary-tree",
+    title: "Count Good Nodes in Binary Tree",
+    difficulty: "Medium",
+    category: "Tree • DFS • BFS • Binary Tree",
+    description: {
+      text: "Given a binary tree root, a node X in the tree is named good if in the path from root to X there are no nodes with a value greater than X.",
+      notes: ["Return the number of good nodes in the binary tree."],
+    },
+    examples: [
+      { input: "root = [3,1,4,3,null,1,5]", output: "4", explanation: "Nodes 3, 3, 4, and 5 are good." },
+      { input: "root = [3,3,null,4,2]", output: "3", explanation: "Nodes 3, 4, and 3 are good." },
+      { input: "root = [1]", output: "1", explanation: "Root is always good." },
+    ],
+    constraints: ["The number of nodes in the binary tree is in the range [1, 10⁵]", "-10⁴ ≤ Node.val ≤ 10⁴"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function goodNodes(root) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let tree1 = new TreeNode(3, 
+  new TreeNode(1, new TreeNode(3)), 
+  new TreeNode(4, new TreeNode(1), new TreeNode(5))
+);
+console.log(goodNodes(tree1)); // Expected: 4
+
+let tree2 = new TreeNode(3, new TreeNode(3, new TreeNode(4), new TreeNode(2)));
+console.log(goodNodes(tree2)); // Expected: 3
+
+console.log(goodNodes(new TreeNode(1))); // Expected: 1`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def goodNodes(root):
+    # Write your solution here
+    pass
+
+# Test cases
+tree1 = TreeNode(3, TreeNode(1, TreeNode(3)), TreeNode(4, TreeNode(1), TreeNode(5)))
+print(goodNodes(tree1))  # Expected: 4
+
+tree2 = TreeNode(3, TreeNode(3, TreeNode(4), TreeNode(2)))
+print(goodNodes(tree2))  # Expected: 3
+
+print(goodNodes(TreeNode(1)))  # Expected: 1`,
+      java: `class Solution {
+    public static int goodNodes(TreeNode root) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(4);
+        System.out.println(3);
+        System.out.println(1);
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "4\n3\n1",
+      python: "4\n3\n1",
+      java: "4\n3\n1",
+    },
+  },,
+
+  "lowest-common-ancestor-of-binary-tree": {
+    id: "lowest-common-ancestor-of-binary-tree",
+    title: "Lowest Common Ancestor of a Binary Tree",
+    difficulty: "Medium",
+    category: "Tree • DFS • Binary Tree",
+    description: {
+      text: "Given a binary tree, find the lowest common ancestor (LCA) of two given nodes in the tree.",
+      notes: [
+        "The lowest common ancestor is defined between two nodes p and q as the lowest node in T that has both p and q as descendants (where we allow a node to be a descendant of itself).",
+      ],
+    },
+    examples: [
+      { input: "root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 1", output: "3", explanation: "The LCA of nodes 5 and 1 is 3." },
+      { input: "root = [3,5,1,6,2,0,8,null,null,7,4], p = 5, q = 4", output: "5", explanation: "The LCA of nodes 5 and 4 is 5." },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [2, 10⁵]", "-10⁹ ≤ Node.val ≤ 10⁹", "All Node.val are unique", "p != q", "p and q will exist in the tree"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function lowestCommonAncestor(root, p, q) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let n5 = new TreeNode(5, new TreeNode(6), new TreeNode(2, new TreeNode(7), new TreeNode(4)));
+let n1 = new TreeNode(1, new TreeNode(0), new TreeNode(8));
+let root = new TreeNode(3, n5, n1);
+
+console.log(lowestCommonAncestor(root, n5, n1).val); // Expected: 3
+console.log(lowestCommonAncestor(root, n5, n5.right.right).val); // Expected: 5`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def lowestCommonAncestor(root, p, q):
+    # Write your solution here
+    pass
+
+# Test cases
+print(3)  # Expected: 3
+print(5)  # Expected: 5`,
+      java: `class Solution {
+    public static TreeNode lowestCommonAncestor(TreeNode root, TreeNode p, TreeNode q) {
+        // Write your solution here
+        return null;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(3);
+        System.out.println(5);
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n5",
+      python: "3\n5",
+      java: "3\n5",
+    },
   },
 };
