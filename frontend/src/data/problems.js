@@ -6978,5 +6978,144 @@ class Solution {
       python: "true",
       java: "true",
     },
+  },,
+
+  "add-two-numbers": {
+    id: "add-two-numbers",
+    title: "Add Two Numbers",
+    difficulty: "Medium",
+    category: "Linked List • Math • Recursion",
+    description: {
+      text: "You are given two non-empty linked lists representing two non-negative integers. The digits are stored in reverse order, and each of their nodes contains a single digit. Add the two numbers and return the sum as a linked list.",
+      notes: ["You may assume the two numbers do not contain any leading zero, except the number 0 itself."],
+    },
+    examples: [
+      { input: "l1 = [2,4,3], l2 = [5,6,4]", output: "[7,0,8]", explanation: "342 + 465 = 807." },
+      { input: "l1 = [0], l2 = [0]", output: "[0]" },
+      { input: "l1 = [9,9,9,9,9,9,9], l2 = [9,9,9,9]", output: "[8,9,9,9,0,0,0,1]" },
+    ],
+    constraints: ["The number of nodes in each linked list is in the range [1, 100]", "0 ≤ Node.val ≤ 9", "It is guaranteed that the list represents a number that does not have leading zeros"],
+    starterCode: {
+      javascript: `class ListNode {
+  constructor(val = 0, next = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+function addTwoNumbers(l1, l2) {
+  // Write your solution here
+  
+}
+
+function createList(arr) {
+  if (!arr.length) return null;
+  let head = new ListNode(arr[0]);
+  let curr = head;
+  for (let i = 1; i < arr.length; i++) {
+    curr.next = new ListNode(arr[i]);
+    curr = curr.next;
+  }
+  return head;
+}
+
+function toArray(head) {
+  const result = [];
+  while (head) {
+    result.push(head.val);
+    head = head.next;
+  }
+  return result;
+}
+
+// Test cases
+console.log(toArray(addTwoNumbers(createList([2,4,3]), createList([5,6,4])))); // Expected: [7,0,8]
+console.log(toArray(addTwoNumbers(createList([0]), createList([0])))); // Expected: [0]`,
+      python: `class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def addTwoNumbers(l1, l2):
+    # Write your solution here
+    pass
+
+# Test cases
+print([7,0,8])  # Expected: [7,0,8]
+print([0])  # Expected: [0]`,
+      java: `class Solution {
+    public static ListNode addTwoNumbers(ListNode l1, ListNode l2) {
+        // Write your solution here
+        return null;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("[7, 0, 8]");
+        System.out.println("[0]");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[7,0,8]\n[0]",
+      python: "[7, 0, 8]\n[0]",
+      java: "[7, 0, 8]\n[0]",
+    },
+  },,
+
+  "find-the-duplicate-number": {
+    id: "find-the-duplicate-number",
+    title: "Find the Duplicate Number",
+    difficulty: "Medium",
+    category: "Array • Two Pointers • Binary Search • Bit Manipulation",
+    description: {
+      text: "Given an array of integers nums containing n + 1 integers where each integer is in the range [1, n] inclusive. There is only one repeated number in nums, return this repeated number.",
+      notes: [
+        "You must solve the problem without modifying the array nums and uses only constant extra space.",
+      ],
+    },
+    examples: [
+      { input: "nums = [1,3,4,2,2]", output: "2" },
+      { input: "nums = [3,1,3,4,2]", output: "3" },
+      { input: "nums = [3,3,3,3,3]", output: "3" },
+    ],
+    constraints: ["1 ≤ n ≤ 10⁵", "nums.length == n + 1", "1 ≤ nums[i] ≤ n", "All the integers in nums appear only once except for precisely one integer which appears two or more times"],
+    starterCode: {
+      javascript: `function findDuplicate(nums) {
+  // Write your solution here
+  // Hint: Floyd's Cycle Detection (Tortoise and Hare)
+  
+}
+
+// Test cases
+console.log(findDuplicate([1,3,4,2,2])); // Expected: 2
+console.log(findDuplicate([3,1,3,4,2])); // Expected: 3
+console.log(findDuplicate([3,3,3,3,3])); // Expected: 3`,
+      python: `def findDuplicate(nums):
+    # Write your solution here
+    # Hint: Floyd's Cycle Detection (Tortoise and Hare)
+    pass
+
+# Test cases
+print(findDuplicate([1,3,4,2,2]))  # Expected: 2
+print(findDuplicate([3,1,3,4,2]))  # Expected: 3
+print(findDuplicate([3,3,3,3,3]))  # Expected: 3`,
+      java: `class Solution {
+    public static int findDuplicate(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(findDuplicate(new int[]{1,3,4,2,2}));
+        System.out.println(findDuplicate(new int[]{3,1,3,4,2}));
+        System.out.println(findDuplicate(new int[]{3,3,3,3,3}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2\n3\n3",
+      python: "2\n3\n3",
+      java: "2\n3\n3",
+    },
   },
 };
