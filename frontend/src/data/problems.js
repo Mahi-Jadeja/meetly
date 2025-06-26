@@ -7271,5 +7271,157 @@ print(diameterOfBinaryTree(tree2))  # Expected: 1`,
       python: "3\n1",
       java: "3\n1",
     },
+  },,
+
+  "balanced-binary-tree": {
+    id: "balanced-binary-tree",
+    title: "Balanced Binary Tree",
+    difficulty: "Easy",
+    category: "Tree • DFS • Binary Tree",
+    description: {
+      text: "Given a binary tree, determine if it is height-balanced.",
+      notes: ["A height-balanced binary tree is a binary tree in which the depth of the two subtrees of every node never differs by more than one."],
+    },
+    examples: [
+      { input: "root = [3,9,20,null,null,15,7]", output: "true" },
+      { input: "root = [1,2,2,3,3,null,null,4,4]", output: "false" },
+      { input: "root = []", output: "true" },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [0, 5000]", "-10⁴ ≤ Node.val ≤ 10⁴"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function isBalanced(root) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let tree1 = new TreeNode(3, new TreeNode(9), new TreeNode(20, new TreeNode(15), new TreeNode(7)));
+console.log(isBalanced(tree1)); // Expected: true
+
+let tree2 = new TreeNode(1, 
+  new TreeNode(2, new TreeNode(3, new TreeNode(4), new TreeNode(4)), new TreeNode(3)), 
+  new TreeNode(2)
+);
+console.log(isBalanced(tree2)); // Expected: false
+
+console.log(isBalanced(null)); // Expected: true`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def isBalanced(root):
+    # Write your solution here
+    pass
+
+# Test cases
+tree1 = TreeNode(3, TreeNode(9), TreeNode(20, TreeNode(15), TreeNode(7)))
+print(isBalanced(tree1))  # Expected: True
+
+print(isBalanced(None))  # Expected: True`,
+      java: `class Solution {
+    public static boolean isBalanced(TreeNode root) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("true");
+        System.out.println("false");
+        System.out.println("true");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse\ntrue",
+      python: "True\nTrue",
+      java: "true\nfalse\ntrue",
+    },
+  },,
+
+  "binary-tree-right-side-view": {
+    id: "binary-tree-right-side-view",
+    title: "Binary Tree Right Side View",
+    difficulty: "Medium",
+    category: "Tree • DFS • BFS • Binary Tree",
+    description: {
+      text: "Given the root of a binary tree, imagine yourself standing on the right side of it, return the values of the nodes you can see ordered from top to bottom.",
+      notes: [],
+    },
+    examples: [
+      { input: "root = [1,2,3,null,5,null,4]", output: "[1,3,4]" },
+      { input: "root = [1,null,3]", output: "[1,3]" },
+      { input: "root = []", output: "[]" },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [0, 100]", "-100 ≤ Node.val ≤ 100"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function rightSideView(root) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let tree1 = new TreeNode(1, new TreeNode(2, null, new TreeNode(5)), new TreeNode(3, null, new TreeNode(4)));
+console.log(rightSideView(tree1)); // Expected: [1,3,4]
+
+let tree2 = new TreeNode(1, null, new TreeNode(3));
+console.log(rightSideView(tree2)); // Expected: [1,3]
+
+console.log(rightSideView(null)); // Expected: []`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def rightSideView(root):
+    # Write your solution here
+    pass
+
+# Test cases
+tree1 = TreeNode(1, TreeNode(2, None, TreeNode(5)), TreeNode(3, None, TreeNode(4)))
+print(rightSideView(tree1))  # Expected: [1,3,4]
+
+tree2 = TreeNode(1, None, TreeNode(3))
+print(rightSideView(tree2))  # Expected: [1,3]
+
+print(rightSideView(None))  # Expected: []`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<Integer> rightSideView(TreeNode root) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("[1, 3, 4]");
+        System.out.println("[1, 3]");
+        System.out.println("[]");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[1,3,4]\n[1,3]\n[]",
+      python: "[1, 3, 4]\n[1, 3]\n[]",
+      java: "[1, 3, 4]\n[1, 3]\n[]",
+    },
   },
 };
