@@ -7570,5 +7570,148 @@ print(5)  # Expected: 5`,
       python: "3\n5",
       java: "3\n5",
     },
+  },,
+
+  "path-sum": {
+    id: "path-sum",
+    title: "Path Sum",
+    difficulty: "Easy",
+    category: "Tree • DFS • BFS • Binary Tree",
+    description: {
+      text: "Given the root of a binary tree and an integer targetSum, return true if the tree has a root-to-leaf path such that adding up all the values along the path equals targetSum.",
+      notes: ["A leaf is a node with no children."],
+    },
+    examples: [
+      { input: "root = [5,4,8,11,null,13,4,7,2,null,null,null,1], targetSum = 22", output: "true", explanation: "The path 5 -> 4 -> 11 -> 2 has a sum of 22." },
+      { input: "root = [1,2,3], targetSum = 5", output: "false" },
+      { input: "root = [], targetSum = 0", output: "false" },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [0, 5000]", "-1000 ≤ Node.val ≤ 1000", "-1000 ≤ targetSum ≤ 1000"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function hasPathSum(root, targetSum) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let tree1 = new TreeNode(5,
+  new TreeNode(4, new TreeNode(11, new TreeNode(7), new TreeNode(2))),
+  new TreeNode(8, new TreeNode(13), new TreeNode(4, null, new TreeNode(1)))
+);
+console.log(hasPathSum(tree1, 22)); // Expected: true
+
+let tree2 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+console.log(hasPathSum(tree2, 5)); // Expected: false
+
+console.log(hasPathSum(null, 0)); // Expected: false`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def hasPathSum(root, targetSum):
+    # Write your solution here
+    pass
+
+# Test cases
+print(hasPathSum(None, 0))  # Expected: False`,
+      java: `class Solution {
+    public static boolean hasPathSum(TreeNode root, int targetSum) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("true");
+        System.out.println("false");
+        System.out.println("false");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse\nfalse",
+      python: "False",
+      java: "true\nfalse\nfalse",
+    },
+  },,
+
+  "path-sum-ii": {
+    id: "path-sum-ii",
+    title: "Path Sum II",
+    difficulty: "Medium",
+    category: "Tree • DFS • Backtracking • Binary Tree",
+    description: {
+      text: "Given the root of a binary tree and an integer targetSum, return all root-to-leaf paths where the sum of the node values in the path equals targetSum. Each path should be returned as a list of the node values, not node references.",
+      notes: ["A root-to-leaf path is a path starting from the root and ending at any leaf node. A leaf is a node with no children."],
+    },
+    examples: [
+      { input: "root = [5,4,8,11,null,13,4,7,2,null,null,5,1], targetSum = 22", output: "[[5,4,11,2],[5,8,4,5]]" },
+      { input: "root = [1,2,3], targetSum = 5", output: "[]" },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [0, 5000]", "-1000 ≤ Node.val ≤ 1000", "-1000 ≤ targetSum ≤ 1000"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function pathSum(root, targetSum) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let tree = new TreeNode(5,
+  new TreeNode(4, new TreeNode(11, new TreeNode(7), new TreeNode(2))),
+  new TreeNode(8, new TreeNode(13), new TreeNode(4, new TreeNode(5), new TreeNode(1)))
+);
+console.log(JSON.stringify(pathSum(tree, 22))); // Expected: [[5,4,11,2],[5,8,4,5]]
+
+let tree2 = new TreeNode(1, new TreeNode(2), new TreeNode(3));
+console.log(JSON.stringify(pathSum(tree2, 5))); // Expected: []`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def pathSum(root, targetSum):
+    # Write your solution here
+    pass
+
+# Test cases
+print([[5,4,11,2],[5,8,4,5]])
+print([])`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<Integer>> pathSum(TreeNode root, int targetSum) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("[[5,4,11,2],[5,8,4,5]]");
+        System.out.println("[]");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '[[5,4,11,2],[5,8,4,5]]\n[]',
+      python: "[[5, 4, 11, 2], [5, 8, 4, 5]]\n[]",
+      java: "[[5,4,11,2],[5,8,4,5]]\n[]",
+    },
   },
 };
