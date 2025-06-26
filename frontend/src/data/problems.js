@@ -7117,5 +7117,159 @@ print(findDuplicate([3,3,3,3,3]))  # Expected: 3`,
       python: "2\n3\n3",
       java: "2\n3\n3",
     },
+  },,
+
+  "serialize-and-deserialize-binary-tree": {
+    id: "serialize-and-deserialize-binary-tree",
+    title: "Serialize and Deserialize Binary Tree",
+    difficulty: "Hard",
+    category: "String • Tree • DFS • BFS • Design • Binary Tree",
+    description: {
+      text: "Serialization is the process of converting a data structure or object into a sequence of bits so that it can be stored in a file or memory buffer, or transmitted across a network connection link to be reconstructed later in the same or another computer environment.",
+      notes: [
+        "Design an algorithm to serialize and deserialize a binary tree.",
+        "There is no restriction on how your serialization/deserialization algorithm should work.",
+        "You just need to ensure that a binary tree can be serialized to a string and this string can be deserialized to the original tree structure.",
+      ],
+    },
+    examples: [
+      { input: "root = [1,2,3,null,null,4,5]", output: "[1,2,3,null,null,4,5]" },
+      { input: "root = []", output: "[]" },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [0, 10⁴]", "-1000 ≤ Node.val ≤ 1000"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function serialize(root) {
+  // Encodes a tree to a single string
+  
+}
+
+function deserialize(data) {
+  // Decodes your encoded data to tree
+  
+}
+
+// Test cases
+let tree = new TreeNode(1, new TreeNode(2), new TreeNode(3, new TreeNode(4), new TreeNode(5)));
+let serialized = serialize(tree);
+let deserialized = deserialize(serialized);
+console.log(deserialized.val === tree.val); // Expected: true
+console.log(serialize(null) === serialize(deserialize(serialize(null)))); // Expected: true`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def serialize(root):
+    # Encodes a tree to a single string
+    pass
+
+def deserialize(data):
+    # Decodes your encoded data to tree
+    pass
+
+# Test cases
+tree = TreeNode(1, TreeNode(2), TreeNode(3, TreeNode(4), TreeNode(5)))
+serialized = serialize(tree)
+deserialized = deserialize(serialized)
+print(deserialized.val == tree.val)  # Expected: True`,
+      java: `class Codec {
+    public String serialize(TreeNode root) {
+        // Encodes a tree to a single string
+        return "";
+    }
+    
+    public TreeNode deserialize(String data) {
+        // Decodes your encoded data to tree
+        return null;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("true");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\ntrue",
+      python: "True",
+      java: "true",
+    },
+  },,
+
+  "diameter-of-binary-tree": {
+    id: "diameter-of-binary-tree",
+    title: "Diameter of Binary Tree",
+    difficulty: "Easy",
+    category: "Tree • DFS • Binary Tree",
+    description: {
+      text: "Given the root of a binary tree, return the length of the diameter of the tree. The diameter of a binary tree is the length of the longest path between any two nodes in a tree. This path may or may not pass through the root.",
+      notes: ["The length of a path between two nodes is represented by the number of edges between them."],
+    },
+    examples: [
+      { input: "root = [1,2,3,4,5]", output: "3", explanation: "The longest path is [4,2,1,3] or [5,2,1,3] with length 3." },
+      { input: "root = [1,2]", output: "1" },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [1, 10⁴]", "-100 ≤ Node.val ≤ 100"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function diameterOfBinaryTree(root) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let tree1 = new TreeNode(1, new TreeNode(2, new TreeNode(4), new TreeNode(5)), new TreeNode(3));
+console.log(diameterOfBinaryTree(tree1)); // Expected: 3
+
+let tree2 = new TreeNode(1, new TreeNode(2));
+console.log(diameterOfBinaryTree(tree2)); // Expected: 1`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def diameterOfBinaryTree(root):
+    # Write your solution here
+    pass
+
+# Test cases
+tree1 = TreeNode(1, TreeNode(2, TreeNode(4), TreeNode(5)), TreeNode(3))
+print(diameterOfBinaryTree(tree1))  # Expected: 3
+
+tree2 = TreeNode(1, TreeNode(2))
+print(diameterOfBinaryTree(tree2))  # Expected: 1`,
+      java: `class Solution {
+    public static int diameterOfBinaryTree(TreeNode root) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(3);
+        System.out.println(1);
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n1",
+      python: "3\n1",
+      java: "3\n1",
+    },
   },
 };
