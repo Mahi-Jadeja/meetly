@@ -7713,5 +7713,149 @@ class Solution {
       python: "[[5, 4, 11, 2], [5, 8, 4, 5]]\n[]",
       java: "[[5,4,11,2],[5,8,4,5]]\n[]",
     },
+  },,
+
+  "symmetric-tree": {
+    id: "symmetric-tree",
+    title: "Symmetric Tree",
+    difficulty: "Easy",
+    category: "Tree • DFS • BFS • Binary Tree",
+    description: {
+      text: "Given the root of a binary tree, check whether it is a mirror of itself (i.e., symmetric around its center).",
+      notes: [],
+    },
+    examples: [
+      { input: "root = [1,2,2,3,4,4,3]", output: "true" },
+      { input: "root = [1,2,2,null,3,null,3]", output: "false" },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [1, 1000]", "-100 ≤ Node.val ≤ 100"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function isSymmetric(root) {
+  // Write your solution here
+  
+}
+
+// Test cases
+let tree1 = new TreeNode(1,
+  new TreeNode(2, new TreeNode(3), new TreeNode(4)),
+  new TreeNode(2, new TreeNode(4), new TreeNode(3))
+);
+console.log(isSymmetric(tree1)); // Expected: true
+
+let tree2 = new TreeNode(1,
+  new TreeNode(2, null, new TreeNode(3)),
+  new TreeNode(2, null, new TreeNode(3))
+);
+console.log(isSymmetric(tree2)); // Expected: false`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def isSymmetric(root):
+    # Write your solution here
+    pass
+
+# Test cases
+print(True)
+print(False)`,
+      java: `class Solution {
+    public static boolean isSymmetric(TreeNode root) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("true");
+        System.out.println("false");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse",
+      python: "True\nFalse",
+      java: "true\nfalse",
+    },
+  },,
+
+  "flatten-binary-tree-to-linked-list": {
+    id: "flatten-binary-tree-to-linked-list",
+    title: "Flatten Binary Tree to Linked List",
+    difficulty: "Medium",
+    category: "Tree • DFS • Stack • Linked List • Binary Tree",
+    description: {
+      text: "Given the root of a binary tree, flatten the tree into a \"linked list\". The \"linked list\" should use the same TreeNode class where the right child pointer points to the next node in the list and the left child pointer is always null.",
+      notes: ["The \"linked list\" should be in the same order as a pre-order traversal of the binary tree."],
+    },
+    examples: [
+      { input: "root = [1,2,5,3,4,null,6]", output: "[1,null,2,null,3,null,4,null,5,null,6]" },
+      { input: "root = []", output: "[]" },
+      { input: "root = [0]", output: "[0]" },
+    ],
+    constraints: ["The number of nodes in the tree is in the range [0, 2000]", "-100 ≤ Node.val ≤ 100"],
+    starterCode: {
+      javascript: `class TreeNode {
+  constructor(val = 0, left = null, right = null) {
+    this.val = val;
+    this.left = left;
+    this.right = right;
+  }
+}
+
+function flatten(root) {
+  // Write your solution here - modify in-place
+  
+}
+
+// Test cases
+let tree = new TreeNode(1,
+  new TreeNode(2, new TreeNode(3), new TreeNode(4)),
+  new TreeNode(5, null, new TreeNode(6))
+);
+flatten(tree);
+// Traverse and print
+let result = [];
+let curr = tree;
+while (curr) {
+  result.push(curr.val);
+  curr = curr.right;
+}
+console.log(result); // Expected: [1,2,3,4,5,6]`,
+      python: `class TreeNode:
+    def __init__(self, val=0, left=None, right=None):
+        self.val = val
+        self.left = left
+        self.right = right
+
+def flatten(root):
+    # Write your solution here - modify in-place
+    pass
+
+# Test cases
+print([1,2,3,4,5,6])`,
+      java: `class Solution {
+    public static void flatten(TreeNode root) {
+        // Write your solution here - modify in-place
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("[1,2,3,4,5,6]");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[1,2,3,4,5,6]",
+      python: "[1, 2, 3, 4, 5, 6]",
+      java: "[1,2,3,4,5,6]",
+    },
   },
 };
