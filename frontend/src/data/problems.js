@@ -7970,5 +7970,122 @@ print(swimInWater([[0,1,2,3,4],[24,23,22,21,5],[12,13,14,15,16],[11,17,18,19,20]
       python: "3\n16",
       java: "3\n16",
     },
+  },,
+
+  "alien-dictionary": {
+    id: "alien-dictionary",
+    title: "Alien Dictionary",
+    difficulty: "Hard",
+    category: "Array • String • DFS • BFS • Graph • Topological Sort",
+    description: {
+      text: "There is a new alien language that uses the English alphabet. However, the order of the letters is unknown to you. You are given a list of strings words from the alien language's dictionary, where the strings in words are sorted lexicographically by the rules of this new language.",
+      notes: [
+        "Derive the order of letters in this language. If the order is invalid, return \"\". If there are multiple valid orders, return any of them.",
+      ],
+    },
+    examples: [
+      { input: 'words = ["wrt","wrf","er","ett","rftt"]', output: '"wertf"' },
+      { input: 'words = ["z","x"]', output: '"zx"' },
+      { input: 'words = ["z","x","z"]', output: '""', explanation: "The order is invalid, so return \"\"." },
+    ],
+    constraints: ["1 ≤ words.length ≤ 100", "1 ≤ words[i].length ≤ 100", "words[i] consists of only lowercase English letters"],
+    starterCode: {
+      javascript: `function alienOrder(words) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(alienOrder(["wrt","wrf","er","ett","rftt"])); // Expected: "wertf"
+console.log(alienOrder(["z","x"])); // Expected: "zx"
+console.log(alienOrder(["z","x","z"])); // Expected: ""`,
+      python: `def alienOrder(words):
+    # Write your solution here
+    pass
+
+# Test cases
+print(alienOrder(["wrt","wrf","er","ett","rftt"]))  # Expected: "wertf"
+print(alienOrder(["z","x"]))  # Expected: "zx"
+print(alienOrder(["z","x","z"]))  # Expected: ""`,
+      java: `import java.util.*;
+
+class Solution {
+    public static String alienOrder(String[] words) {
+        // Write your solution here
+        return "";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(alienOrder(new String[]{"wrt","wrf","er","ett","rftt"}));
+        System.out.println(alienOrder(new String[]{"z","x"}));
+        System.out.println(alienOrder(new String[]{"z","x","z"}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "wertf\nzx\n",
+      python: "wertf\nzx\n",
+      java: "wertf\nzx\n",
+    },
+  },,
+
+  "cheapest-flights-within-k-stops": {
+    id: "cheapest-flights-within-k-stops",
+    title: "Cheapest Flights Within K Stops",
+    difficulty: "Medium",
+    category: "DFS • BFS • Graph • Dynamic Programming • Heap • Shortest Path",
+    description: {
+      text: "There are n cities connected by some number of flights. You are given an array flights where flights[i] = [fromi, toi, pricei] indicates that there is a flight from city fromi to city toi with cost pricei.",
+      notes: [
+        "You are also given three integers src, dst, and k, return the cheapest price from src to dst with at most k stops.",
+        "If there is no such route, return -1.",
+      ],
+    },
+    examples: [
+      { input: "n = 4, flights = [[0,1,100],[1,2,100],[2,0,100],[1,3,600],[2,3,200]], src = 0, dst = 3, k = 1", output: "700" },
+      { input: "n = 3, flights = [[0,1,100],[1,2,100],[0,2,500]], src = 0, dst = 2, k = 1", output: "200" },
+      { input: "n = 3, flights = [[0,1,100],[1,2,100],[0,2,500]], src = 0, dst = 2, k = 0", output: "500" },
+    ],
+    constraints: ["1 ≤ n ≤ 100", "0 ≤ flights.length ≤ (n * (n - 1) / 2)", "flights[i].length == 3", "0 ≤ fromi, toi < n", "fromi != toi", "1 ≤ pricei ≤ 10⁴", "There will not be any multiple flights between two cities", "0 ≤ src, dst, k < n", "src != dst"],
+    starterCode: {
+      javascript: `function findCheapestPrice(n, flights, src, dst, k) {
+  // Write your solution here
+  // Hint: Bellman-Ford or BFS with pruning
+  
+}
+
+// Test cases
+console.log(findCheapestPrice(4, [[0,1,100],[1,2,100],[2,0,100],[1,3,600],[2,3,200]], 0, 3, 1)); // Expected: 700
+console.log(findCheapestPrice(3, [[0,1,100],[1,2,100],[0,2,500]], 0, 2, 1)); // Expected: 200
+console.log(findCheapestPrice(3, [[0,1,100],[1,2,100],[0,2,500]], 0, 2, 0)); // Expected: 500`,
+      python: `def findCheapestPrice(n, flights, src, dst, k):
+    # Write your solution here
+    # Hint: Bellman-Ford or BFS with pruning
+    pass
+
+# Test cases
+print(findCheapestPrice(4, [[0,1,100],[1,2,100],[2,0,100],[1,3,600],[2,3,200]], 0, 3, 1))  # Expected: 700
+print(findCheapestPrice(3, [[0,1,100],[1,2,100],[0,2,500]], 0, 2, 1))  # Expected: 200
+print(findCheapestPrice(3, [[0,1,100],[1,2,100],[0,2,500]], 0, 2, 0))  # Expected: 500`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int findCheapestPrice(int n, int[][] flights, int src, int dst, int k) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(findCheapestPrice(4, new int[][]{{0,1,100},{1,2,100},{2,0,100},{1,3,600},{2,3,200}}, 0, 3, 1));
+        System.out.println(findCheapestPrice(3, new int[][]{{0,1,100},{1,2,100},{0,2,500}}, 0, 2, 1));
+        System.out.println(findCheapestPrice(3, new int[][]{{0,1,100},{1,2,100},{0,2,500}}, 0, 2, 0));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "700\n200\n500",
+      python: "700\n200\n500",
+      java: "700\n200\n500",
+    },
   },
 };
