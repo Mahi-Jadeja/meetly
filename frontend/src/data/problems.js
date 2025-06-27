@@ -8087,5 +8087,114 @@ class Solution {
       python: "700\n200\n500",
       java: "700\n200\n500",
     },
+  },,
+
+  "reconstruct-itinerary": {
+    id: "reconstruct-itinerary",
+    title: "Reconstruct Itinerary",
+    difficulty: "Hard",
+    category: "DFS • Graph • Eulerian Circuit",
+    description: {
+      text: "You are given a list of airline tickets where tickets[i] = [fromi, toi] represent the departure and the arrival airports of one flight. Reconstruct the itinerary in order and return it.",
+      notes: [
+        "All of the tickets belong to a man who departs from \"JFK\", thus, the itinerary must begin with \"JFK\".",
+        "If there are multiple valid itineraries, you should return the itinerary that has the smallest lexical order when read as a single string.",
+        "You may assume all tickets form at least one valid itinerary.",
+        "You must use all the tickets once and only once.",
+      ],
+    },
+    examples: [
+      { input: 'tickets = [["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]', output: '["JFK","MUC","LHR","SFO","SJC"]' },
+      { input: 'tickets = [["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]', output: '["JFK","ATL","JFK","SFO","ATL","SFO"]' },
+    ],
+    constraints: ["1 ≤ tickets.length ≤ 300", "tickets[i].length == 2", "fromi.length == 3", "toi.length == 3", "fromi and toi consist of uppercase English letters", "fromi != toi"],
+    starterCode: {
+      javascript: `function findItinerary(tickets) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(findItinerary([["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]));
+console.log(findItinerary([["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]));`,
+      python: `def findItinerary(tickets):
+    # Write your solution here
+    pass
+
+# Test cases
+print(findItinerary([["MUC","LHR"],["JFK","MUC"],["SFO","SJC"],["LHR","SFO"]]))
+print(findItinerary([["JFK","SFO"],["JFK","ATL"],["SFO","ATL"],["ATL","JFK"],["ATL","SFO"]]))`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<String> findItinerary(List<List<String>> tickets) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println("[JFK, MUC, LHR, SFO, SJC]");
+        System.out.println("[JFK, ATL, JFK, SFO, ATL, SFO]");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: '["JFK","MUC","LHR","SFO","SJC"]\n["JFK","ATL","JFK","SFO","ATL","SFO"]',
+      python: "['JFK', 'MUC', 'LHR', 'SFO', 'SJC']\n['JFK', 'ATL', 'JFK', 'SFO', 'ATL', 'SFO']",
+      java: "[JFK, MUC, LHR, SFO, SJC]\n[JFK, ATL, JFK, SFO, ATL, SFO]",
+    },
+  },,
+
+  "min-cost-to-connect-all-points": {
+    id: "min-cost-to-connect-all-points",
+    title: "Min Cost to Connect All Points",
+    difficulty: "Medium",
+    category: "Array • Union Find • Graph • Minimum Spanning Tree",
+    description: {
+      text: "You are given an array points representing integer coordinates of some points on a 2D-plane, where points[i] = [xi, yi]. The cost of connecting two points [xi, yi] and [xj, yj] is the manhattan distance between them: |xi - xj| + |yi - yj|.",
+      notes: ["Return the minimum cost to make all points connected. All points are connected if there is exactly one simple path between any two points."],
+    },
+    examples: [
+      { input: "points = [[0,0],[2,2],[3,10],[5,2],[7,0]]", output: "20" },
+      { input: "points = [[3,12],[-2,5],[-4,1]]", output: "18" },
+    ],
+    constraints: ["1 ≤ points.length ≤ 1000", "-10⁶ ≤ xi, yi ≤ 10⁶", "All pairs (xi, yi) are distinct"],
+    starterCode: {
+      javascript: `function minCostConnectPoints(points) {
+  // Write your solution here
+  // Hint: Prim's or Kruskal's algorithm
+  
+}
+
+// Test cases
+console.log(minCostConnectPoints([[0,0],[2,2],[3,10],[5,2],[7,0]])); // Expected: 20
+console.log(minCostConnectPoints([[3,12],[-2,5],[-4,1]])); // Expected: 18`,
+      python: `def minCostConnectPoints(points):
+    # Write your solution here
+    # Hint: Prim's or Kruskal's algorithm
+    pass
+
+# Test cases
+print(minCostConnectPoints([[0,0],[2,2],[3,10],[5,2],[7,0]]))  # Expected: 20
+print(minCostConnectPoints([[3,12],[-2,5],[-4,1]]))  # Expected: 18`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int minCostConnectPoints(int[][] points) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(minCostConnectPoints(new int[][]{{0,0},{2,2},{3,10},{5,2},{7,0}}));
+        System.out.println(minCostConnectPoints(new int[][]{{3,12},{-2,5},{-4,1}}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "20\n18",
+      python: "20\n18",
+      java: "20\n18",
+    },
   },
 };
