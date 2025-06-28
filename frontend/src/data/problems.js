@@ -8318,5 +8318,117 @@ class Solution {
       python: "[['John', 'john00@mail.com', 'john_newyork@mail.com', 'johnsmith@mail.com'], ['Mary', 'mary@mail.com'], ['John', 'johnnybravo@mail.com']]",
       java: "Merged accounts",
     },
+  },,
+
+  "powx-n": {
+    id: "powx-n",
+    title: "Pow(x, n)",
+    difficulty: "Medium",
+    category: "Math • Recursion",
+    description: {
+      text: "Implement pow(x, n), which calculates x raised to the power n (i.e., xⁿ).",
+      notes: [],
+    },
+    examples: [
+      { input: "x = 2.00000, n = 10", output: "1024.00000" },
+      { input: "x = 2.10000, n = 3", output: "9.26100" },
+      { input: "x = 2.00000, n = -2", output: "0.25000" },
+    ],
+    constraints: ["-100.0 < x < 100.0", "-2³¹ ≤ n ≤ 2³¹ - 1", "n is an integer", "-10⁴ ≤ xⁿ ≤ 10⁴"],
+    starterCode: {
+      javascript: `function myPow(x, n) {
+  // Write your solution here
+  // Hint: Fast exponentiation (divide and conquer)
+  
+}
+
+// Test cases
+console.log(myPow(2.00000, 10)); // Expected: 1024.00000
+console.log(myPow(2.10000, 3)); // Expected: 9.261
+console.log(myPow(2.00000, -2)); // Expected: 0.25`,
+      python: `def myPow(x, n):
+    # Write your solution here
+    # Hint: Fast exponentiation (divide and conquer)
+    pass
+
+# Test cases
+print(myPow(2.00000, 10))  # Expected: 1024.0
+print(myPow(2.10000, 3))  # Expected: 9.261
+print(myPow(2.00000, -2))  # Expected: 0.25`,
+      java: `class Solution {
+    public static double myPow(double x, int n) {
+        // Write your solution here
+        return 0.0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(myPow(2.00000, 10));
+        System.out.println(myPow(2.10000, 3));
+        System.out.println(myPow(2.00000, -2));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "1024\n9.261000000000001\n0.25",
+      python: "1024.0\n9.261\n0.25",
+      java: "1024.0\n9.261000000000001\n0.25",
+    },
+  },,
+
+  "sqrtx": {
+    id: "sqrtx",
+    title: "Sqrt(x)",
+    difficulty: "Easy",
+    category: "Math • Binary Search",
+    description: {
+      text: "Given a non-negative integer x, return the square root of x rounded down to the nearest integer. The returned integer should be non-negative as well.",
+      notes: ["You must not use any built-in exponent function or operator."],
+    },
+    examples: [
+      { input: "x = 4", output: "2", explanation: "The square root of 4 is 2." },
+      { input: "x = 8", output: "2", explanation: "The square root of 8 is 2.82842..., and since we round it down to the nearest integer, 2 is returned." },
+    ],
+    constraints: ["0 ≤ x ≤ 2³¹ - 1"],
+    starterCode: {
+      javascript: `function mySqrt(x) {
+  // Write your solution here
+  // Hint: Binary search
+  
+}
+
+// Test cases
+console.log(mySqrt(4)); // Expected: 2
+console.log(mySqrt(8)); // Expected: 2
+console.log(mySqrt(0)); // Expected: 0
+console.log(mySqrt(1)); // Expected: 1`,
+      python: `def mySqrt(x):
+    # Write your solution here
+    # Hint: Binary search
+    pass
+
+# Test cases
+print(mySqrt(4))  # Expected: 2
+print(mySqrt(8))  # Expected: 2
+print(mySqrt(0))  # Expected: 0
+print(mySqrt(1))  # Expected: 1`,
+      java: `class Solution {
+    public static int mySqrt(int x) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(mySqrt(4));
+        System.out.println(mySqrt(8));
+        System.out.println(mySqrt(0));
+        System.out.println(mySqrt(1));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2\n2\n0\n1",
+      python: "2\n2\n0\n1",
+      java: "2\n2\n0\n1",
+    },
   },
 };
