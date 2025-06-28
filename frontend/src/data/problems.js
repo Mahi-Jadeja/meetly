@@ -8587,5 +8587,115 @@ class DetectSquares {
       python: "1\n0\n2",
       java: "1\n0\n2",
     },
+  },,
+
+  "happy-number": {
+    id: "happy-number",
+    title: "Happy Number",
+    difficulty: "Easy",
+    category: "Hash Table • Math • Two Pointers",
+    description: {
+      text: "Write an algorithm to determine if a number n is happy. A happy number is a number defined by the following process: Starting with any positive integer, replace the number by the sum of the squares of its digits. Repeat the process until the number equals 1 (where it will stay), or it loops endlessly in a cycle which does not include 1.",
+      notes: ["Those numbers for which this process ends in 1 are happy."],
+    },
+    examples: [
+      { input: "n = 19", output: "true", explanation: "1² + 9² = 82, 8² + 2² = 68, 6² + 8² = 100, 1² + 0² + 0² = 1" },
+      { input: "n = 2", output: "false" },
+    ],
+    constraints: ["1 ≤ n ≤ 2³¹ - 1"],
+    starterCode: {
+      javascript: `function isHappy(n) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(isHappy(19)); // Expected: true
+console.log(isHappy(2)); // Expected: false
+console.log(isHappy(1)); // Expected: true`,
+      python: `def isHappy(n):
+    # Write your solution here
+    pass
+
+# Test cases
+print(isHappy(19))  # Expected: True
+print(isHappy(2))  # Expected: False
+print(isHappy(1))  # Expected: True`,
+      java: `class Solution {
+    public static boolean isHappy(int n) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(isHappy(19));
+        System.out.println(isHappy(2));
+        System.out.println(isHappy(1));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse\ntrue",
+      python: "True\nFalse\nTrue",
+      java: "true\nfalse\ntrue",
+    },
+  },,
+
+  "plus-one": {
+    id: "plus-one",
+    title: "Plus One",
+    difficulty: "Easy",
+    category: "Array • Math",
+    description: {
+      text: "You are given a large integer represented as an integer array digits, where each digits[i] is the iᵗʰ digit of the integer. The digits are ordered from most significant to least significant in left-to-right order. The large integer does not contain any leading 0's.",
+      notes: ["Increment the large integer by one and return the resulting array of digits."],
+    },
+    examples: [
+      { input: "digits = [1,2,3]", output: "[1,2,4]", explanation: "The array represents the integer 123. Incrementing by one gives 124." },
+      { input: "digits = [4,3,2,1]", output: "[4,3,2,2]" },
+      { input: "digits = [9]", output: "[1,0]" },
+    ],
+    constraints: ["1 ≤ digits.length ≤ 100", "0 ≤ digits[i] ≤ 9", "digits does not contain any leading 0's"],
+    starterCode: {
+      javascript: `function plusOne(digits) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(plusOne([1,2,3])); // Expected: [1,2,4]
+console.log(plusOne([4,3,2,1])); // Expected: [4,3,2,2]
+console.log(plusOne([9])); // Expected: [1,0]
+console.log(plusOne([9,9,9])); // Expected: [1,0,0,0]`,
+      python: `def plusOne(digits):
+    # Write your solution here
+    pass
+
+# Test cases
+print(plusOne([1,2,3]))  # Expected: [1,2,4]
+print(plusOne([4,3,2,1]))  # Expected: [4,3,2,2]
+print(plusOne([9]))  # Expected: [1,0]
+print(plusOne([9,9,9]))  # Expected: [1,0,0,0]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int[] plusOne(int[] digits) {
+        // Write your solution here
+        return new int[0];
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(plusOne(new int[]{1,2,3})));
+        System.out.println(Arrays.toString(plusOne(new int[]{4,3,2,1})));
+        System.out.println(Arrays.toString(plusOne(new int[]{9})));
+        System.out.println(Arrays.toString(plusOne(new int[]{9,9,9})));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[1,2,4]\n[4,3,2,2]\n[1,0]\n[1,0,0,0]",
+      python: "[1, 2, 4]\n[4, 3, 2, 2]\n[1, 0]\n[1, 0, 0, 0]",
+      java: "[1, 2, 4]\n[4, 3, 2, 2]\n[1, 0]\n[1, 0, 0, 0]",
+    },
   },
 };
