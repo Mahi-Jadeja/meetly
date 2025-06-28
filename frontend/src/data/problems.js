@@ -8697,5 +8697,122 @@ class Solution {
       python: "[1, 2, 4]\n[4, 3, 2, 2]\n[1, 0]\n[1, 0, 0, 0]",
       java: "[1, 2, 4]\n[4, 3, 2, 2]\n[1, 0]\n[1, 0, 0, 0]",
     },
+  },,
+
+  "rotate-array": {
+    id: "rotate-array",
+    title: "Rotate Array",
+    difficulty: "Medium",
+    category: "Array • Math • Two Pointers",
+    description: {
+      text: "Given an integer array nums, rotate the array to the right by k steps, where k is non-negative.",
+      notes: [],
+    },
+    examples: [
+      { input: "nums = [1,2,3,4,5,6,7], k = 3", output: "[5,6,7,1,2,3,4]" },
+      { input: "nums = [-1,-100,3,99], k = 2", output: "[3,99,-1,-100]" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 10⁵", "-2³¹ ≤ nums[i] ≤ 2³¹ - 1", "0 ≤ k ≤ 10⁵"],
+    starterCode: {
+      javascript: `function rotate(nums, k) {
+  // Write your solution here - modify in-place
+  
+}
+
+// Test cases
+let nums1 = [1,2,3,4,5,6,7];
+rotate(nums1, 3);
+console.log(nums1); // Expected: [5,6,7,1,2,3,4]
+
+let nums2 = [-1,-100,3,99];
+rotate(nums2, 2);
+console.log(nums2); // Expected: [3,99,-1,-100]`,
+      python: `def rotate(nums, k):
+    # Write your solution here - modify in-place
+    pass
+
+# Test cases
+nums1 = [1,2,3,4,5,6,7]
+rotate(nums1, 3)
+print(nums1)  # Expected: [5,6,7,1,2,3,4]
+
+nums2 = [-1,-100,3,99]
+rotate(nums2, 2)
+print(nums2)  # Expected: [3,99,-1,-100]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static void rotate(int[] nums, int k) {
+        // Write your solution here - modify in-place
+    }
+    
+    public static void main(String[] args) {
+        int[] nums1 = {1,2,3,4,5,6,7};
+        rotate(nums1, 3);
+        System.out.println(Arrays.toString(nums1));
+        
+        int[] nums2 = {-1,-100,3,99};
+        rotate(nums2, 2);
+        System.out.println(Arrays.toString(nums2));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[5,6,7,1,2,3,4]\n[3,99,-1,-100]",
+      python: "[5, 6, 7, 1, 2, 3, 4]\n[3, 99, -1, -100]",
+      java: "[5, 6, 7, 1, 2, 3, 4]\n[3, 99, -1, -100]",
+    },
+  },,
+
+  "maximum-product-subarray": {
+    id: "maximum-product-subarray",
+    title: "Maximum Product Subarray",
+    difficulty: "Medium",
+    category: "Array • Dynamic Programming",
+    description: {
+      text: "Given an integer array nums, find a subarray that has the largest product, and return the product.",
+      notes: ["The test cases are generated so that the answer will fit in a 32-bit integer."],
+    },
+    examples: [
+      { input: "nums = [2,3,-2,4]", output: "6", explanation: "[2,3] has the largest product 6." },
+      { input: "nums = [-2,0,-1]", output: "0", explanation: "The result cannot be 2, because [-2,-1] is not a subarray." },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 2 × 10⁴", "-10 ≤ nums[i] ≤ 10", "The product of any prefix or suffix of nums is guaranteed to fit in a 32-bit integer"],
+    starterCode: {
+      javascript: `function maxProduct(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(maxProduct([2,3,-2,4])); // Expected: 6
+console.log(maxProduct([-2,0,-1])); // Expected: 0
+console.log(maxProduct([-2,3,-4])); // Expected: 24`,
+      python: `def maxProduct(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(maxProduct([2,3,-2,4]))  # Expected: 6
+print(maxProduct([-2,0,-1]))  # Expected: 0
+print(maxProduct([-2,3,-4]))  # Expected: 24`,
+      java: `class Solution {
+    public static int maxProduct(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(maxProduct(new int[]{2,3,-2,4}));
+        System.out.println(maxProduct(new int[]{-2,0,-1}));
+        System.out.println(maxProduct(new int[]{-2,3,-4}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "6\n0\n24",
+      python: "6\n0\n24",
+      java: "6\n0\n24",
+    },
   },
 };
