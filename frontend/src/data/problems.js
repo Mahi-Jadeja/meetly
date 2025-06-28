@@ -8430,5 +8430,162 @@ print(mySqrt(1))  # Expected: 1`,
       python: "2\n2\n0\n1",
       java: "2\n2\n0\n1",
     },
+  },,
+
+  "multiply-strings": {
+    id: "multiply-strings",
+    title: "Multiply Strings",
+    difficulty: "Medium",
+    category: "Math • String • Simulation",
+    description: {
+      text: "Given two non-negative integers num1 and num2 represented as strings, return the product of num1 and num2, also represented as a string.",
+      notes: ["Note: You must not use any built-in BigInteger library or convert the inputs to integer directly."],
+    },
+    examples: [
+      { input: 'num1 = "2", num2 = "3"', output: '"6"' },
+      { input: 'num1 = "123", num2 = "456"', output: '"56088"' },
+    ],
+    constraints: ["1 ≤ num1.length, num2.length ≤ 200", "num1 and num2 consist of digits only", "Both num1 and num2 do not contain any leading zero, except the number 0 itself"],
+    starterCode: {
+      javascript: `function multiply(num1, num2) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(multiply("2", "3")); // Expected: "6"
+console.log(multiply("123", "456")); // Expected: "56088"
+console.log(multiply("0", "0")); // Expected: "0"`,
+      python: `def multiply(num1, num2):
+    # Write your solution here
+    pass
+
+# Test cases
+print(multiply("2", "3"))  # Expected: "6"
+print(multiply("123", "456"))  # Expected: "56088"
+print(multiply("0", "0"))  # Expected: "0"`,
+      java: `class Solution {
+    public static String multiply(String num1, String num2) {
+        // Write your solution here
+        return "";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(multiply("2", "3"));
+        System.out.println(multiply("123", "456"));
+        System.out.println(multiply("0", "0"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "6\n56088\n0",
+      python: "6\n56088\n0",
+      java: "6\n56088\n0",
+    },
+  },,
+
+  "detect-squares": {
+    id: "detect-squares",
+    title: "Detect Squares",
+    difficulty: "Medium",
+    category: "Array • Hash Table • Design • Counting",
+    description: {
+      text: "You are given a stream of points on the X-Y plane. Design an algorithm that adds new points and counts the number of ways to choose three points such that the three points and a given fourth point form an axis-aligned square with positive area.",
+      notes: [
+        "Implement the DetectSquares class:",
+        "DetectSquares() Initializes the object with an empty data structure.",
+        "void add(int[] point) Adds a new point point = [x, y] to the data structure.",
+        "int count(int[] point) Counts the number of ways to form axis-aligned squares with point point = [x, y].",
+      ],
+    },
+    examples: [
+      {
+        input: '["DetectSquares", "add", "add", "add", "count", "count", "add", "count"]\n[[], [[3, 10]], [[11, 2]], [[3, 2]], [[11, 10]], [[14, 8]], [[11, 2]], [[11, 10]]]',
+        output: "[null, null, null, null, 1, 0, null, 2]",
+      },
+    ],
+    constraints: ["point.length == 2", "0 ≤ x, y ≤ 1000", "At most 3000 calls in total will be made to add and count"],
+    starterCode: {
+      javascript: `class DetectSquares {
+  constructor() {
+    // Initialize
+    
+  }
+  
+  add(point) {
+    // Add point
+    
+  }
+  
+  count(point) {
+    // Count squares
+    
+  }
+}
+
+// Test cases
+const ds = new DetectSquares();
+ds.add([3, 10]);
+ds.add([11, 2]);
+ds.add([3, 2]);
+console.log(ds.count([11, 10])); // Expected: 1
+console.log(ds.count([14, 8])); // Expected: 0
+ds.add([11, 2]);
+console.log(ds.count([11, 10])); // Expected: 2`,
+      python: `class DetectSquares:
+    def __init__(self):
+        # Initialize
+        pass
+    
+    def add(self, point):
+        # Add point
+        pass
+    
+    def count(self, point):
+        # Count squares
+        pass
+
+# Test cases
+ds = DetectSquares()
+ds.add([3, 10])
+ds.add([11, 2])
+ds.add([3, 2])
+print(ds.count([11, 10]))  # Expected: 1
+print(ds.count([14, 8]))  # Expected: 0
+ds.add([11, 2])
+print(ds.count([11, 10]))  # Expected: 2`,
+      java: `import java.util.*;
+
+class DetectSquares {
+    public DetectSquares() {
+        // Initialize
+    }
+    
+    public void add(int[] point) {
+        // Add point
+    }
+    
+    public int count(int[] point) {
+        // Count squares
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        DetectSquares ds = new DetectSquares();
+        ds.add(new int[]{3, 10});
+        ds.add(new int[]{11, 2});
+        ds.add(new int[]{3, 2});
+        System.out.println(ds.count(new int[]{11, 10}));
+        System.out.println(ds.count(new int[]{14, 8}));
+        ds.add(new int[]{11, 2});
+        System.out.println(ds.count(new int[]{11, 10}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "1\n0\n2",
+      python: "1\n0\n2",
+      java: "1\n0\n2",
+    },
   },
 };
