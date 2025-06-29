@@ -8814,5 +8814,106 @@ print(maxProduct([-2,3,-4]))  # Expected: 24`,
       python: "6\n0\n24",
       java: "6\n0\n24",
     },
+  },,
+
+  "min-cost-climbing-stairs": {
+    id: "min-cost-climbing-stairs",
+    title: "Min Cost Climbing Stairs",
+    difficulty: "Easy",
+    category: "Array • Dynamic Programming",
+    description: {
+      text: "You are given an integer array cost where cost[i] is the cost of iᵗʰ step on a staircase. Once you pay the cost, you can either climb one or two steps.",
+      notes: [
+        "You can either start from the step with index 0, or the step with index 1.",
+        "Return the minimum cost to reach the top of the floor.",
+      ],
+    },
+    examples: [
+      { input: "cost = [10,15,20]", output: "15", explanation: "You will start at index 1. Pay 15 and climb two steps to reach the top. The total cost is 15." },
+      { input: "cost = [1,100,1,1,1,100,1,1,100,1]", output: "6", explanation: "You will start at index 0. The total cost is 6." },
+    ],
+    constraints: ["2 ≤ cost.length ≤ 1000", "0 ≤ cost[i] ≤ 999"],
+    starterCode: {
+      javascript: `function minCostClimbingStairs(cost) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(minCostClimbingStairs([10,15,20])); // Expected: 15
+console.log(minCostClimbingStairs([1,100,1,1,1,100,1,1,100,1])); // Expected: 6`,
+      python: `def minCostClimbingStairs(cost):
+    # Write your solution here
+    pass
+
+# Test cases
+print(minCostClimbingStairs([10,15,20]))  # Expected: 15
+print(minCostClimbingStairs([1,100,1,1,1,100,1,1,100,1]))  # Expected: 6`,
+      java: `class Solution {
+    public static int minCostClimbingStairs(int[] cost) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(minCostClimbingStairs(new int[]{10,15,20}));
+        System.out.println(minCostClimbingStairs(new int[]{1,100,1,1,1,100,1,1,100,1}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "15\n6",
+      python: "15\n6",
+      java: "15\n6",
+    },
+  },,
+
+  "jump-game": {
+    id: "jump-game",
+    title: "Jump Game",
+    difficulty: "Medium",
+    category: "Array • Dynamic Programming • Greedy",
+    description: {
+      text: "You are given an integer array nums. You are initially positioned at the array's first index, and each element in the array represents your maximum jump length at that position.",
+      notes: ["Return true if you can reach the last index, or false otherwise."],
+    },
+    examples: [
+      { input: "nums = [2,3,1,1,4]", output: "true", explanation: "Jump 1 step from index 0 to 1, then 3 steps to the last index." },
+      { input: "nums = [3,2,1,0,4]", output: "false", explanation: "You will always arrive at index 3. Its maximum jump length is 0, which makes it impossible to reach the last index." },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 10⁴", "0 ≤ nums[i] ≤ 10⁵"],
+    starterCode: {
+      javascript: `function canJump(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(canJump([2,3,1,1,4])); // Expected: true
+console.log(canJump([3,2,1,0,4])); // Expected: false`,
+      python: `def canJump(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(canJump([2,3,1,1,4]))  # Expected: True
+print(canJump([3,2,1,0,4]))  # Expected: False`,
+      java: `class Solution {
+    public static boolean canJump(int[] nums) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(canJump(new int[]{2,3,1,1,4}));
+        System.out.println(canJump(new int[]{3,2,1,0,4}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse",
+      python: "True\nFalse",
+      java: "true\nfalse",
+    },
   },
 };
