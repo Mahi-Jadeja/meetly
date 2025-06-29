@@ -9068,5 +9068,138 @@ class Solution {
       python: "2\nno cycle",
       java: "2\nno cycle",
     },
+  },,
+
+  "sort-colors": {
+    id: "sort-colors",
+    title: "Sort Colors",
+    difficulty: "Medium",
+    category: "Array • Two Pointers • Sorting",
+    description: {
+      text: "Given an array nums with n objects colored red, white, or blue, sort them in-place so that objects of the same color are adjacent, with the colors in the order red, white, and blue.",
+      notes: [
+        "We will use the integers 0, 1, and 2 to represent the color red, white, and blue, respectively.",
+        "You must solve this problem without using the library's sort function.",
+      ],
+    },
+    examples: [
+      { input: "nums = [2,0,2,1,1,0]", output: "[0,0,1,1,2,2]" },
+      { input: "nums = [2,0,1]", output: "[0,1,2]" },
+    ],
+    constraints: ["n == nums.length", "1 ≤ n ≤ 300", "nums[i] is either 0, 1, or 2"],
+    starterCode: {
+      javascript: `function sortColors(nums) {
+  // Write your solution here - modify in-place
+  
+}
+
+// Test cases
+let nums1 = [2,0,2,1,1,0];
+sortColors(nums1);
+console.log(nums1); // Expected: [0,0,1,1,2,2]
+
+let nums2 = [2,0,1];
+sortColors(nums2);
+console.log(nums2); // Expected: [0,1,2]`,
+      python: `def sortColors(nums):
+    # Write your solution here - modify in-place
+    pass
+
+# Test cases
+nums1 = [2,0,2,1,1,0]
+sortColors(nums1)
+print(nums1)  # Expected: [0,0,1,1,2,2]
+
+nums2 = [2,0,1]
+sortColors(nums2)
+print(nums2)  # Expected: [0,1,2]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static void sortColors(int[] nums) {
+        // Write your solution here - modify in-place
+    }
+    
+    public static void main(String[] args) {
+        int[] nums1 = {2,0,2,1,1,0};
+        sortColors(nums1);
+        System.out.println(Arrays.toString(nums1));
+        
+        int[] nums2 = {2,0,1};
+        sortColors(nums2);
+        System.out.println(Arrays.toString(nums2));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[0,0,1,1,2,2]\n[0,1,2]",
+      python: "[0, 0, 1, 1, 2, 2]\n[0, 1, 2]",
+      java: "[0, 0, 1, 1, 2, 2]\n[0, 1, 2]",
+    },
+  },,
+
+  "merge-sorted-array": {
+    id: "merge-sorted-array",
+    title: "Merge Sorted Array",
+    difficulty: "Easy",
+    category: "Array • Two Pointers • Sorting",
+    description: {
+      text: "You are given two integer arrays nums1 and nums2, sorted in non-decreasing order, and two integers m and n, representing the number of elements in nums1 and nums2 respectively. Merge nums1 and nums2 into a single array sorted in non-decreasing order.",
+      notes: ["The final sorted array should be stored inside the array nums1."],
+    },
+    examples: [
+      { input: "nums1 = [1,2,3,0,0,0], m = 3, nums2 = [2,5,6], n = 3", output: "[1,2,2,3,5,6]" },
+      { input: "nums1 = [1], m = 1, nums2 = [], n = 0", output: "[1]" },
+    ],
+    constraints: ["nums1.length == m + n", "nums2.length == n", "0 ≤ m, n ≤ 200"],
+    starterCode: {
+      javascript: `function merge(nums1, m, nums2, n) {
+  // Write your solution here - modify nums1 in-place
+  
+}
+
+// Test cases
+let nums1 = [1,2,3,0,0,0];
+merge(nums1, 3, [2,5,6], 3);
+console.log(nums1); // Expected: [1,2,2,3,5,6]
+
+let nums2 = [1];
+merge(nums2, 1, [], 0);
+console.log(nums2); // Expected: [1]`,
+      python: `def merge(nums1, m, nums2, n):
+    # Write your solution here - modify nums1 in-place
+    pass
+
+# Test cases
+nums1 = [1,2,3,0,0,0]
+merge(nums1, 3, [2,5,6], 3)
+print(nums1)  # Expected: [1,2,2,3,5,6]
+
+nums2 = [1]
+merge(nums2, 1, [], 0)
+print(nums2)  # Expected: [1]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static void merge(int[] nums1, int m, int[] nums2, int n) {
+        // Write your solution here - modify nums1 in-place
+    }
+    
+    public static void main(String[] args) {
+        int[] nums1 = {1,2,3,0,0,0};
+        merge(nums1, 3, new int[]{2,5,6}, 3);
+        System.out.println(Arrays.toString(nums1));
+        
+        int[] nums2 = {1};
+        merge(nums2, 1, new int[]{}, 0);
+        System.out.println(Arrays.toString(nums2));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[1,2,2,3,5,6]\n[1]",
+      python: "[1, 2, 2, 3, 5, 6]\n[1]",
+      java: "[1, 2, 2, 3, 5, 6]\n[1]",
+    },
   },
 };
