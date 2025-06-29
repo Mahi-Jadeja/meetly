@@ -9201,5 +9201,136 @@ class Solution {
       python: "[1, 2, 2, 3, 5, 6]\n[1]",
       java: "[1, 2, 2, 3, 5, 6]\n[1]",
     },
+  },,
+
+  "first-bad-version": {
+    id: "first-bad-version",
+    title: "First Bad Version",
+    difficulty: "Easy",
+    category: "Binary Search",
+    description: {
+      text: "You are a product manager and currently leading a team to develop a new product. Unfortunately, the latest version of your product fails the quality check. Since each version is developed based on the previous version, all the versions after a bad version are also bad.",
+      notes: [
+        "You are given an API bool isBadVersion(version) which returns whether version is bad.",
+        "Implement a function to find the first bad version. You should minimize the number of calls to the API.",
+      ],
+    },
+    examples: [
+      { input: "n = 5, bad = 4", output: "4", explanation: "Call isBadVersion(3) -> false, isBadVersion(5) -> true, isBadVersion(4) -> true. So 4 is the first bad version." },
+      { input: "n = 1, bad = 1", output: "1" },
+    ],
+    constraints: ["1 ≤ bad ≤ n ≤ 2³¹ - 1"],
+    starterCode: {
+      javascript: `// API definition
+let badVersion = 4;
+function isBadVersion(version) {
+  return version >= badVersion;
+}
+
+function firstBadVersion(n) {
+  // Write your solution here
+  
+}
+
+// Test cases
+badVersion = 4;
+console.log(firstBadVersion(5)); // Expected: 4
+
+badVersion = 1;
+console.log(firstBadVersion(1)); // Expected: 1`,
+      python: `# API definition
+bad_version = 4
+def isBadVersion(version):
+    return version >= bad_version
+
+def firstBadVersion(n):
+    # Write your solution here
+    pass
+
+# Test cases
+bad_version = 4
+print(firstBadVersion(5))  # Expected: 4
+
+bad_version = 1
+print(firstBadVersion(1))  # Expected: 1`,
+      java: `class Solution {
+    static int badVersion = 4;
+    
+    static boolean isBadVersion(int version) {
+        return version >= badVersion;
+    }
+    
+    public static int firstBadVersion(int n) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        badVersion = 4;
+        System.out.println(firstBadVersion(5));
+        
+        badVersion = 1;
+        System.out.println(firstBadVersion(1));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "4\n1",
+      python: "4\n1",
+      java: "4\n1",
+    },
+  },,
+
+  "search-insert-position": {
+    id: "search-insert-position",
+    title: "Search Insert Position",
+    difficulty: "Easy",
+    category: "Array • Binary Search",
+    description: {
+      text: "Given a sorted array of distinct integers and a target value, return the index if the target is found. If not, return the index where it would be if it were inserted in order.",
+      notes: ["You must write an algorithm with O(log n) runtime complexity."],
+    },
+    examples: [
+      { input: "nums = [1,3,5,6], target = 5", output: "2" },
+      { input: "nums = [1,3,5,6], target = 2", output: "1" },
+      { input: "nums = [1,3,5,6], target = 7", output: "4" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 10⁴", "-10⁴ ≤ nums[i] ≤ 10⁴", "nums contains distinct values sorted in ascending order"],
+    starterCode: {
+      javascript: `function searchInsert(nums, target) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(searchInsert([1,3,5,6], 5)); // Expected: 2
+console.log(searchInsert([1,3,5,6], 2)); // Expected: 1
+console.log(searchInsert([1,3,5,6], 7)); // Expected: 4`,
+      python: `def searchInsert(nums, target):
+    # Write your solution here
+    pass
+
+# Test cases
+print(searchInsert([1,3,5,6], 5))  # Expected: 2
+print(searchInsert([1,3,5,6], 2))  # Expected: 1
+print(searchInsert([1,3,5,6], 7))  # Expected: 4`,
+      java: `class Solution {
+    public static int searchInsert(int[] nums, int target) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(searchInsert(new int[]{1,3,5,6}, 5));
+        System.out.println(searchInsert(new int[]{1,3,5,6}, 2));
+        System.out.println(searchInsert(new int[]{1,3,5,6}, 7));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2\n1\n4",
+      python: "2\n1\n4",
+      java: "2\n1\n4",
+    },
   },
 };
