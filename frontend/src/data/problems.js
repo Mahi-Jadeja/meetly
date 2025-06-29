@@ -8915,5 +8915,158 @@ print(canJump([3,2,1,0,4]))  # Expected: False`,
       python: "True\nFalse",
       java: "true\nfalse",
     },
+  },,
+
+  "jump-game-ii": {
+    id: "jump-game-ii",
+    title: "Jump Game II",
+    difficulty: "Medium",
+    category: "Array • Dynamic Programming • Greedy",
+    description: {
+      text: "You are given a 0-indexed array of integers nums of length n. You are initially positioned at nums[0]. Each element nums[i] represents the maximum length of a forward jump from index i.",
+      notes: ["Return the minimum number of jumps to reach nums[n - 1]. The test cases are generated such that you can reach nums[n - 1]."],
+    },
+    examples: [
+      { input: "nums = [2,3,1,1,4]", output: "2", explanation: "The minimum number of jumps to reach the last index is 2. Jump 1 step from index 0 to 1, then 3 steps to the last index." },
+      { input: "nums = [2,3,0,1,4]", output: "2" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 10⁴", "0 ≤ nums[i] ≤ 1000", "It's guaranteed that you can reach nums[n - 1]"],
+    starterCode: {
+      javascript: `function jump(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(jump([2,3,1,1,4])); // Expected: 2
+console.log(jump([2,3,0,1,4])); // Expected: 2`,
+      python: `def jump(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(jump([2,3,1,1,4]))  # Expected: 2
+print(jump([2,3,0,1,4]))  # Expected: 2`,
+      java: `class Solution {
+    public static int jump(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(jump(new int[]{2,3,1,1,4}));
+        System.out.println(jump(new int[]{2,3,0,1,4}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2\n2",
+      python: "2\n2",
+      java: "2\n2",
+    },
+  },,
+
+  "linked-list-cycle-ii": {
+    id: "linked-list-cycle-ii",
+    title: "Linked List Cycle II",
+    difficulty: "Medium",
+    category: "Linked List • Two Pointers • Hash Table",
+    description: {
+      text: "Given the head of a linked list, return the node where the cycle begins. If there is no cycle, return null.",
+      notes: [
+        "There is a cycle in a linked list if there is some node in the list that can be reached again by continuously following the next pointer.",
+        "Do not modify the linked list.",
+      ],
+    },
+    examples: [
+      { input: "head = [3,2,0,-4], pos = 1", output: "tail connects to node index 1", explanation: "There is a cycle in the linked list, where tail connects to the second node." },
+      { input: "head = [1,2], pos = 0", output: "tail connects to node index 0" },
+      { input: "head = [1], pos = -1", output: "no cycle" },
+    ],
+    constraints: ["The number of nodes is in the range [0, 10⁴]", "-10⁵ ≤ Node.val ≤ 10⁵", "pos is -1 or a valid index in the linked list"],
+    starterCode: {
+      javascript: `class ListNode {
+  constructor(val = 0, next = null) {
+    this.val = val;
+    this.next = next;
+  }
+}
+
+function detectCycle(head) {
+  // Write your solution here
+  
+}
+
+// Test cases
+// Creating cycle: 3 -> 2 -> 0 -> -4 -> back to 2
+let node4 = new ListNode(-4);
+let node3 = new ListNode(0, node4);
+let node2 = new ListNode(2, node3);
+let node1 = new ListNode(3, node2);
+node4.next = node2; // Create cycle
+
+let result = detectCycle(node1);
+console.log(result ? result.val : "no cycle"); // Expected: 2
+
+// No cycle test
+let head2 = new ListNode(1, new ListNode(2));
+console.log(detectCycle(head2) ? "cycle" : "no cycle"); // Expected: no cycle`,
+      python: `class ListNode:
+    def __init__(self, val=0, next=None):
+        self.val = val
+        self.next = next
+
+def detectCycle(head):
+    # Write your solution here
+    pass
+
+# Test cases
+node4 = ListNode(-4)
+node3 = ListNode(0, node4)
+node2 = ListNode(2, node3)
+node1 = ListNode(3, node2)
+node4.next = node2  # Create cycle
+
+result = detectCycle(node1)
+print(result.val if result else "no cycle")  # Expected: 2
+
+head2 = ListNode(1, ListNode(2))
+print("cycle" if detectCycle(head2) else "no cycle")  # Expected: no cycle`,
+      java: `class ListNode {
+    int val;
+    ListNode next;
+    ListNode(int x) { val = x; next = null; }
+}
+
+class Solution {
+    public static ListNode detectCycle(ListNode head) {
+        // Write your solution here
+        return null;
+    }
+    
+    public static void main(String[] args) {
+        ListNode node4 = new ListNode(-4);
+        ListNode node3 = new ListNode(0);
+        ListNode node2 = new ListNode(2);
+        ListNode node1 = new ListNode(3);
+        node1.next = node2;
+        node2.next = node3;
+        node3.next = node4;
+        node4.next = node2;
+        
+        ListNode result = detectCycle(node1);
+        System.out.println(result != null ? result.val : "no cycle");
+        
+        ListNode head2 = new ListNode(1);
+        head2.next = new ListNode(2);
+        System.out.println(detectCycle(head2) != null ? "cycle" : "no cycle");
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2\nno cycle",
+      python: "2\nno cycle",
+      java: "2\nno cycle",
+    },
   },
 };
