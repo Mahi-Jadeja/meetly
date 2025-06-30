@@ -9434,5 +9434,139 @@ print(characterReplacement("AABABBA", 1))  # Expected: 4`,
       python: "4\n4",
       java: "4\n4",
     },
+  },,
+
+  "find-first-occurrence": {
+    id: "find-first-occurrence",
+    title: "Find the Index of the First Occurrence in a String",
+    difficulty: "Easy",
+    category: "String • Two Pointers • String Matching",
+    description: {
+      text: "Given two strings needle and haystack, return the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.",
+      notes: [],
+    },
+    examples: [
+      { input: 'haystack = "sadbutsad", needle = "sad"', output: "0", explanation: '"sad" occurs at index 0 and 6. The first occurrence is at index 0.' },
+      { input: 'haystack = "leetcode", needle = "leeto"', output: "-1", explanation: '"leeto" did not occur in "leetcode".' },
+    ],
+    constraints: ["1 ≤ haystack.length, needle.length ≤ 10⁴", "haystack and needle consist of only lowercase English characters"],
+    starterCode: {
+      javascript: `function strStr(haystack, needle) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(strStr("sadbutsad", "sad")); // Expected: 0
+console.log(strStr("leetcode", "leeto")); // Expected: -1`,
+      python: `def strStr(haystack, needle):
+    # Write your solution here
+    pass
+
+# Test cases
+print(strStr("sadbutsad", "sad"))  # Expected: 0
+print(strStr("leetcode", "leeto"))  # Expected: -1`,
+      java: `class Solution {
+    public static int strStr(String haystack, String needle) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(strStr("sadbutsad", "sad"));
+        System.out.println(strStr("leetcode", "leeto"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "0\n-1",
+      python: "0\n-1",
+      java: "0\n-1",
+    },
+  },,
+
+  "valid-sudoku": {
+    id: "valid-sudoku",
+    title: "Valid Sudoku",
+    difficulty: "Medium",
+    category: "Array • Hash Table • Matrix",
+    description: {
+      text: "Determine if a 9 x 9 Sudoku board is valid. Only the filled cells need to be validated according to the following rules:",
+      notes: [
+        "Each row must contain the digits 1-9 without repetition.",
+        "Each column must contain the digits 1-9 without repetition.",
+        "Each of the nine 3 x 3 sub-boxes must contain the digits 1-9 without repetition.",
+      ],
+    },
+    examples: [
+      { 
+        input: 'board = [["5","3",".",".","7",".",".",".","."],["6",".",".","1","9","5",".",".","."],[".","9","8",".",".",".",".","6","."],["8",".",".",".","6",".",".",".","3"],["4",".",".","8",".","3",".",".","1"],["7",".",".",".","2",".",".",".","6"],[".","6",".",".",".",".","2","8","."],[".",".",".","4","1","9",".",".","5"],[".",".",".",".","8",".",".","7","9"]]', 
+        output: "true" 
+      },
+    ],
+    constraints: ["board.length == 9", "board[i].length == 9", "board[i][j] is a digit 1-9 or '.'"],
+    starterCode: {
+      javascript: `function isValidSudoku(board) {
+  // Write your solution here
+  
+}
+
+// Test case
+const board = [
+  ["5","3",".",".","7",".",".",".","."],
+  ["6",".",".","1","9","5",".",".","."],
+  [".","9","8",".",".",".",".","6","."],
+  ["8",".",".",".","6",".",".",".","3"],
+  ["4",".",".","8",".","3",".",".","1"],
+  ["7",".",".",".","2",".",".",".","6"],
+  [".","6",".",".",".",".","2","8","."],
+  [".",".",".","4","1","9",".",".","5"],
+  [".",".",".",".","8",".",".","7","9"]
+];
+console.log(isValidSudoku(board)); // Expected: true`,
+      python: `def isValidSudoku(board):
+    # Write your solution here
+    pass
+
+# Test case
+board = [
+  ["5","3",".",".","7",".",".",".","."],
+  ["6",".",".","1","9","5",".",".","."],
+  [".","9","8",".",".",".",".","6","."],
+  ["8",".",".",".","6",".",".",".","3"],
+  ["4",".",".","8",".","3",".",".","1"],
+  ["7",".",".",".","2",".",".",".","6"],
+  [".","6",".",".",".",".","2","8","."],
+  [".",".",".","4","1","9",".",".","5"],
+  [".",".",".",".","8",".",".","7","9"]
+]
+print(isValidSudoku(board))  # Expected: True`,
+      java: `class Solution {
+    public static boolean isValidSudoku(char[][] board) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        char[][] board = {
+            {'5','3','.','.','7','.','.','.','.'},
+            {'6','.','.','1','9','5','.','.','.'},
+            {'.','9','8','.','.','.','.','6','.'},
+            {'8','.','.','.','6','.','.','.','3'},
+            {'4','.','.','8','.','3','.','.','1'},
+            {'7','.','.','.','2','.','.','.','6'},
+            {'.','6','.','.','.','.','2','8','.'},
+            {'.','.','.','4','1','9','.','.','5'},
+            {'.','.','.','.','8','.','.','7','9'}
+        };
+        System.out.println(isValidSudoku(board));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true",
+      python: "True",
+      java: "true",
+    },
   },
 };
