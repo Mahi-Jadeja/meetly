@@ -9568,5 +9568,126 @@ print(isValidSudoku(board))  # Expected: True`,
       python: "True",
       java: "true",
     },
+  },,
+
+  "next-permutation": {
+    id: "next-permutation",
+    title: "Next Permutation",
+    difficulty: "Medium",
+    category: "Array • Two Pointers",
+    description: {
+      text: "A permutation of an array of integers is an arrangement of its members into a sequence or linear order. The next permutation of an array of integers is the next lexicographically greater permutation of its integer.",
+      notes: [
+        "If such arrangement is not possible, the array must be rearranged as the lowest possible order (sorted in ascending order).",
+        "The replacement must be in place and use only constant extra memory.",
+      ],
+    },
+    examples: [
+      { input: "nums = [1,2,3]", output: "[1,3,2]" },
+      { input: "nums = [3,2,1]", output: "[1,2,3]" },
+      { input: "nums = [1,1,5]", output: "[1,5,1]" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 100", "0 ≤ nums[i] ≤ 100"],
+    starterCode: {
+      javascript: `function nextPermutation(nums) {
+  // Write your solution here - modify in-place
+  
+}
+
+// Test cases
+let nums1 = [1,2,3];
+nextPermutation(nums1);
+console.log(nums1); // Expected: [1,3,2]
+
+let nums2 = [3,2,1];
+nextPermutation(nums2);
+console.log(nums2); // Expected: [1,2,3]`,
+      python: `def nextPermutation(nums):
+    # Write your solution here - modify in-place
+    pass
+
+# Test cases
+nums1 = [1,2,3]
+nextPermutation(nums1)
+print(nums1)  # Expected: [1,3,2]
+
+nums2 = [3,2,1]
+nextPermutation(nums2)
+print(nums2)  # Expected: [1,2,3]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static void nextPermutation(int[] nums) {
+        // Write your solution here - modify in-place
+    }
+    
+    public static void main(String[] args) {
+        int[] nums1 = {1,2,3};
+        nextPermutation(nums1);
+        System.out.println(Arrays.toString(nums1));
+        
+        int[] nums2 = {3,2,1};
+        nextPermutation(nums2);
+        System.out.println(Arrays.toString(nums2));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[1,3,2]\n[1,2,3]",
+      python: "[1, 3, 2]\n[1, 2, 3]",
+      java: "[1, 3, 2]\n[1, 2, 3]",
+    },
+  },,
+
+  "gas-station": {
+    id: "gas-station",
+    title: "Gas Station",
+    difficulty: "Medium",
+    category: "Array • Greedy",
+    description: {
+      text: "There are n gas stations along a circular route, where the amount of gas at the iᵗʰ station is gas[i]. You have a car with an unlimited gas tank and it costs cost[i] of gas to travel from the iᵗʰ station to its next (i + 1)ᵗʰ station.",
+      notes: [
+        "Return the starting gas station's index if you can travel around the circuit once in the clockwise direction, otherwise return -1.",
+        "If there exists a solution, it is guaranteed to be unique.",
+      ],
+    },
+    examples: [
+      { input: "gas = [1,2,3,4,5], cost = [3,4,5,1,2]", output: "3", explanation: "Start at station 3 and fill up with 4 units of gas. Travel to station 4 with 4-1=3 gas..." },
+      { input: "gas = [2,3,4], cost = [3,4,3]", output: "-1", explanation: "You can't complete the circuit." },
+    ],
+    constraints: ["n == gas.length == cost.length", "1 ≤ n ≤ 10⁵", "0 ≤ gas[i], cost[i] ≤ 10⁴"],
+    starterCode: {
+      javascript: `function canCompleteCircuit(gas, cost) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(canCompleteCircuit([1,2,3,4,5], [3,4,5,1,2])); // Expected: 3
+console.log(canCompleteCircuit([2,3,4], [3,4,3])); // Expected: -1`,
+      python: `def canCompleteCircuit(gas, cost):
+    # Write your solution here
+    pass
+
+# Test cases
+print(canCompleteCircuit([1,2,3,4,5], [3,4,5,1,2]))  # Expected: 3
+print(canCompleteCircuit([2,3,4], [3,4,3]))  # Expected: -1`,
+      java: `class Solution {
+    public static int canCompleteCircuit(int[] gas, int[] cost) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(canCompleteCircuit(new int[]{1,2,3,4,5}, new int[]{3,4,5,1,2}));
+        System.out.println(canCompleteCircuit(new int[]{2,3,4}, new int[]{3,4,3}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n-1",
+      python: "3\n-1",
+      java: "3\n-1",
+    },
   },
 };
