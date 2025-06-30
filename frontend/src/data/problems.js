@@ -9689,5 +9689,107 @@ print(canCompleteCircuit([2,3,4], [3,4,3]))  # Expected: -1`,
       python: "3\n-1",
       java: "3\n-1",
     },
+  },,
+
+  "candy": {
+    id: "candy",
+    title: "Candy",
+    difficulty: "Hard",
+    category: "Array • Greedy",
+    description: {
+      text: "There are n children standing in a line. Each child is assigned a rating value given in the integer array ratings. You are giving candies to these children subjected to the following requirements:",
+      notes: [
+        "Each child must have at least one candy.",
+        "Children with a higher rating get more candies than their neighbors.",
+        "Return the minimum number of candies you need to have to distribute the candies to the children.",
+      ],
+    },
+    examples: [
+      { input: "ratings = [1,0,2]", output: "5", explanation: "You can allocate to the first, second and third child with 2, 1, 2 candies respectively." },
+      { input: "ratings = [1,2,2]", output: "4", explanation: "You can allocate to the first, second and third child with 1, 2, 1 candies respectively." },
+    ],
+    constraints: ["n == ratings.length", "1 ≤ n ≤ 2 × 10⁴", "0 ≤ ratings[i] ≤ 2 × 10⁴"],
+    starterCode: {
+      javascript: `function candy(ratings) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(candy([1,0,2])); // Expected: 5
+console.log(candy([1,2,2])); // Expected: 4`,
+      python: `def candy(ratings):
+    # Write your solution here
+    pass
+
+# Test cases
+print(candy([1,0,2]))  # Expected: 5
+print(candy([1,2,2]))  # Expected: 4`,
+      java: `class Solution {
+    public static int candy(int[] ratings) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(candy(new int[]{1,0,2}));
+        System.out.println(candy(new int[]{1,2,2}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "5\n4",
+      python: "5\n4",
+      java: "5\n4",
+    },
+  },,
+
+  "largest-number": {
+    id: "largest-number",
+    title: "Largest Number",
+    difficulty: "Medium",
+    category: "Array • String • Greedy • Sorting",
+    description: {
+      text: "Given a list of non-negative integers nums, arrange them such that they form the largest number and return it.",
+      notes: ["Since the result may be very large, you need to return a string instead of an integer."],
+    },
+    examples: [
+      { input: "nums = [10,2]", output: '"210"' },
+      { input: "nums = [3,30,34,5,9]", output: '"9534330"' },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 100", "0 ≤ nums[i] ≤ 10⁹"],
+    starterCode: {
+      javascript: `function largestNumber(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(largestNumber([10,2])); // Expected: "210"
+console.log(largestNumber([3,30,34,5,9])); // Expected: "9534330"`,
+      python: `def largestNumber(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(largestNumber([10,2]))  # Expected: "210"
+print(largestNumber([3,30,34,5,9]))  # Expected: "9534330"`,
+      java: `class Solution {
+    public static String largestNumber(int[] nums) {
+        // Write your solution here
+        return "";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(largestNumber(new int[]{10,2}));
+        System.out.println(largestNumber(new int[]{3,30,34,5,9}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "210\n9534330",
+      python: "210\n9534330",
+      java: "210\n9534330",
+    },
   },
 };
