@@ -9332,5 +9332,107 @@ print(searchInsert([1,3,5,6], 7))  # Expected: 4`,
       python: "2\n1\n4",
       java: "2\n1\n4",
     },
+  },,
+
+  "find-peak-element": {
+    id: "find-peak-element",
+    title: "Find Peak Element",
+    difficulty: "Medium",
+    category: "Array • Binary Search",
+    description: {
+      text: "A peak element is an element that is strictly greater than its neighbors. Given a 0-indexed integer array nums, find a peak element, and return its index.",
+      notes: [
+        "If the array contains multiple peaks, return the index to any of the peaks.",
+        "You may imagine that nums[-1] = nums[n] = -∞.",
+        "You must write an algorithm that runs in O(log n) time.",
+      ],
+    },
+    examples: [
+      { input: "nums = [1,2,3,1]", output: "2", explanation: "3 is a peak element and your function should return the index number 2." },
+      { input: "nums = [1,2,1,3,5,6,4]", output: "5", explanation: "Your function can return either index 1 (peak=2) or 5 (peak=6)." },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 1000", "-2³¹ ≤ nums[i] ≤ 2³¹ - 1", "nums[i] ≠ nums[i + 1] for all valid i"],
+    starterCode: {
+      javascript: `function findPeakElement(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(findPeakElement([1,2,3,1])); // Expected: 2
+console.log(findPeakElement([1,2,1,3,5,6,4])); // Expected: 5 (or 1)`,
+      python: `def findPeakElement(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(findPeakElement([1,2,3,1]))  # Expected: 2
+print(findPeakElement([1,2,1,3,5,6,4]))  # Expected: 5 (or 1)`,
+      java: `class Solution {
+    public static int findPeakElement(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(findPeakElement(new int[]{1,2,3,1}));
+        System.out.println(findPeakElement(new int[]{1,2,1,3,5,6,4}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "2\n5",
+      python: "2\n5",
+      java: "2\n5",
+    },
+  },,
+
+  "longest-repeating-character-replacement": {
+    id: "longest-repeating-character-replacement",
+    title: "Longest Repeating Character Replacement",
+    difficulty: "Medium",
+    category: "String • Hash Table • Sliding Window",
+    description: {
+      text: "You are given a string s and an integer k. You can choose any character of the string and change it to any other uppercase English character. You can perform this operation at most k times.",
+      notes: ["Return the length of the longest substring containing the same letter you can get after performing the above operations."],
+    },
+    examples: [
+      { input: 's = "ABAB", k = 2', output: "4", explanation: "Replace the two 'A's with two 'B's or vice versa." },
+      { input: 's = "AABABBA", k = 1', output: "4", explanation: "Replace the one 'A' in the middle with 'B' and form 'AABBBBA'. The substring 'BBBB' has the longest repeating letters." },
+    ],
+    constraints: ["1 ≤ s.length ≤ 10⁵", "s consists of only uppercase English letters", "0 ≤ k ≤ s.length"],
+    starterCode: {
+      javascript: `function characterReplacement(s, k) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(characterReplacement("ABAB", 2)); // Expected: 4
+console.log(characterReplacement("AABABBA", 1)); // Expected: 4`,
+      python: `def characterReplacement(s, k):
+    # Write your solution here
+    pass
+
+# Test cases
+print(characterReplacement("ABAB", 2))  # Expected: 4
+print(characterReplacement("AABABBA", 1))  # Expected: 4`,
+      java: `class Solution {
+    public static int characterReplacement(String s, int k) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(characterReplacement("ABAB", 2));
+        System.out.println(characterReplacement("AABABBA", 1));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "4\n4",
+      python: "4\n4",
+      java: "4\n4",
+    },
   },
 };
