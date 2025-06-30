@@ -9791,5 +9791,173 @@ print(largestNumber([3,30,34,5,9]))  # Expected: "9534330"`,
       python: "210\n9534330",
       java: "210\n9534330",
     },
+  },,
+
+  "h-index": {
+    id: "h-index",
+    title: "H-Index",
+    difficulty: "Medium",
+    category: "Array • Sorting • Counting Sort",
+    description: {
+      text: "Given an array of integers citations where citations[i] is the number of citations a researcher received for their iᵗʰ paper, return the researcher's h-index.",
+      notes: ["The h-index is defined as the maximum value h such that the researcher has published at least h papers that have each been cited at least h times."],
+    },
+    examples: [
+      { input: "citations = [3,0,6,1,5]", output: "3", explanation: "The researcher has 3 papers with at least 3 citations each." },
+      { input: "citations = [1,3,1]", output: "1" },
+    ],
+    constraints: ["n == citations.length", "1 ≤ n ≤ 5000", "0 ≤ citations[i] ≤ 1000"],
+    starterCode: {
+      javascript: `function hIndex(citations) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(hIndex([3,0,6,1,5])); // Expected: 3
+console.log(hIndex([1,3,1])); // Expected: 1`,
+      python: `def hIndex(citations):
+    # Write your solution here
+    pass
+
+# Test cases
+print(hIndex([3,0,6,1,5]))  # Expected: 3
+print(hIndex([1,3,1]))  # Expected: 1`,
+      java: `class Solution {
+    public static int hIndex(int[] citations) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(hIndex(new int[]{3,0,6,1,5}));
+        System.out.println(hIndex(new int[]{1,3,1}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n1",
+      python: "3\n1",
+      java: "3\n1",
+    },
+  },,
+
+  "randomized-set": {
+    id: "randomized-set",
+    title: "Insert Delete GetRandom O(1)",
+    difficulty: "Medium",
+    category: "Array • Hash Table • Design • Randomized",
+    description: {
+      text: "Implement the RandomizedSet class that supports insert, remove, and getRandom operations, all in average O(1) time complexity.",
+      notes: [
+        "insert(val): Inserts an item val into the set if not present. Returns true if the item was not present, false otherwise.",
+        "remove(val): Removes an item val from the set if present. Returns true if the item was present, false otherwise.",
+        "getRandom(): Returns a random element from the current set of elements.",
+      ],
+    },
+    examples: [
+      { 
+        input: '["RandomizedSet", "insert", "remove", "insert", "getRandom", "remove", "insert", "getRandom"]\n[[], [1], [2], [2], [], [1], [2], []]', 
+        output: "[null, true, false, true, 2, true, false, 2]" 
+      },
+    ],
+    constraints: ["-2³¹ ≤ val ≤ 2³¹ - 1", "At most 2 × 10⁵ calls will be made to insert, remove, and getRandom"],
+    starterCode: {
+      javascript: `class RandomizedSet {
+  constructor() {
+    // Initialize your data structure here
+  }
+  
+  insert(val) {
+    // Write your solution here
+  }
+  
+  remove(val) {
+    // Write your solution here
+  }
+  
+  getRandom() {
+    // Write your solution here
+  }
+}
+
+// Test case
+const obj = new RandomizedSet();
+console.log(obj.insert(1)); // Expected: true
+console.log(obj.remove(2)); // Expected: false
+console.log(obj.insert(2)); // Expected: true
+console.log(obj.getRandom()); // Expected: 1 or 2
+console.log(obj.remove(1)); // Expected: true
+console.log(obj.insert(2)); // Expected: false
+console.log(obj.getRandom()); // Expected: 2`,
+      python: `import random
+
+class RandomizedSet:
+    def __init__(self):
+        # Initialize your data structure here
+        pass
+    
+    def insert(self, val):
+        # Write your solution here
+        pass
+    
+    def remove(self, val):
+        # Write your solution here
+        pass
+    
+    def getRandom(self):
+        # Write your solution here
+        pass
+
+# Test case
+obj = RandomizedSet()
+print(obj.insert(1))  # Expected: True
+print(obj.remove(2))  # Expected: False
+print(obj.insert(2))  # Expected: True
+print(obj.getRandom())  # Expected: 1 or 2
+print(obj.remove(1))  # Expected: True
+print(obj.insert(2))  # Expected: False
+print(obj.getRandom())  # Expected: 2`,
+      java: `import java.util.*;
+
+class RandomizedSet {
+    // Initialize your data structure here
+    
+    public RandomizedSet() {
+        
+    }
+    
+    public boolean insert(int val) {
+        // Write your solution here
+        return false;
+    }
+    
+    public boolean remove(int val) {
+        // Write your solution here
+        return false;
+    }
+    
+    public int getRandom() {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        RandomizedSet obj = new RandomizedSet();
+        System.out.println(obj.insert(1));
+        System.out.println(obj.remove(2));
+        System.out.println(obj.insert(2));
+        System.out.println(obj.getRandom());
+        System.out.println(obj.remove(1));
+        System.out.println(obj.insert(2));
+        System.out.println(obj.getRandom());
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse\ntrue\n2\ntrue\nfalse\n2",
+      python: "True\nFalse\nTrue\n2\nTrue\nFalse\n2",
+      java: "true\nfalse\ntrue\n2\ntrue\nfalse\n2",
+    },
   },
 };
