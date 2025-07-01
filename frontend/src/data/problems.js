@@ -10063,5 +10063,107 @@ class Solution {
       python: "[0, 6]\n[0, 1, 2]",
       java: "[0, 6]\n[0, 1, 2]",
     },
+  },,
+
+  "longest-palindrome": {
+    id: "longest-palindrome",
+    title: "Longest Palindrome",
+    difficulty: "Easy",
+    category: "String • Hash Table • Greedy",
+    description: {
+      text: "Given a string s which consists of lowercase or uppercase letters, return the length of the longest palindrome that can be built with those letters.",
+      notes: ["Letters are case sensitive, for example, 'Aa' is not considered a palindrome here."],
+    },
+    examples: [
+      { input: 's = "abccccdd"', output: "7", explanation: 'One longest palindrome that can be built is "dccaccd", whose length is 7.' },
+      { input: 's = "a"', output: "1" },
+    ],
+    constraints: ["1 ≤ s.length ≤ 2000", "s consists of lowercase and/or uppercase English letters only"],
+    starterCode: {
+      javascript: `function longestPalindrome(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(longestPalindrome("abccccdd")); // Expected: 7
+console.log(longestPalindrome("a")); // Expected: 1`,
+      python: `def longestPalindrome(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(longestPalindrome("abccccdd"))  # Expected: 7
+print(longestPalindrome("a"))  # Expected: 1`,
+      java: `class Solution {
+    public static int longestPalindrome(String s) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(longestPalindrome("abccccdd"));
+        System.out.println(longestPalindrome("a"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "7\n1",
+      python: "7\n1",
+      java: "7\n1",
+    },
+  },,
+
+  "ransom-note": {
+    id: "ransom-note",
+    title: "Ransom Note",
+    difficulty: "Easy",
+    category: "String • Hash Table • Counting",
+    description: {
+      text: "Given two strings ransomNote and magazine, return true if ransomNote can be constructed by using the letters from magazine and false otherwise.",
+      notes: ["Each letter in magazine can only be used once in ransomNote."],
+    },
+    examples: [
+      { input: 'ransomNote = "a", magazine = "b"', output: "false" },
+      { input: 'ransomNote = "aa", magazine = "ab"', output: "false" },
+      { input: 'ransomNote = "aa", magazine = "aab"', output: "true" },
+    ],
+    constraints: ["1 ≤ ransomNote.length, magazine.length ≤ 10⁵", "ransomNote and magazine consist of lowercase English letters"],
+    starterCode: {
+      javascript: `function canConstruct(ransomNote, magazine) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(canConstruct("a", "b")); // Expected: false
+console.log(canConstruct("aa", "ab")); // Expected: false
+console.log(canConstruct("aa", "aab")); // Expected: true`,
+      python: `def canConstruct(ransomNote, magazine):
+    # Write your solution here
+    pass
+
+# Test cases
+print(canConstruct("a", "b"))  # Expected: False
+print(canConstruct("aa", "ab"))  # Expected: False
+print(canConstruct("aa", "aab"))  # Expected: True`,
+      java: `class Solution {
+    public static boolean canConstruct(String ransomNote, String magazine) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(canConstruct("a", "b"));
+        System.out.println(canConstruct("aa", "ab"));
+        System.out.println(canConstruct("aa", "aab"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "false\nfalse\ntrue",
+      python: "False\nFalse\nTrue",
+      java: "false\nfalse\ntrue",
+    },
   },
 };
