@@ -9959,5 +9959,109 @@ class RandomizedSet {
       python: "True\nFalse\nTrue\n2\nTrue\nFalse\n2",
       java: "true\nfalse\ntrue\n2\ntrue\nfalse\n2",
     },
+  },,
+
+  "first-unique-character": {
+    id: "first-unique-character",
+    title: "First Unique Character in a String",
+    difficulty: "Easy",
+    category: "String • Hash Table • Queue • Counting",
+    description: {
+      text: "Given a string s, find the first non-repeating character in it and return its index. If it does not exist, return -1.",
+      notes: [],
+    },
+    examples: [
+      { input: 's = "leetcode"', output: "0" },
+      { input: 's = "loveleetcode"', output: "2" },
+      { input: 's = "aabb"', output: "-1" },
+    ],
+    constraints: ["1 ≤ s.length ≤ 10⁵", "s consists of only lowercase English letters"],
+    starterCode: {
+      javascript: `function firstUniqChar(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(firstUniqChar("leetcode")); // Expected: 0
+console.log(firstUniqChar("loveleetcode")); // Expected: 2
+console.log(firstUniqChar("aabb")); // Expected: -1`,
+      python: `def firstUniqChar(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(firstUniqChar("leetcode"))  # Expected: 0
+print(firstUniqChar("loveleetcode"))  # Expected: 2
+print(firstUniqChar("aabb"))  # Expected: -1`,
+      java: `class Solution {
+    public static int firstUniqChar(String s) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(firstUniqChar("leetcode"));
+        System.out.println(firstUniqChar("loveleetcode"));
+        System.out.println(firstUniqChar("aabb"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "0\n2\n-1",
+      python: "0\n2\n-1",
+      java: "0\n2\n-1",
+    },
+  },,
+
+  "find-all-anagrams": {
+    id: "find-all-anagrams",
+    title: "Find All Anagrams in a String",
+    difficulty: "Medium",
+    category: "String • Hash Table • Sliding Window",
+    description: {
+      text: "Given two strings s and p, return an array of all the start indices of p's anagrams in s. You may return the answer in any order.",
+      notes: ["An Anagram is a word or phrase formed by rearranging the letters of a different word or phrase, using all the original letters exactly once."],
+    },
+    examples: [
+      { input: 's = "cbaebabacd", p = "abc"', output: "[0,6]", explanation: 'The substring with start index 0 is "cba" and with start index 6 is "bac".' },
+      { input: 's = "abab", p = "ab"', output: "[0,1,2]" },
+    ],
+    constraints: ["1 ≤ s.length, p.length ≤ 3 × 10⁴", "s and p consist of lowercase English letters"],
+    starterCode: {
+      javascript: `function findAnagrams(s, p) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(findAnagrams("cbaebabacd", "abc")); // Expected: [0,6]
+console.log(findAnagrams("abab", "ab")); // Expected: [0,1,2]`,
+      python: `def findAnagrams(s, p):
+    # Write your solution here
+    pass
+
+# Test cases
+print(findAnagrams("cbaebabacd", "abc"))  # Expected: [0,6]
+print(findAnagrams("abab", "ab"))  # Expected: [0,1,2]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<Integer> findAnagrams(String s, String p) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(findAnagrams("cbaebabacd", "abc"));
+        System.out.println(findAnagrams("abab", "ab"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[0,6]\n[0,1,2]",
+      python: "[0, 6]\n[0, 1, 2]",
+      java: "[0, 6]\n[0, 1, 2]",
+    },
   },
 };
