@@ -10165,5 +10165,114 @@ print(canConstruct("aa", "aab"))  # Expected: True`,
       python: "False\nFalse\nTrue",
       java: "false\nfalse\ntrue",
     },
+  },,
+
+  "isomorphic-strings": {
+    id: "isomorphic-strings",
+    title: "Isomorphic Strings",
+    difficulty: "Easy",
+    category: "String • Hash Table",
+    description: {
+      text: "Given two strings s and t, determine if they are isomorphic. Two strings s and t are isomorphic if the characters in s can be replaced to get t.",
+      notes: [
+        "All occurrences of a character must be replaced with another character while preserving the order of characters.",
+        "No two characters may map to the same character, but a character may map to itself.",
+      ],
+    },
+    examples: [
+      { input: 's = "egg", t = "add"', output: "true" },
+      { input: 's = "foo", t = "bar"', output: "false" },
+      { input: 's = "paper", t = "title"', output: "true" },
+    ],
+    constraints: ["1 ≤ s.length ≤ 5 × 10⁴", "t.length == s.length", "s and t consist of any valid ascii character"],
+    starterCode: {
+      javascript: `function isIsomorphic(s, t) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(isIsomorphic("egg", "add")); // Expected: true
+console.log(isIsomorphic("foo", "bar")); // Expected: false
+console.log(isIsomorphic("paper", "title")); // Expected: true`,
+      python: `def isIsomorphic(s, t):
+    # Write your solution here
+    pass
+
+# Test cases
+print(isIsomorphic("egg", "add"))  # Expected: True
+print(isIsomorphic("foo", "bar"))  # Expected: False
+print(isIsomorphic("paper", "title"))  # Expected: True`,
+      java: `class Solution {
+    public static boolean isIsomorphic(String s, String t) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(isIsomorphic("egg", "add"));
+        System.out.println(isIsomorphic("foo", "bar"));
+        System.out.println(isIsomorphic("paper", "title"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse\ntrue",
+      python: "True\nFalse\nTrue",
+      java: "true\nfalse\ntrue",
+    },
+  },,
+
+  "word-pattern": {
+    id: "word-pattern",
+    title: "Word Pattern",
+    difficulty: "Easy",
+    category: "String • Hash Table",
+    description: {
+      text: "Given a pattern and a string s, find if s follows the same pattern. Here follow means a full match, such that there is a bijection between a letter in pattern and a non-empty word in s.",
+      notes: [],
+    },
+    examples: [
+      { input: 'pattern = "abba", s = "dog cat cat dog"', output: "true" },
+      { input: 'pattern = "abba", s = "dog cat cat fish"', output: "false" },
+      { input: 'pattern = "aaaa", s = "dog cat cat dog"', output: "false" },
+    ],
+    constraints: ["1 ≤ pattern.length ≤ 300", "pattern contains only lower-case English letters", "1 ≤ s.length ≤ 3000"],
+    starterCode: {
+      javascript: `function wordPattern(pattern, s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(wordPattern("abba", "dog cat cat dog")); // Expected: true
+console.log(wordPattern("abba", "dog cat cat fish")); // Expected: false
+console.log(wordPattern("aaaa", "dog cat cat dog")); // Expected: false`,
+      python: `def wordPattern(pattern, s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(wordPattern("abba", "dog cat cat dog"))  # Expected: True
+print(wordPattern("abba", "dog cat cat fish"))  # Expected: False
+print(wordPattern("aaaa", "dog cat cat dog"))  # Expected: False`,
+      java: `class Solution {
+    public static boolean wordPattern(String pattern, String s) {
+        // Write your solution here
+        return false;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(wordPattern("abba", "dog cat cat dog"));
+        System.out.println(wordPattern("abba", "dog cat cat fish"));
+        System.out.println(wordPattern("aaaa", "dog cat cat dog"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "true\nfalse\nfalse",
+      python: "True\nFalse\nFalse",
+      java: "true\nfalse\nfalse",
+    },
   },
 };
