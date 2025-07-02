@@ -10274,5 +10274,118 @@ print(wordPattern("aaaa", "dog cat cat dog"))  # Expected: False`,
       python: "True\nFalse\nFalse",
       java: "true\nfalse\nfalse",
     },
+  },,
+
+  "integer-to-roman": {
+    id: "integer-to-roman",
+    title: "Integer to Roman",
+    difficulty: "Medium",
+    category: "String • Hash Table • Math",
+    description: {
+      text: "Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. Given an integer, convert it to a roman numeral.",
+      notes: [
+        "I=1, V=5, X=10, L=50, C=100, D=500, M=1000",
+        "I can be placed before V and X to make 4 and 9.",
+        "X can be placed before L and C to make 40 and 90.",
+        "C can be placed before D and M to make 400 and 900.",
+      ],
+    },
+    examples: [
+      { input: "num = 3", output: '"III"' },
+      { input: "num = 58", output: '"LVIII"', explanation: "L = 50, V = 5, III = 3." },
+      { input: "num = 1994", output: '"MCMXCIV"', explanation: "M = 1000, CM = 900, XC = 90 and IV = 4." },
+    ],
+    constraints: ["1 ≤ num ≤ 3999"],
+    starterCode: {
+      javascript: `function intToRoman(num) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(intToRoman(3)); // Expected: "III"
+console.log(intToRoman(58)); // Expected: "LVIII"
+console.log(intToRoman(1994)); // Expected: "MCMXCIV"`,
+      python: `def intToRoman(num):
+    # Write your solution here
+    pass
+
+# Test cases
+print(intToRoman(3))  # Expected: "III"
+print(intToRoman(58))  # Expected: "LVIII"
+print(intToRoman(1994))  # Expected: "MCMXCIV"`,
+      java: `class Solution {
+    public static String intToRoman(int num) {
+        // Write your solution here
+        return "";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(intToRoman(3));
+        System.out.println(intToRoman(58));
+        System.out.println(intToRoman(1994));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "III\nLVIII\nMCMXCIV",
+      python: "III\nLVIII\nMCMXCIV",
+      java: "III\nLVIII\nMCMXCIV",
+    },
+  },,
+
+  "roman-to-integer": {
+    id: "roman-to-integer",
+    title: "Roman to Integer",
+    difficulty: "Easy",
+    category: "String • Hash Table • Math",
+    description: {
+      text: "Roman numerals are represented by seven different symbols: I, V, X, L, C, D and M. Given a roman numeral, convert it to an integer.",
+      notes: [
+        "I=1, V=5, X=10, L=50, C=100, D=500, M=1000",
+      ],
+    },
+    examples: [
+      { input: 's = "III"', output: "3" },
+      { input: 's = "LVIII"', output: "58" },
+      { input: 's = "MCMXCIV"', output: "1994" },
+    ],
+    constraints: ["1 ≤ s.length ≤ 15", "s contains only the characters ('I', 'V', 'X', 'L', 'C', 'D', 'M')"],
+    starterCode: {
+      javascript: `function romanToInt(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(romanToInt("III")); // Expected: 3
+console.log(romanToInt("LVIII")); // Expected: 58
+console.log(romanToInt("MCMXCIV")); // Expected: 1994`,
+      python: `def romanToInt(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(romanToInt("III"))  # Expected: 3
+print(romanToInt("LVIII"))  # Expected: 58
+print(romanToInt("MCMXCIV"))  # Expected: 1994`,
+      java: `class Solution {
+    public static int romanToInt(String s) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(romanToInt("III"));
+        System.out.println(romanToInt("LVIII"));
+        System.out.println(romanToInt("MCMXCIV"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n58\n1994",
+      python: "3\n58\n1994",
+      java: "3\n58\n1994",
+    },
   },
 };
