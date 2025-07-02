@@ -10591,5 +10591,112 @@ print(convert("A", 1))  # Expected: "A"`,
       python: "PAHNAPLSIIGYIR\nPINALSIGYAHRPI\nA",
       java: "PAHNAPLSIIGYIR\nPINALSIGYAHRPI\nA",
     },
+  },,
+
+  "find-first-last-position": {
+    id: "find-first-last-position",
+    title: "Find First and Last Position of Element in Sorted Array",
+    difficulty: "Medium",
+    category: "Array • Binary Search",
+    description: {
+      text: "Given an array of integers nums sorted in non-decreasing order, find the starting and ending position of a given target value.",
+      notes: [
+        "If target is not found in the array, return [-1, -1].",
+        "You must write an algorithm with O(log n) runtime complexity.",
+      ],
+    },
+    examples: [
+      { input: "nums = [5,7,7,8,8,10], target = 8", output: "[3,4]" },
+      { input: "nums = [5,7,7,8,8,10], target = 6", output: "[-1,-1]" },
+      { input: "nums = [], target = 0", output: "[-1,-1]" },
+    ],
+    constraints: ["0 ≤ nums.length ≤ 10⁵", "-10⁹ ≤ nums[i] ≤ 10⁹", "nums is a non-decreasing array"],
+    starterCode: {
+      javascript: `function searchRange(nums, target) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(searchRange([5,7,7,8,8,10], 8)); // Expected: [3,4]
+console.log(searchRange([5,7,7,8,8,10], 6)); // Expected: [-1,-1]
+console.log(searchRange([], 0)); // Expected: [-1,-1]`,
+      python: `def searchRange(nums, target):
+    # Write your solution here
+    pass
+
+# Test cases
+print(searchRange([5,7,7,8,8,10], 8))  # Expected: [3,4]
+print(searchRange([5,7,7,8,8,10], 6))  # Expected: [-1,-1]
+print(searchRange([], 0))  # Expected: [-1,-1]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int[] searchRange(int[] nums, int target) {
+        // Write your solution here
+        return new int[]{-1, -1};
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(searchRange(new int[]{5,7,7,8,8,10}, 8)));
+        System.out.println(Arrays.toString(searchRange(new int[]{5,7,7,8,8,10}, 6)));
+        System.out.println(Arrays.toString(searchRange(new int[]{}, 0)));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[3,4]\n[-1,-1]\n[-1,-1]",
+      python: "[3, 4]\n[-1, -1]\n[-1, -1]",
+      java: "[3, 4]\n[-1, -1]\n[-1, -1]",
+    },
+  },,
+
+  "single-number-ii": {
+    id: "single-number-ii",
+    title: "Single Number II",
+    difficulty: "Medium",
+    category: "Array • Bit Manipulation",
+    description: {
+      text: "Given an integer array nums where every element appears three times except for one, which appears exactly once. Find the single element and return it.",
+      notes: ["You must implement a solution with a linear runtime complexity and use only constant extra space."],
+    },
+    examples: [
+      { input: "nums = [2,2,3,2]", output: "3" },
+      { input: "nums = [0,1,0,1,0,1,99]", output: "99" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 3 × 10⁴", "-2³¹ ≤ nums[i] ≤ 2³¹ - 1", "Each element appears exactly three times except for one element which appears once"],
+    starterCode: {
+      javascript: `function singleNumber(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(singleNumber([2,2,3,2])); // Expected: 3
+console.log(singleNumber([0,1,0,1,0,1,99])); // Expected: 99`,
+      python: `def singleNumber(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(singleNumber([2,2,3,2]))  # Expected: 3
+print(singleNumber([0,1,0,1,0,1,99]))  # Expected: 99`,
+      java: `class Solution {
+    public static int singleNumber(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(singleNumber(new int[]{2,2,3,2}));
+        System.out.println(singleNumber(new int[]{0,1,0,1,0,1,99}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n99",
+      python: "3\n99",
+      java: "3\n99",
+    },
   },
 };
