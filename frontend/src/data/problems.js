@@ -10485,5 +10485,111 @@ print(longestCommonPrefix(["dog","racecar","car"]))  # Expected: ""`,
       python: "fl\n",
       java: "fl\n",
     },
+  },,
+
+  "reverse-words-in-string": {
+    id: "reverse-words-in-string",
+    title: "Reverse Words in a String",
+    difficulty: "Medium",
+    category: "String • Two Pointers",
+    description: {
+      text: "Given an input string s, reverse the order of the words. A word is defined as a sequence of non-space characters. The words in s will be separated by at least one space.",
+      notes: ["Return a string of the words in reverse order concatenated by a single space."],
+    },
+    examples: [
+      { input: 's = "the sky is blue"', output: '"blue is sky the"' },
+      { input: 's = "  hello world  "', output: '"world hello"' },
+      { input: 's = "a good   example"', output: '"example good a"' },
+    ],
+    constraints: ["1 ≤ s.length ≤ 10⁴", "s contains English letters (upper-case and lower-case), digits, and spaces ' '"],
+    starterCode: {
+      javascript: `function reverseWords(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(reverseWords("the sky is blue")); // Expected: "blue is sky the"
+console.log(reverseWords("  hello world  ")); // Expected: "world hello"
+console.log(reverseWords("a good   example")); // Expected: "example good a"`,
+      python: `def reverseWords(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(reverseWords("the sky is blue"))  # Expected: "blue is sky the"
+print(reverseWords("  hello world  "))  # Expected: "world hello"
+print(reverseWords("a good   example"))  # Expected: "example good a"`,
+      java: `class Solution {
+    public static String reverseWords(String s) {
+        // Write your solution here
+        return "";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(reverseWords("the sky is blue"));
+        System.out.println(reverseWords("  hello world  "));
+        System.out.println(reverseWords("a good   example"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "blue is sky the\nworld hello\nexample good a",
+      python: "blue is sky the\nworld hello\nexample good a",
+      java: "blue is sky the\nworld hello\nexample good a",
+    },
+  },,
+
+  "zigzag-conversion": {
+    id: "zigzag-conversion",
+    title: "Zigzag Conversion",
+    difficulty: "Medium",
+    category: "String",
+    description: {
+      text: 'The string "PAYPALISHIRING" is written in a zigzag pattern on a given number of rows. Write the code that will take a string and make this conversion given a number of rows.',
+      notes: [],
+    },
+    examples: [
+      { input: 's = "PAYPALISHIRING", numRows = 3', output: '"PAHNAPLSIIGYIR"' },
+      { input: 's = "PAYPALISHIRING", numRows = 4', output: '"PINALSIGYAHRPI"' },
+      { input: 's = "A", numRows = 1', output: '"A"' },
+    ],
+    constraints: ["1 ≤ s.length ≤ 1000", "s consists of English letters (lower-case and upper-case), ',' and '.'", "1 ≤ numRows ≤ 1000"],
+    starterCode: {
+      javascript: `function convert(s, numRows) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(convert("PAYPALISHIRING", 3)); // Expected: "PAHNAPLSIIGYIR"
+console.log(convert("PAYPALISHIRING", 4)); // Expected: "PINALSIGYAHRPI"
+console.log(convert("A", 1)); // Expected: "A"`,
+      python: `def convert(s, numRows):
+    # Write your solution here
+    pass
+
+# Test cases
+print(convert("PAYPALISHIRING", 3))  # Expected: "PAHNAPLSIIGYIR"
+print(convert("PAYPALISHIRING", 4))  # Expected: "PINALSIGYAHRPI"
+print(convert("A", 1))  # Expected: "A"`,
+      java: `class Solution {
+    public static String convert(String s, int numRows) {
+        // Write your solution here
+        return "";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(convert("PAYPALISHIRING", 3));
+        System.out.println(convert("PAYPALISHIRING", 4));
+        System.out.println(convert("A", 1));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "PAHNAPLSIIGYIR\nPINALSIGYAHRPI\nA",
+      python: "PAHNAPLSIIGYIR\nPINALSIGYAHRPI\nA",
+      java: "PAHNAPLSIIGYIR\nPINALSIGYAHRPI\nA",
+    },
   },
 };
