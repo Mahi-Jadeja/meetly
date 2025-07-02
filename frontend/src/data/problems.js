@@ -10387,5 +10387,103 @@ print(romanToInt("MCMXCIV"))  # Expected: 1994`,
       python: "3\n58\n1994",
       java: "3\n58\n1994",
     },
+  },,
+
+  "length-of-last-word": {
+    id: "length-of-last-word",
+    title: "Length of Last Word",
+    difficulty: "Easy",
+    category: "String",
+    description: {
+      text: "Given a string s consisting of words and spaces, return the length of the last word in the string.",
+      notes: ["A word is a maximal substring consisting of non-space characters only."],
+    },
+    examples: [
+      { input: 's = "Hello World"', output: "5", explanation: 'The last word is "World" with length 5.' },
+      { input: 's = "   fly me   to   the moon  "', output: "4", explanation: 'The last word is "moon" with length 4.' },
+    ],
+    constraints: ["1 ≤ s.length ≤ 10⁴", "s consists of only English letters and spaces ' '"],
+    starterCode: {
+      javascript: `function lengthOfLastWord(s) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(lengthOfLastWord("Hello World")); // Expected: 5
+console.log(lengthOfLastWord("   fly me   to   the moon  ")); // Expected: 4`,
+      python: `def lengthOfLastWord(s):
+    # Write your solution here
+    pass
+
+# Test cases
+print(lengthOfLastWord("Hello World"))  # Expected: 5
+print(lengthOfLastWord("   fly me   to   the moon  "))  # Expected: 4`,
+      java: `class Solution {
+    public static int lengthOfLastWord(String s) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(lengthOfLastWord("Hello World"));
+        System.out.println(lengthOfLastWord("   fly me   to   the moon  "));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "5\n4",
+      python: "5\n4",
+      java: "5\n4",
+    },
+  },,
+
+  "longest-common-prefix": {
+    id: "longest-common-prefix",
+    title: "Longest Common Prefix",
+    difficulty: "Easy",
+    category: "String • Trie",
+    description: {
+      text: "Write a function to find the longest common prefix string amongst an array of strings.",
+      notes: ["If there is no common prefix, return an empty string ''."],
+    },
+    examples: [
+      { input: 'strs = ["flower","flow","flight"]', output: '"fl"' },
+      { input: 'strs = ["dog","racecar","car"]', output: '""', explanation: "There is no common prefix among the input strings." },
+    ],
+    constraints: ["1 ≤ strs.length ≤ 200", "0 ≤ strs[i].length ≤ 200", "strs[i] consists of only lowercase English letters"],
+    starterCode: {
+      javascript: `function longestCommonPrefix(strs) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(longestCommonPrefix(["flower","flow","flight"])); // Expected: "fl"
+console.log(longestCommonPrefix(["dog","racecar","car"])); // Expected: ""`,
+      python: `def longestCommonPrefix(strs):
+    # Write your solution here
+    pass
+
+# Test cases
+print(longestCommonPrefix(["flower","flow","flight"]))  # Expected: "fl"
+print(longestCommonPrefix(["dog","racecar","car"]))  # Expected: ""`,
+      java: `class Solution {
+    public static String longestCommonPrefix(String[] strs) {
+        // Write your solution here
+        return "";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(longestCommonPrefix(new String[]{"flower","flow","flight"}));
+        System.out.println(longestCommonPrefix(new String[]{"dog","racecar","car"}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "fl\n",
+      python: "fl\n",
+      java: "fl\n",
+    },
   },
 };
