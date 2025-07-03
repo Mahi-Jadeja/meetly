@@ -10802,5 +10802,111 @@ print(rangeBitwiseAnd(1, 2147483647))  # Expected: 0`,
       python: "4\n0\n0",
       java: "4\n0\n0",
     },
+  },,
+
+  "factorial-trailing-zeroes": {
+    id: "factorial-trailing-zeroes",
+    title: "Factorial Trailing Zeroes",
+    difficulty: "Medium",
+    category: "Math",
+    description: {
+      text: "Given an integer n, return the number of trailing zeroes in n!",
+      notes: ["Note that n! = n * (n - 1) * (n - 2) * ... * 3 * 2 * 1."],
+    },
+    examples: [
+      { input: "n = 3", output: "0", explanation: "3! = 6, no trailing zero." },
+      { input: "n = 5", output: "1", explanation: "5! = 120, one trailing zero." },
+      { input: "n = 0", output: "0" },
+    ],
+    constraints: ["0 ≤ n ≤ 10⁴"],
+    starterCode: {
+      javascript: `function trailingZeroes(n) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(trailingZeroes(3)); // Expected: 0
+console.log(trailingZeroes(5)); // Expected: 1
+console.log(trailingZeroes(0)); // Expected: 0`,
+      python: `def trailingZeroes(n):
+    # Write your solution here
+    pass
+
+# Test cases
+print(trailingZeroes(3))  # Expected: 0
+print(trailingZeroes(5))  # Expected: 1
+print(trailingZeroes(0))  # Expected: 0`,
+      java: `class Solution {
+    public static int trailingZeroes(int n) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(trailingZeroes(3));
+        System.out.println(trailingZeroes(5));
+        System.out.println(trailingZeroes(0));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "0\n1\n0",
+      python: "0\n1\n0",
+      java: "0\n1\n0",
+    },
+  },,
+
+  "excel-sheet-column-number": {
+    id: "excel-sheet-column-number",
+    title: "Excel Sheet Column Number",
+    difficulty: "Easy",
+    category: "String • Math",
+    description: {
+      text: "Given a string columnTitle that represents the column title as appears in an Excel sheet, return its corresponding column number.",
+      notes: ["A -> 1, B -> 2, C -> 3, ..., Z -> 26, AA -> 27, AB -> 28, ..."],
+    },
+    examples: [
+      { input: 'columnTitle = "A"', output: "1" },
+      { input: 'columnTitle = "AB"', output: "28" },
+      { input: 'columnTitle = "ZY"', output: "701" },
+    ],
+    constraints: ["1 ≤ columnTitle.length ≤ 7", "columnTitle consists only of uppercase English letters"],
+    starterCode: {
+      javascript: `function titleToNumber(columnTitle) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(titleToNumber("A")); // Expected: 1
+console.log(titleToNumber("AB")); // Expected: 28
+console.log(titleToNumber("ZY")); // Expected: 701`,
+      python: `def titleToNumber(columnTitle):
+    # Write your solution here
+    pass
+
+# Test cases
+print(titleToNumber("A"))  # Expected: 1
+print(titleToNumber("AB"))  # Expected: 28
+print(titleToNumber("ZY"))  # Expected: 701`,
+      java: `class Solution {
+    public static int titleToNumber(String columnTitle) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(titleToNumber("A"));
+        System.out.println(titleToNumber("AB"));
+        System.out.println(titleToNumber("ZY"));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "1\n28\n701",
+      python: "1\n28\n701",
+      java: "1\n28\n701",
+    },
   },
 };
