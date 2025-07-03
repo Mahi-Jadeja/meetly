@@ -10698,5 +10698,109 @@ print(singleNumber([0,1,0,1,0,1,99]))  # Expected: 99`,
       python: "3\n99",
       java: "3\n99",
     },
+  },,
+
+  "single-number-iii": {
+    id: "single-number-iii",
+    title: "Single Number III",
+    difficulty: "Medium",
+    category: "Array • Bit Manipulation",
+    description: {
+      text: "Given an integer array nums, in which exactly two elements appear only once and all the other elements appear exactly twice. Find the two elements that appear only once. You can return the answer in any order.",
+      notes: ["You must write an algorithm that runs in linear runtime complexity and uses only constant extra space."],
+    },
+    examples: [
+      { input: "nums = [1,2,1,3,2,5]", output: "[3,5]", explanation: "[5, 3] is also a valid answer." },
+      { input: "nums = [-1,0]", output: "[-1,0]" },
+    ],
+    constraints: ["2 ≤ nums.length ≤ 3 × 10⁴", "-2³¹ ≤ nums[i] ≤ 2³¹ - 1", "Each integer appears exactly twice except for two elements which appear once"],
+    starterCode: {
+      javascript: `function singleNumber(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(singleNumber([1,2,1,3,2,5])); // Expected: [3,5] or [5,3]
+console.log(singleNumber([-1,0])); // Expected: [-1,0]`,
+      python: `def singleNumber(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(singleNumber([1,2,1,3,2,5]))  # Expected: [3,5] or [5,3]
+print(singleNumber([-1,0]))  # Expected: [-1,0]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static int[] singleNumber(int[] nums) {
+        // Write your solution here
+        return new int[]{};
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(Arrays.toString(singleNumber(new int[]{1,2,1,3,2,5})));
+        System.out.println(Arrays.toString(singleNumber(new int[]{-1,0})));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[3,5]\n[-1,0]",
+      python: "[3, 5]\n[-1, 0]",
+      java: "[3, 5]\n[-1, 0]",
+    },
+  },,
+
+  "bitwise-and-range": {
+    id: "bitwise-and-range",
+    title: "Bitwise AND of Numbers Range",
+    difficulty: "Medium",
+    category: "Bit Manipulation",
+    description: {
+      text: "Given two integers left and right that represent the range [left, right], return the bitwise AND of all numbers in this range, inclusive.",
+      notes: [],
+    },
+    examples: [
+      { input: "left = 5, right = 7", output: "4" },
+      { input: "left = 0, right = 0", output: "0" },
+      { input: "left = 1, right = 2147483647", output: "0" },
+    ],
+    constraints: ["0 ≤ left ≤ right ≤ 2³¹ - 1"],
+    starterCode: {
+      javascript: `function rangeBitwiseAnd(left, right) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(rangeBitwiseAnd(5, 7)); // Expected: 4
+console.log(rangeBitwiseAnd(0, 0)); // Expected: 0
+console.log(rangeBitwiseAnd(1, 2147483647)); // Expected: 0`,
+      python: `def rangeBitwiseAnd(left, right):
+    # Write your solution here
+    pass
+
+# Test cases
+print(rangeBitwiseAnd(5, 7))  # Expected: 4
+print(rangeBitwiseAnd(0, 0))  # Expected: 0
+print(rangeBitwiseAnd(1, 2147483647))  # Expected: 0`,
+      java: `class Solution {
+    public static int rangeBitwiseAnd(int left, int right) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(rangeBitwiseAnd(5, 7));
+        System.out.println(rangeBitwiseAnd(0, 0));
+        System.out.println(rangeBitwiseAnd(1, 2147483647));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "4\n0\n0",
+      python: "4\n0\n0",
+      java: "4\n0\n0",
+    },
   },
 };
