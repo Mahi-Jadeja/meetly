@@ -11010,5 +11010,111 @@ print(majorityElement([2,2,1,1,1,2,2]))  # Expected: 2`,
       python: "3\n2",
       java: "3\n2",
     },
+  },,
+
+  "majority-element-ii": {
+    id: "majority-element-ii",
+    title: "Majority Element II",
+    difficulty: "Medium",
+    category: "Array • Hash Table • Sorting • Counting",
+    description: {
+      text: "Given an integer array of size n, find all elements that appear more than ⌊ n/3 ⌋ times.",
+      notes: [],
+    },
+    examples: [
+      { input: "nums = [3,2,3]", output: "[3]" },
+      { input: "nums = [1]", output: "[1]" },
+      { input: "nums = [1,2]", output: "[1,2]" },
+    ],
+    constraints: ["1 ≤ nums.length ≤ 5 × 10⁴", "-10⁹ ≤ nums[i] ≤ 10⁹"],
+    starterCode: {
+      javascript: `function majorityElement(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(majorityElement([3,2,3])); // Expected: [3]
+console.log(majorityElement([1])); // Expected: [1]
+console.log(majorityElement([1,2])); // Expected: [1,2]`,
+      python: `def majorityElement(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(majorityElement([3,2,3]))  # Expected: [3]
+print(majorityElement([1]))  # Expected: [1]
+print(majorityElement([1,2]))  # Expected: [1,2]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<Integer> majorityElement(int[] nums) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(majorityElement(new int[]{3,2,3}));
+        System.out.println(majorityElement(new int[]{1}));
+        System.out.println(majorityElement(new int[]{1,2}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[3]\n[1]\n[1,2]",
+      python: "[3]\n[1]\n[1, 2]",
+      java: "[3]\n[1]\n[1, 2]",
+    },
+  },,
+
+  "pascals-triangle": {
+    id: "pascals-triangle",
+    title: "Pascal's Triangle",
+    difficulty: "Easy",
+    category: "Array • Dynamic Programming",
+    description: {
+      text: "Given an integer numRows, return the first numRows of Pascal's triangle.",
+      notes: ["In Pascal's triangle, each number is the sum of the two numbers directly above it."],
+    },
+    examples: [
+      { input: "numRows = 5", output: "[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]" },
+      { input: "numRows = 1", output: "[[1]]" },
+    ],
+    constraints: ["1 ≤ numRows ≤ 30"],
+    starterCode: {
+      javascript: `function generate(numRows) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(JSON.stringify(generate(5))); // Expected: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+console.log(JSON.stringify(generate(1))); // Expected: [[1]]`,
+      python: `def generate(numRows):
+    # Write your solution here
+    pass
+
+# Test cases
+print(generate(5))  # Expected: [[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]
+print(generate(1))  # Expected: [[1]]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<List<Integer>> generate(int numRows) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(generate(5));
+        System.out.println(generate(1));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[[1],[1,1],[1,2,1],[1,3,3,1],[1,4,6,4,1]]\n[[1]]",
+      python: "[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]\n[[1]]",
+      java: "[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]\n[[1]]",
+    },
   },
 };
