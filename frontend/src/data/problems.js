@@ -10908,5 +10908,107 @@ print(titleToNumber("ZY"))  # Expected: 701`,
       python: "1\n28\n701",
       java: "1\n28\n701",
     },
+  },,
+
+  "excel-sheet-column-title": {
+    id: "excel-sheet-column-title",
+    title: "Excel Sheet Column Title",
+    difficulty: "Easy",
+    category: "String • Math",
+    description: {
+      text: "Given an integer columnNumber, return its corresponding column title as it appears in an Excel sheet.",
+      notes: ["1 -> A, 2 -> B, 3 -> C, ..., 26 -> Z, 27 -> AA, 28 -> AB, ..."],
+    },
+    examples: [
+      { input: "columnNumber = 1", output: '"A"' },
+      { input: "columnNumber = 28", output: '"AB"' },
+      { input: "columnNumber = 701", output: '"ZY"' },
+    ],
+    constraints: ["1 ≤ columnNumber ≤ 2³¹ - 1"],
+    starterCode: {
+      javascript: `function convertToTitle(columnNumber) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(convertToTitle(1)); // Expected: "A"
+console.log(convertToTitle(28)); // Expected: "AB"
+console.log(convertToTitle(701)); // Expected: "ZY"`,
+      python: `def convertToTitle(columnNumber):
+    # Write your solution here
+    pass
+
+# Test cases
+print(convertToTitle(1))  # Expected: "A"
+print(convertToTitle(28))  # Expected: "AB"
+print(convertToTitle(701))  # Expected: "ZY"`,
+      java: `class Solution {
+    public static String convertToTitle(int columnNumber) {
+        // Write your solution here
+        return "";
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(convertToTitle(1));
+        System.out.println(convertToTitle(28));
+        System.out.println(convertToTitle(701));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "A\nAB\nZY",
+      python: "A\nAB\nZY",
+      java: "A\nAB\nZY",
+    },
+  },,
+
+  "majority-element": {
+    id: "majority-element",
+    title: "Majority Element",
+    difficulty: "Easy",
+    category: "Array • Hash Table • Divide and Conquer • Sorting",
+    description: {
+      text: "Given an array nums of size n, return the majority element. The majority element is the element that appears more than ⌊n / 2⌋ times.",
+      notes: ["You may assume that the majority element always exists in the array."],
+    },
+    examples: [
+      { input: "nums = [3,2,3]", output: "3" },
+      { input: "nums = [2,2,1,1,1,2,2]", output: "2" },
+    ],
+    constraints: ["n == nums.length", "1 ≤ n ≤ 5 × 10⁴", "-10⁹ ≤ nums[i] ≤ 10⁹"],
+    starterCode: {
+      javascript: `function majorityElement(nums) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(majorityElement([3,2,3])); // Expected: 3
+console.log(majorityElement([2,2,1,1,1,2,2])); // Expected: 2`,
+      python: `def majorityElement(nums):
+    # Write your solution here
+    pass
+
+# Test cases
+print(majorityElement([3,2,3]))  # Expected: 3
+print(majorityElement([2,2,1,1,1,2,2]))  # Expected: 2`,
+      java: `class Solution {
+    public static int majorityElement(int[] nums) {
+        // Write your solution here
+        return 0;
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(majorityElement(new int[]{3,2,3}));
+        System.out.println(majorityElement(new int[]{2,2,1,1,1,2,2}));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "3\n2",
+      python: "3\n2",
+      java: "3\n2",
+    },
   },
 };
