@@ -11116,5 +11116,60 @@ class Solution {
       python: "[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]\n[[1]]",
       java: "[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]\n[[1]]",
     },
+  },,
+
+  "pascals-triangle-ii": {
+    id: "pascals-triangle-ii",
+    title: "Pascal's Triangle II",
+    difficulty: "Easy",
+    category: "Array • Dynamic Programming",
+    description: {
+      text: "Given an integer rowIndex, return the rowIndexᵗʰ (0-indexed) row of the Pascal's triangle.",
+      notes: ["Could you optimize your algorithm to use only O(rowIndex) extra space?"],
+    },
+    examples: [
+      { input: "rowIndex = 3", output: "[1,3,3,1]" },
+      { input: "rowIndex = 0", output: "[1]" },
+      { input: "rowIndex = 1", output: "[1,1]" },
+    ],
+    constraints: ["0 ≤ rowIndex ≤ 33"],
+    starterCode: {
+      javascript: `function getRow(rowIndex) {
+  // Write your solution here
+  
+}
+
+// Test cases
+console.log(getRow(3)); // Expected: [1,3,3,1]
+console.log(getRow(0)); // Expected: [1]
+console.log(getRow(1)); // Expected: [1,1]`,
+      python: `def getRow(rowIndex):
+    # Write your solution here
+    pass
+
+# Test cases
+print(getRow(3))  # Expected: [1,3,3,1]
+print(getRow(0))  # Expected: [1]
+print(getRow(1))  # Expected: [1,1]`,
+      java: `import java.util.*;
+
+class Solution {
+    public static List<Integer> getRow(int rowIndex) {
+        // Write your solution here
+        return new ArrayList<>();
+    }
+    
+    public static void main(String[] args) {
+        System.out.println(getRow(3));
+        System.out.println(getRow(0));
+        System.out.println(getRow(1));
+    }
+}`,
+    },
+    expectedOutput: {
+      javascript: "[1,3,3,1]\n[1]\n[1,1]",
+      python: "[1, 3, 3, 1]\n[1]\n[1, 1]",
+      java: "[1, 3, 3, 1]\n[1]\n[1, 1]",
+    },
   },
 };
